@@ -1,5 +1,11 @@
 "use client";
 
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { navbarItems } from "@/lib/constants/navigation";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import {
@@ -9,12 +15,6 @@ import {
 } from "@heroicons/react/20/solid";
 import { useState } from "react";
 import { ThemeToggle } from "./button/ThemeToggle";
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-} from "@/components/ui/dropdown-menu";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,7 +23,7 @@ export default function Header() {
     <header className="top-0 z-50 absolute inset-x-0 bg-background">
       <nav
         aria-label="Global"
-        className="flex justify-between items-center lg:px-8 p-6"
+        className="flex justify-between items-center shadow lg:px-8 p-6 border-b"
       >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
@@ -62,10 +62,7 @@ export default function Header() {
                 <DropdownMenuContent align="start" className="min-w-[180px]">
                   {item.dropdown.map((sub) => (
                     <DropdownMenuItem asChild key={sub.label}>
-                      <a
-                        href={sub.href}
-                        className="block px-4 py-2 text-sm"
-                      >
+                      <a href={sub.href} className="block px-4 py-2 text-sm">
                         {sub.label}
                       </a>
                     </DropdownMenuItem>
@@ -83,12 +80,7 @@ export default function Header() {
             )
           )}
         </div>
-        <div className="lg:flex lg:flex-1 lg:justify-end hidden">
-          <a href="#" className="font-semibold text-sm/6">
-            Log in <span aria-hidden="true">&rarr;</span>
-          </a>
-          <ThemeToggle />
-        </div>
+        <ThemeToggle />
       </nav>
       {/* Mobile Navbar */}
       <Dialog
@@ -123,7 +115,7 @@ export default function Header() {
                   item.dropdown ? (
                     <div key={item.label}>
                       <details>
-                        <summary className="block flex justify-between items-center hover:bg-gray-50 -mx-3 px-3 py-2 rounded-lg font-semibold text-base/7 cursor-pointer">
+                        <summary className="flex justify-between items-center hover:bg-gray-50 -mx-3 px-3 py-2 rounded-lg font-semibold text-base/7 cursor-pointer">
                           {item.label}
                           <ChevronDownIcon className="inline ml-2 w-4 h-4" />
                         </summary>
@@ -150,14 +142,6 @@ export default function Header() {
                     </a>
                   )
                 )}
-              </div>
-              <div className="py-6">
-                <a
-                  href="#"
-                  className="block hover:bg-gray-50 -mx-3 px-3 py-2.5 rounded-lg font-semibold text-base/7"
-                >
-                  Log in
-                </a>
               </div>
             </div>
           </div>
