@@ -6,18 +6,33 @@ export default function SummerCampsPage() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="mx-auto pt-8 md:pt-12 lg:pt-16 w-10/12 md:w-11/12">
+    <div className="mx-auto pt-8 md:pt-12 lg:pt-24 w-10/12 md:w-11/12">
       <h1>Summer Camps</h1>
+      <h5>
+        Immersive, hands-on tech experiences that spark curiosity and build real
+        skills
+      </h5>
+      <p>
+        Our Summer Coding Camps are designed to turn vacation time into a season
+        of exploration and innovation. Through full-day, week-long programs,
+        students dive deep into coding, game development, robotics, and
+        more—working on exciting projects that blend creativity with technology.
+        Each camp is carefully structured to provide a fun, supportive
+        environment where kids can build friendships, grow their confidence, and
+        develop real-world skills they’ll carry into the future. Whether your
+        child is a beginner or an experienced coder, our camps offer the perfect
+        mix of learning and play to make their summer unforgettable.
+      </p>
 
       {/* Tabs */}
-      <div className="flex gap-4 mt-8 border-gray-200 border-b">
+      <div className="flex gap-4 mt-8 border-b border-border">
         {summerCourses.map((group, idx) => (
           <button
             key={group.title}
             className={`px-4 py-2 font-semibold border-b-2 transition-colors ${
               activeTab === idx
-                ? "border-indigo-500 text-indigo-600"
-                : "border-transparent text-gray-500 hover:text-indigo-500"
+                ? "border-tertiary text-tertiary border-b-2"
+                : "border-transparent text-gray-500 hover:text-tertiary"
             }`}
             onClick={() => setActiveTab(idx)}
             type="button"
@@ -33,10 +48,13 @@ export default function SummerCampsPage() {
           {summerCourses[activeTab].courses.map((course) => (
             <div
               key={course.courseName}
-              className="bg-white shadow-sm p-4 border rounded-lg"
+              className="bg-card shadow-sm p-4 border border-border rounded-lg text-card-foreground"
             >
-              <h3 className="font-bold text-lg">{course.courseName}</h3>
-              <div className="mb-2 text-gray-600 text-sm">
+              <h3>
+                {course.courseName} ({course.level})
+              </h3>
+              <h5>{course.subtitle}</h5>
+              <div className="mb-2 text-sm">
                 <span>{course.duration}</span> | <span>{course.format}</span>
               </div>
               <p className="mb-2">{course.description}</p>
