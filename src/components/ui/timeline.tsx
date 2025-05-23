@@ -1,13 +1,19 @@
 "use client";
 import { motion, useScroll, useTransform } from "motion/react";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-interface TimelineEntry {
-  title: string;
-  content: React.ReactNode;
+interface RoadmapCourse {
+  courseName: string;
+  focus: string[];
+  outcomes: string[];
 }
 
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+interface TimelineProps {
+  data: RoadmapCourse[];
+  title?: string;
+}
+
+export const Timeline = ({ data, title }: TimelineProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
@@ -17,7 +23,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       const rect = ref.current.getBoundingClientRect();
       setHeight(rect.height);
     }
-  }, [ref]);
+  }, [ref, data]);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -32,36 +38,49 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       className="bg-white dark:bg-neutral-950 md:px-10 w-full font-sans"
       ref={containerRef}
     >
-      <div className="mx-auto px-4 md:px-8 lg:px-10 py-20 max-w-7xl">
-        <h2 className="mb-4 max-w-4xl text-black text-lg md:text-4xl dark:text-white">
-          Changelog from my journey
-        </h2>
-        <p className="max-w-sm text-neutral-700 text-sm md:text-base dark:text-neutral-300">
-          I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
-          a timeline of my journey.
-        </p>
-      </div>
+      {title && (
+        <div className="mx-auto px-4 md:px-8 lg:px-10 py-8 max-w-7xl">
+          <h2 className="mb-4 max-w-4xl text-black text-lg md:text-3xl dark:text-white">
+            {title}
+          </h2>
+        </div>
+      )}
 
       <div ref={ref} className="relative mx-auto pb-20 max-w-7xl">
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex justify-start md:gap-10 pt-10 md:pt-40"
+            className="flex justify-start md:gap-10 pt-10 md:pt-24"
           >
-            <div className="top-40 z-40 sticky flex md:flex-row flex-col items-center md:w-full max-w-xs lg:max-w-sm self-start">
+            <div className="top-24 z-40 sticky flex md:flex-row flex-col items-center md:w-full max-w-xs lg:max-w-sm self-start">
               <div className="left-3 md:left-3 absolute flex justify-center items-center bg-white dark:bg-black rounded-full w-10 h-10">
                 <div className="bg-neutral-200 dark:bg-neutral-800 p-2 border border-neutral-300 dark:border-neutral-700 rounded-full w-4 h-4" />
               </div>
-              <h3 className="md:block hidden md:pl-20 font-bold text-neutral-500 text-xl md:text-5xl dark:text-neutral-500">
-                {item.title}
+              <h3 className="md:block hidden md:pl-20 font-bold text-neutral-500 text-xl md:text-2xl dark:text-neutral-500">
+                {item.courseName}
               </h3>
             </div>
 
             <div className="relative pr-4 pl-20 md:pl-4 w-full">
-              <h3 className="block md:hidden mb-4 font-bold text-2xl text-left text-neutral-500 dark:text-neutral-500">
-                {item.title}
+              <h3 className="block md:hidden mb-4 font-bold text-left text-neutral-500 text-xl dark:text-neutral-500">
+                {item.courseName}
               </h3>
-              {item.content}{" "}
+              <div className="mb-2">
+                <span className="font-semibold text-indigo-600">Focus:</span>
+                <ul className="ml-6 text-neutral-800 dark:text-neutral-200 list-disc">
+                  {item.focus.map((f, i) => (
+                    <li key={i}>{f}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <span className="font-semibold text-indigo-600">Outcomes:</span>
+                <ul className="ml-6 text-neutral-800 dark:text-neutral-200 list-disc">
+                  {item.outcomes.map((o, i) => (
+                    <li key={i}>{o}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         ))}
