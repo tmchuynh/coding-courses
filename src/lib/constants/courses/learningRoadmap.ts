@@ -70,6 +70,31 @@ export const learningRoadmap: Roadmap[] = [
           },
         ],
       },
+      {
+        title: "AI & Circuits for Early Learners",
+        courses: [
+          {
+            courseName: "AI Storytellers",
+            focus: ["Create interactive stories with AI tools and characters"],
+            outcomes: [
+              "Intro to AI concepts",
+              "Voice/image recognition basics",
+              "Creative digital play",
+            ],
+          },
+          {
+            courseName: "Sensory Circuits Lab",
+            focus: [
+              "Build simple circuits and use sensors for interactive projects",
+            ],
+            outcomes: [
+              "Basic electronics",
+              "Input/output logic",
+              "Hands-on tech exploration",
+            ],
+          },
+        ],
+      },
     ],
   },
   {
@@ -131,6 +156,31 @@ export const learningRoadmap: Roadmap[] = [
               "Digital storytelling",
               "Sequencing",
               "Loops and conditions",
+            ],
+          },
+        ],
+      },
+      {
+        title: "AI & Hardware Exploration",
+        courses: [
+          {
+            courseName: "AI Playground",
+            focus: ["Experiment with AI tools for art, music, and games"],
+            outcomes: [
+              "Hands-on AI projects",
+              "Pattern recognition",
+              "Ethical AI discussion",
+            ],
+          },
+          {
+            courseName: "Inventor's Workshop",
+            focus: [
+              "Design and build gadgets with microcontrollers and sensors",
+            ],
+            outcomes: [
+              "Prototyping skills",
+              "Hardware/software integration",
+              "Engineering problem-solving",
             ],
           },
         ],
@@ -201,6 +251,29 @@ export const learningRoadmap: Roadmap[] = [
               "Game mechanics",
               "Physics engines",
               "User interface design",
+            ],
+          },
+        ],
+      },
+      {
+        title: "AI & Smart Devices",
+        courses: [
+          {
+            courseName: "AI Explorers",
+            focus: ["Build simple ML models for image/text recognition"],
+            outcomes: [
+              "Neural network basics",
+              "Model training/testing",
+              "AI ethics awareness",
+            ],
+          },
+          {
+            courseName: "Smart Devices Lab",
+            focus: ["Create IoT gadgets with sensors and code"],
+            outcomes: [
+              "IoT prototyping",
+              "Automation concepts",
+              "Real-world device building",
             ],
           },
         ],
@@ -360,6 +433,29 @@ export const learningRoadmap: Roadmap[] = [
               "Final portfolio",
               "Demo day pitch",
               "Professional polish",
+            ],
+          },
+        ],
+      },
+      {
+        title: "AI & Robotics Engineering",
+        courses: [
+          {
+            courseName: "Machine Learning Studio",
+            focus: ["Build ML models for image, text, and data analysis"],
+            outcomes: [
+              "Python ML basics",
+              "Data visualization",
+              "Model evaluation",
+            ],
+          },
+          {
+            courseName: "Robotics Engineering",
+            focus: ["Design, build, and program advanced robots"],
+            outcomes: [
+              "Robotics systems integration",
+              "Autonomous navigation",
+              "Competition readiness",
             ],
           },
         ],
