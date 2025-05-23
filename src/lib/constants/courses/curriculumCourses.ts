@@ -107,6 +107,7 @@ export const curriculumCourses: Curriculum[] = [
     courses: [
       {
         courseName: "Game Builders Club",
+        level: "Beginner",
         description:
           "Students move from passive players to active creators by building 2D games. They explore user interaction, conditional logic, and sprite control, gaining experience in structured problem-solving and debugging.",
         focus: [
