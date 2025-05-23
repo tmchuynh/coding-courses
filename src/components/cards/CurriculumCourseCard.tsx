@@ -14,7 +14,18 @@ export default function CurriculumCourseCard({ course }: { course: Course }) {
   }
   return (
     <div className="shadow p-6 border rounded-lg">
-      <h3>{course.courseName}</h3>
+      <h3
+        className="underline underline-offset-2 hover:no-underline cursor-pointer"
+        onClick={() =>
+          router.push(
+            `/programs/courses/${formatToSlug(ageGroup)}/${formatToSlug(
+              course.courseName
+            )}`
+          )
+        }
+      >
+        {course.courseName}
+      </h3>
       <p className="mb-4">{course.description}</p>
       <div className="mb-2">
         <h3 className="font-semibold">Focus:</h3>
@@ -49,7 +60,7 @@ export default function CurriculumCourseCard({ course }: { course: Course }) {
         className="mt-6"
         onClick={() =>
           router.push(
-            `/curriculum/age-groups/${formatToSlug(ageGroup)}/${formatToSlug(
+            `/programs/courses/${formatToSlug(ageGroup)}/${formatToSlug(
               course.courseName
             )}`
           )
