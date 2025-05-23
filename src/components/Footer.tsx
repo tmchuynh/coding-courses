@@ -2,8 +2,8 @@ import { footerNavigation } from "@/lib/constants/navigation";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 mt-32 sm:mt-56">
-      <div className="mx-auto px-6 lg:px-8 pt-16 sm:pt-24 lg:pt-32 pb-8 max-w-7xl">
+    <footer className="mt-20 pt-12 border-t">
+      <div className="mx-auto px-6 lg:px-8 pb-8 max-w-7xl">
         <div className="xl:gap-8 xl:grid xl:grid-cols-3">
           <div className="gap-8 grid grid-cols-2 xl:col-span-2 mt-16 xl:mt-0">
             <div className="md:gap-8 md:grid md:grid-cols-2">
