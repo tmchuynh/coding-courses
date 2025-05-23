@@ -65,13 +65,13 @@
   --card-foreground: oklch(0.22 0.03 220);
   --popover: oklch(0.92 0.01 210);
   --popover-foreground: oklch(0.22 0.03 220);
-  --primary: oklch(0.60 0.13 210);                 /* Blue */
+  --primary: oklch(0.42 0.0713 186.81);                 /* Blue */
   --primary-foreground: oklch(0.98 0.01 100);      /* White */
-  --secondary: oklch(0.70 0.10 190);               /* Teal */
+  --secondary: oklch(0.46 0.1114 246.37);               /* Teal */
   --secondary-foreground: oklch(0.22 0.03 220);
-  --tertiary: oklch(0.80 0.04 210);                /* Light blue */
+  --tertiary: oklch(0.3967 0.1894 300.32);                /* Light blue */
   --tertiary-foreground: oklch(0.22 0.03 220);
-  --fancy: oklch(0.65 0.12 180);                   /* Teal accent */
+  --fancy: oklch(45.7% 0.24 277.023);                   /* Teal accent */
   --fancy-foreground: oklch(0.98 0.01 100);
   --muted: oklch(0.88 0.01 220);                   /* Muted blue-grey */
   --muted-foreground: oklch(0.35 0.01 220);        /* Muted blue-grey */
@@ -212,18 +212,18 @@
   }
 
   h2 {
-    @apply font-[YsabeauSC] font-semibold text-2xl text-fancy lg:text-3xl;
+    @apply font-[YsabeauSC] font-semibold text-2xl text-secondary lg:text-3xl;
   }
 
   h3 {
-    @apply font-[YsabeauOffice] font-light text-tertiary text-xl 2xl:text-2xl;
+    @apply font-[YsabeauSC] font-bold text-fancy text-base lg:text-xl ;
   }
 
   h4 {
-    @apply font-[RedHatMono] font-extrabold text-accent text-base underline underline-offset-2;
+    @apply font-[RedHatMono] text-tertiary text-base;
   }
   h5 {
-    @apply mb-3 font-[RedHatMono] font-bold text-tertiary text-xs md:text-sm;
+    @apply mb-3 font-[RedHatMono] font-bold text-accent text-xs md:text-sm;
   }
   p {
     @apply py-1 text-pretty leading-relaxed;
