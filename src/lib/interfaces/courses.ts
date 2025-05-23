@@ -1,4 +1,4 @@
-import { Course, Schedule } from "../types/types";
+import { Course, Times } from "../types/types";
 
 export interface Track {
   track: string;
@@ -19,10 +19,10 @@ export interface Curriculum {
   courses: Course[];
 }
 
-export interface CourseSchedule extends Course {
+export interface Schedules extends Course {
   subtitle: string;
   formatOptions: string[];
-  schedule: Schedule;
+  schedule: Times;
   instructors: string;
   includes: string[];
 }
