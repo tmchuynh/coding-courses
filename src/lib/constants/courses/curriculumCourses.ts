@@ -6,6 +6,7 @@ export const curriculumCourses: Curriculum[] = [
     courses: [
       {
         courseName: "Code Through Stories",
+        category: "block-coding",
         description:
           "This introductory course uses animated storytelling to teach basic coding concepts. Students bring characters to life, build interactive plots, and learn logical sequencing through digital narratives tailored to early readers and learners.",
         focus: [
@@ -22,6 +23,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Digital Discovery Lab",
+        category: "hardware",
         description:
           "A hands-on, play-based introduction to technology that nurtures curiosity and confidence. Children engage in offline logic games, basic programming tasks, and creative tech-building activities in a highly tactile environment.",
         focus: [
@@ -38,6 +40,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Mini Makers",
+        category: "hardware",
         description:
           "Students combine design, code, and hardware in fun, interactive challenges. This course introduces basic robotics and creative projects like digital art and interactive cards, integrating storytelling and motion.",
         focus: [
@@ -54,6 +57,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Code & Play",
+        category: "block-coding",
         description:
           "An engaging intro to basic computer science concepts through fun, hands-on logic games and movement-based activities. This track builds early algorithmic thinking and curiosity about how technology works.",
         focus: [
@@ -70,6 +74,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Pattern Makers",
+        category: "block-coding",
         description:
           "This track builds early math and logic reasoning through hands-on and screen-based pattern exercises. Ideal for developing visual sequencing and predictive skills in a tech-enhanced setting.",
         focus: [
@@ -86,6 +91,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Tinker Time",
+        category: "hardware",
         description:
           "A tactile-focused track where students manipulate robots, sensors, and block coding kits to connect physical action with digital response. Emphasis is placed on creative play and sensory discovery.",
         focus: [
@@ -107,6 +113,7 @@ export const curriculumCourses: Curriculum[] = [
     courses: [
       {
         courseName: "Game Builders Club",
+        category: "game-dev",
         level: "Beginner",
         description:
           "Students move from passive players to active creators by building 2D games. They explore user interaction, conditional logic, and sprite control, gaining experience in structured problem-solving and debugging.",
@@ -124,6 +131,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Web Wonders",
+        category: "web-dev",
         description:
           "An engaging intro to web development where students create personal websites. They'll explore HTML for structure, CSS for styling, and layout principles to express themselves online.",
         focus: [
@@ -140,6 +148,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "App Explorers",
+        category: "web-dev",
         description:
           "Students transition from games to mobile functionality by building drag-and-drop apps with interactive forms, sound, and logic. Emphasis is placed on user input, design iteration, and real-world utility.",
         focus: [
@@ -156,6 +165,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Creative Code & Art",
+        category: "game-dev",
         description:
           "This course empowers students to explore generative and interactive art using p5.js and Processing. Focus is on translating abstract math concepts into dynamic digital visuals.",
         focus: [
@@ -172,6 +182,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Code for Music",
+        category: "game-dev",
         description:
           "Students use coding environments to create audio experiences, loops, and basic compositions. Great for learners interested in sound, rhythm, and musical creativity.",
         focus: [
@@ -188,6 +199,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Code a Storybook",
+        category: "block-coding",
         description:
           "Combines programming logic with storytelling. Students create branching plots and interactive elements for digital storybooks.",
         focus: [
@@ -209,6 +221,7 @@ export const curriculumCourses: Curriculum[] = [
     courses: [
       {
         courseName: "Game Studio",
+        category: "game-dev",
         description:
           "A deeper dive into game development with more complexity and customization. Students build platformers, puzzle games, or RPGs while learning core software development patterns and debugging techniques.",
         focus: [
@@ -225,6 +238,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Unity Game Dev",
+        category: "game-dev",
         description:
           "Students learn to build 2D and 3D games using Unity and C#. They explore game mechanics, physics, and user interface design, preparing them for advanced game development.",
         focus: [
@@ -241,6 +255,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Interactive Elements",
+        category: "web-dev",
         description:
           "Students learn to create interactive web applications using JavaScript and APIs. They explore dynamic page updates, user input handling, and event-driven programming.",
         focus: [
@@ -257,6 +272,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Frontend Fundamentals",
+        category: "web-dev",
         description:
           "Students learn the basics of front-end development using HTML, CSS, and JavaScript. They explore responsive design, accessibility, and modern web standards.",
         focus: [
@@ -282,6 +298,7 @@ export const curriculumCourses: Curriculum[] = [
     courses: [
       {
         courseName: "Next.js Essentials",
+        category: "web-dev",
         description:
           "Advanced React and Next.js development for high schoolers focused on real-world projects. Students build scalable SPAs with hooks, authentication, forms, and server-side rendering.",
         focus: [
@@ -302,6 +319,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Simulators & Physics",
+        category: "ai",
         description:
           "Students learn to simulate real-world systems using code. They explore physics engines, data visualization, and interactive simulations, applying math concepts in a fun way.",
         focus: [
@@ -318,6 +336,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Full Stack Foundations",
+        category: "web-dev",
         description:
           "Students take on real-world development using HTML, CSS, and JavaScript to create dynamic websites. Projects emphasize responsive design, client-server thinking, and component-based structures.",
         focus: [
@@ -334,6 +353,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "APIs & Integrations",
+        category: "web-dev",
         description:
           "Students tap into the wider internet by integrating public APIs like weather, music, and sports data. Focus is on understanding requests, JSON parsing, and data-driven interfaces.",
         focus: [
@@ -350,6 +370,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Database Basics",
+        category: "web-dev",
         description:
           "Students explore structured data using JSON, local storage, and simple databases. They learn how data moves between front-end and back-end systems through interactive mini-projects.",
         focus: [
@@ -366,6 +387,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Startup Studio",
+        category: "business",
         description:
           "Students turn their coding skills into business ideas. They develop tech-based products, pitch them, and simulate launching a startup with marketing and user testing.",
         focus: [
@@ -382,6 +404,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "AI + Code",
+        category: "ai",
         description:
           "Introduces students to artificial intelligence through coding. They train basic models, create chatbots, and explore ethical issues in AI deployment.",
         focus: [
@@ -398,6 +421,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Advanced Backend & DevOps",
+        category: "web-dev",
         description:
           "Students explore databases, authentication, server logic, and deployment pipelines. Topics include Node.js, Express, PostgreSQL, and tools like Docker and CI/CD flows.",
         focus: [
@@ -414,6 +438,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Startup Accelerator",
+        category: "business",
         description:
           "This capstone track guides students through the full process of launching a real product. With mentorship, they create, pitch, and market a tech product or platform.",
         focus: [
@@ -430,6 +455,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Advanced Web Dev",
+        category: "web-dev",
         description:
           "Students master modern web development using React, TypeScript, and Next.js. They build complex applications with state management, routing, and server-side rendering.",
         focus: [
@@ -446,6 +472,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Capstone Project",
+        category: "web-dev",
         description:
           "Students apply their full-stack skills to build a comprehensive project. They integrate front-end and back-end technologies, focusing on deployment and user experience.",
         focus: [
@@ -462,6 +489,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "3D Animation & Game Dev",
+        category: "game-dev",
         description:
           "Students learn to create 3D models and animations using Blender and Unity. They explore game mechanics, physics, and user interface design, preparing them for advanced game development.",
         focus: [
@@ -478,6 +506,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "CS Prep + Algorithms",
+        category: "ai",
         description:
           "Students prepare for AP Computer Science and college-level CS courses. They learn algorithms, data structures, and problem-solving techniques using Python or Java.",
         focus: [
@@ -494,6 +523,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Internship Program",
+        category: "business",
         description:
           "Students gain real-world experience through internships with tech companies. They work on projects, collaborate with professionals, and build their resumes.",
         focus: [
@@ -510,6 +540,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Entrepreneurship & Innovation",
+        category: "business",
         description:
           "Students learn the principles of entrepreneurship and innovation. They explore business models, marketing strategies, and product development.",
         focus: [
