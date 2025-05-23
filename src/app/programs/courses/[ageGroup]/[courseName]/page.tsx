@@ -86,10 +86,21 @@ export default function CourseDetailPage() {
     ])
   );
 
+  console.log("scheduleCourse", scheduleCourse);
+  console.log("roadmapCourse", roadmapCourse);
+  console.log("curriculumCourse", curriculumCourse);
+  console.log("curriculumGroupTitle", curriculumGroupTitle);
+  console.log("scheduleGroup", scheduleGroup);
+
   return (
     <div className="mx-auto pt-8 md:pt-12 lg:pt-16 w-10/12 md:w-11/12">
       <h1>{curriculumCourse.courseName}</h1>
-      <h5>{curriculumGroupTitle}</h5>
+      <h5>
+        {scheduleCourse.subtitle && <>{scheduleCourse.subtitle}</>}
+        {curriculumCourse.level && <> | {curriculumCourse.level}</>}
+        {scheduleGroup.ageGroup && <> ({scheduleGroup.ageGroup})</>}
+      </h5>
+
       <p>{curriculumCourse.description}</p>
       <div className="mb-4">
         <h3>Focus:</h3>
@@ -109,7 +120,7 @@ export default function CourseDetailPage() {
       </div>
       {curriculumCourse.next && curriculumCourse.next.length > 0 && (
         <div className="mb-4">
-          <h3>Next Courses:</h3>
+          <h3>Next Course(s):</h3>
           <ul className="ml-6 list-disc">
             {curriculumCourse.next.map((n: string, i: number) => {
               const ageGroup = findAgeGroupForCourse(n);
@@ -120,9 +131,10 @@ export default function CourseDetailPage() {
                 <li key={i}>
                   <Button
                     variant={"link"}
+                    className="m-0"
                     onClick={() =>
                       router.push(
-                        `/curriculum/age-groups/${formatToSlug(
+                        `/programs/courses/${formatToSlug(
                           ageGroup
                         )}/${formatToSlug(n)}`
                       )
@@ -140,27 +152,47 @@ export default function CourseDetailPage() {
       {scheduleCourse && (
         <div className="mt-6 mb-4 pt-6 border-t">
           <h2>Current Schedule</h2>
-          {scheduleCourse.subtitle && <h4>{scheduleCourse.subtitle}</h4>}
-          <div className="mb-2 text-gray-700">{scheduleCourse.description}</div>
-          <div className="mb-2">
-            <span className="font-semibold">Format:</span>{" "}
-            {scheduleCourse.formatOptions?.join(", ")}
-          </div>
-          <div className="mb-2">
-            <span className="font-semibold">Schedule:</span>{" "}
-            {scheduleCourse.schedule.days.join(", ")}{" "}
-            {scheduleCourse.schedule.startTime &&
-              `| ${scheduleCourse.schedule.startTime} - ${scheduleCourse.schedule.endTime}`}{" "}
-            {scheduleCourse.schedule.durationWeeks &&
-              `| ${scheduleCourse.schedule.durationWeeks} weeks`}
-          </div>
-          <div className="mb-2">
-            <span className="font-semibold">Instructors:</span>{" "}
-            {scheduleCourse.instructors}
-          </div>
-          <div>
-            <span className="font-semibold">Includes:</span>{" "}
-            {scheduleCourse.includes?.join(", ")}
+          <div className="flex flex-col gap-2 md:grid grid-cols-2 mt-2">
+            <div className="flex flex-col gap-2">
+              <div>
+                <span className="font-semibold">Meeting Days:</span>{" "}
+                {scheduleCourse.schedule.days.map(
+                  (day: string, index: number) => (
+                    <span key={index}>
+                      {day}'s
+                      {index < scheduleCourse.schedule.days.length - 1
+                        ? ", "
+                        : ""}
+                    </span>
+                  )
+                )}
+              </div>
+              <div>
+                <span className="font-semibold">Meeting Time:</span>{" "}
+                {scheduleCourse.schedule.startTime &&
+                  `${scheduleCourse.schedule.startTime} - ${scheduleCourse.schedule.endTime}`}{" "}
+              </div>
+              <div>
+                <span className="font-semibold">Duration:</span>{" "}
+                {scheduleCourse.schedule.durationWeeks &&
+                  `${scheduleCourse.schedule.durationWeeks} weeks`}
+              </div>
+
+              <div>
+                <span className="font-semibold">Instructors:</span>{" "}
+                {scheduleCourse.instructors}
+              </div>
+            </div>
+            <div className="flex flex-col gap-2">
+              <div>
+                <span className="font-semibold">Format Options:</span>{" "}
+                {scheduleCourse.formatOptions?.join(", ")}
+              </div>
+              <div>
+                <span className="font-semibold">Includes:</span>{" "}
+                {scheduleCourse.includes?.join(", ")}
+              </div>
+            </div>
           </div>
         </div>
       )}
@@ -168,12 +200,10 @@ export default function CourseDetailPage() {
       <Button
         className="mt-6"
         onClick={() =>
-          router.push(
-            `/curriculum/age-groups/${formatToSlug(curriculumGroupTitle)}`
-          )
+          router.push(`/programs/courses/${formatToSlug(curriculumGroupTitle)}`)
         }
       >
-        View All Courses in {curriculumGroupTitle}
+        View All Course Schedules for {curriculumGroupTitle}
       </Button>
     </div>
   );

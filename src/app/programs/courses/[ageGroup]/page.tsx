@@ -1,4 +1,6 @@
 "use client";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { yearRoundSchedule } from "@/lib/constants/courses/yearRoundSchedule";
 import { formatGradeRangeSlug, formatToSlug } from "@/lib/utils/format";
 import { useParams, useRouter } from "next/navigation";
@@ -79,38 +81,45 @@ export default function AgeGroupSchedulePage() {
 
   return (
     <div className="mx-auto pt-8 md:pt-12 lg:pt-16 w-10/12 md:w-11/12">
-      <h1 className="mb-6 font-bold text-2xl">
-        {group.ageGroup} Course Schedules
-      </h1>
+      <h1>{group.ageGroup} Course Schedules</h1>
+      <h5>
+        {group.schedules.length} Course
+        {group.schedules.length > 1 ? "s" : ""} Available
+        {group.schedules.length > 0 && ` for ${group.ageGroup}`}
+      </h5>
       {/* Includes filter UI */}
       <div className="mb-6">
-        <span className="mr-2 font-semibold">Filter by Includes:</span>
-        {includesOptions.map((inc) => (
-          <label key={inc} className="inline-flex items-center mr-4">
-            <input
-              type="checkbox"
-              className="mr-1"
-              checked={selectedIncludes.includes(inc)}
-              onChange={() => handleIncludesChange(inc)}
-            />
-            {inc}
-          </label>
-        ))}
+        <p>Filter by Includes:</p>
+        <div className="gap-4 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mt-3">
+          {includesOptions.map((inc) => (
+            <Label key={inc} className="inline-flex items-center mr-4">
+              <Input
+                type="checkbox"
+                className="mr-1 w-fit h-fit"
+                checked={selectedIncludes.includes(inc)}
+                onChange={() => handleIncludesChange(inc)}
+              />
+              {inc}
+            </Label>
+          ))}
+        </div>
       </div>
       {/* Days filter UI */}
       <div className="mb-6">
-        <span className="mr-2 font-semibold">Filter by Days:</span>
-        {daysOptions.map((day) => (
-          <label key={day} className="inline-flex items-center mr-4">
-            <input
-              type="checkbox"
-              className="mr-1"
-              checked={selectedDays.includes(day)}
-              onChange={() => handleDaysChange(day)}
-            />
-            {day}
-          </label>
-        ))}
+        <p>Filter by Days:</p>
+        <div className="gap-4 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 mt-3">
+          {daysOptions.map((day) => (
+            <Label key={day} className="inline-flex items-center mr-4">
+              <Input
+                type="checkbox"
+                className="mr-1 w-fit h-fit"
+                checked={selectedDays.includes(day)}
+                onChange={() => handleDaysChange(day)}
+              />
+              {day}
+            </Label>
+          ))}
+        </div>
       </div>
       <div className="gap-8 grid grid-cols-1 lg:grid-cols-2">
         {filteredCourses.map((course) => (
@@ -122,7 +131,7 @@ export default function AgeGroupSchedulePage() {
               className="mb-2 font-semibold text-xl underline underline-offset-2 hover:no-underline cursor-pointer"
               onClick={() =>
                 router.push(
-                  `/curriculum/age-groups/${formatToSlug(
+                  `/programs/courses/${formatToSlug(
                     group.ageGroup
                   )}/${formatToSlug(course.courseName)}`
                 )
