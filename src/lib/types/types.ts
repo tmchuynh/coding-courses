@@ -40,6 +40,7 @@ export type FAQSection = {
 
 export type Course = {
   courseName: string;
+  level?: string;
   duration?: string;
   format?: string;
   keyProjects?: string[];
