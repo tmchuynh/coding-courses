@@ -2,7 +2,7 @@ import { Stories } from "@/lib/types/types";
 
 export const studentStories: Stories[] = [
   {
-    name: "Sophie",
+    name: "Sophie M.",
     grade: "2nd Grade",
     location: "Orange, CA",
     quote: "I made a game where cats fly!",
@@ -15,7 +15,7 @@ export const studentStories: Stories[] = [
     keyOutcomes: "Confidence, logic, storytelling, and early digital fluency.",
   },
   {
-    name: "Jamal",
+    name: "Jamal V.",
     grade: "5th Grade",
     location: "Houston, TX",
     quote: "Now I teach my little brother how to debug.",
@@ -28,7 +28,7 @@ export const studentStories: Stories[] = [
     keyOutcomes: "Improved focus, logic, family involvement, and leadership.",
   },
   {
-    name: "Emily",
+    name: "Emily R.",
     grade: "8th Grade",
     location: "Denver, CO",
     quote: "I launched my own website—by myself.",
@@ -41,7 +41,7 @@ export const studentStories: Stories[] = [
     keyOutcomes: "Technical depth, problem-solving, confidence to freelance.",
   },
   {
-    name: "Darius",
+    name: "Darius J.",
     grade: "11th Grade",
     location: "Atlanta, GA",
     quote: "My app got me an internship.",
@@ -55,7 +55,7 @@ export const studentStories: Stories[] = [
       "Real-world skills, portfolio, internship, career preparation.",
   },
   {
-    name: "Maya",
+    name: "Maya L.",
     grade: "12th Grade",
     location: "Seattle, WA",
     quote: "I’m now a junior developer at a local startup.",
@@ -68,7 +68,7 @@ export const studentStories: Stories[] = [
     keyOutcomes: "Professional experience, teamwork, full-time tech role.",
   },
   {
-    name: "Carlos",
+    name: "Carlos G.",
     grade: "10th Grade",
     location: "Miami, FL",
     quote: "I started as a student; now I help teach beginners.",
@@ -81,7 +81,7 @@ export const studentStories: Stories[] = [
     keyOutcomes: "Leadership, teaching experience, community impact.",
   },
   {
-    name: "Leah",
+    name: "Leah T.",
     grade: "9th Grade",
     location: "San Francisco, CA",
     quote: "I built a nonprofit website that raised thousands.",
@@ -95,7 +95,7 @@ export const studentStories: Stories[] = [
       "Technical skills with social impact, public speaking, internship.",
   },
   {
-    name: "Ethan",
+    name: "Ethan K.",
     grade: "8th Grade",
     location: "Boston, MA",
     quote: "I won my first coding competition!",
@@ -107,7 +107,7 @@ export const studentStories: Stories[] = [
     keyOutcomes: "Competition success, confidence, robotics integration.",
   },
   {
-    name: "Nia",
+    name: "Nia W.",
     grade: "College Freshman",
     location: "Chicago, IL",
     quote: "This program got me my first internship.",
