@@ -106,6 +106,40 @@ export const curriculumCourses: Curriculum[] = [
         ],
         next: ["Mini Makers", "Code Through Stories"],
       },
+      {
+        courseName: "AI Storytellers",
+        category: "ai",
+        description:
+          "Young learners use simple AI tools to create interactive stories and characters. They explore how computers can 'think' and make choices in storytelling.",
+        focus: [
+          "AI-powered story generation",
+          "Voice and image recognition basics",
+          "Creative play with AI assistants",
+        ],
+        outcomes: [
+          "Understand basic AI concepts through stories",
+          "Interact with AI-driven characters",
+          "Spark curiosity about technology and intelligence",
+        ],
+        next: ["Code Through Stories", "Mini Makers"],
+      },
+      {
+        courseName: "Sensory Circuits Lab",
+        category: "hardware",
+        description:
+          "Students build simple circuits and use sensors to trigger lights, sounds, and movement. This hands-on course connects physical actions to digital responses.",
+        focus: [
+          "Building circuits with LEDs and buzzers",
+          "Using sensors for input/output",
+          "Exploring cause and effect with hardware",
+        ],
+        outcomes: [
+          "Create interactive hardware projects",
+          "Understand basic electronics and sensors",
+          "Develop fine motor and logical skills",
+        ],
+        next: ["Tinker Time", "Mini Makers"],
+      },
     ],
   },
   {
@@ -214,6 +248,40 @@ export const curriculumCourses: Curriculum[] = [
         ],
         next: ["Creative Code & Art"],
       },
+      {
+        courseName: "AI Playground",
+        category: "ai",
+        description:
+          "Students experiment with visual and audio AI tools to create art, music, and games. They learn about training data, pattern recognition, and ethical AI use.",
+        focus: [
+          "Hands-on with image and sound recognition",
+          "Training simple AI models",
+          "Discussing fairness and bias in AI",
+        ],
+        outcomes: [
+          "Build creative projects using AI tools",
+          "Understand how AI learns from data",
+          "Discuss responsible AI use",
+        ],
+        next: ["AI + Code", "Creative Code & Art"],
+      },
+      {
+        courseName: "Inventor's Workshop",
+        category: "hardware",
+        description:
+          "Students design and build gadgets using microcontrollers and sensors. They learn about circuits, programming, and prototyping real-world inventions.",
+        focus: [
+          "Micro:bit or Arduino basics",
+          "Sensor integration and coding",
+          "Prototyping and testing inventions",
+        ],
+        outcomes: [
+          "Build working electronic prototypes",
+          "Combine hardware and software creatively",
+          "Develop problem-solving and engineering skills",
+        ],
+        next: ["Game Studio", "Unity Game Dev"],
+      },
     ],
   },
   {
@@ -290,6 +358,40 @@ export const curriculumCourses: Curriculum[] = [
           "Full Stack Foundations",
           "Interactive Elements",
         ],
+      },
+      {
+        courseName: "AI Explorers",
+        category: "ai",
+        description:
+          "Students dive into machine learning by building simple models for image and text recognition. They explore neural networks, datasets, and real-world AI applications.",
+        focus: [
+          "Training and testing ML models",
+          "Exploring neural networks visually",
+          "Ethics and impact of AI in society",
+        ],
+        outcomes: [
+          "Build and test basic AI models",
+          "Understand neural network fundamentals",
+          "Discuss AI's role in the world",
+        ],
+        next: ["AI + Code", "Simulators & Physics"],
+      },
+      {
+        courseName: "Smart Devices Lab",
+        category: "hardware",
+        description:
+          "Students create smart gadgets using sensors, microcontrollers, and code. Projects include smart lights, alarms, and interactive displays.",
+        focus: [
+          "IoT basics with Arduino or Raspberry Pi",
+          "Sensor data collection and automation",
+          "Building and coding smart devices",
+        ],
+        outcomes: [
+          "Prototype IoT devices",
+          "Understand automation and real-world applications",
+          "Prepare for advanced hardware and robotics",
+        ],
+        next: ["Unity Game Dev", "Database Basics"],
       },
     ],
   },
@@ -554,6 +656,40 @@ export const curriculumCourses: Curriculum[] = [
           "Build skills in marketing, sales, and product development",
         ],
         next: ["Internship Program"],
+      },
+      {
+        courseName: "Machine Learning Studio",
+        category: "ai",
+        description:
+          "Students build real machine learning models for image, text, and data analysis. They use Python and open-source libraries to explore supervised and unsupervised learning.",
+        focus: [
+          "Python for ML (scikit-learn, TensorFlow basics)",
+          "Data preprocessing and visualization",
+          "Model evaluation and improvement",
+        ],
+        outcomes: [
+          "Train and deploy ML models",
+          "Analyze and visualize datasets",
+          "Understand real-world AI applications",
+        ],
+        next: ["AI + Code", "Simulators & Physics"],
+      },
+      {
+        courseName: "Robotics Engineering",
+        category: "hardware",
+        description:
+          "Students design, build, and program robots for real-world tasks. They explore sensors, actuators, and autonomous navigation using advanced kits.",
+        focus: [
+          "Robotics hardware and mechanics",
+          "Programming autonomous behaviors",
+          "Sensors, actuators, and feedback systems",
+        ],
+        outcomes: [
+          "Build and program advanced robots",
+          "Understand robotics systems integration",
+          "Prepare for robotics competitions or engineering careers",
+        ],
+        next: ["Startup Studio", "Advanced Backend & DevOps"],
       },
     ],
   },
