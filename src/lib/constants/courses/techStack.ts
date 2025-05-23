@@ -19,6 +19,16 @@ export const techStack = [
         desc: "Physical games and puzzles that build computational thinking without screens.",
         why: "Screen-free activities develop logic, sequencing, and problem-solving skills in a collaborative and accessible way, supporting foundational thinking before digital tools.",
       },
+      {
+        name: "AI Story Apps",
+        desc: "Simple AI-powered storytelling platforms for kids.",
+        why: "Allows young learners to interact with AI-driven characters and stories, sparking curiosity about how computers can 'think' and make choices.",
+      },
+      {
+        name: "Snap Circuits / LittleBits",
+        desc: "Modular electronics kits for building circuits and sensor-based projects.",
+        why: "Hands-on kits make electronics and sensors accessible, helping students connect physical actions to digital responses in a safe, creative way.",
+      },
     ],
   },
   {
@@ -46,6 +56,16 @@ export const techStack = [
         desc: "The building blocks of web pages, introduced through simple website projects.",
         why: "Learning HTML and CSS gives students a sense of ownership and digital literacy, empowering them to create and publish their own content on the web.",
       },
+      {
+        name: "Teachable Machine",
+        desc: "A web-based tool for training simple AI models with images, sounds, or poses.",
+        why: "Lets students experiment with machine learning concepts in a playful, visual way—perfect for AI Playground and creative AI projects.",
+      },
+      {
+        name: "Micro:bit / Arduino Starter Kits",
+        desc: "Beginner-friendly microcontrollers for building interactive hardware projects.",
+        why: "Empowers students to prototype inventions and learn about sensors, circuits, and coding in Inventor's Workshop.",
+      },
     ],
   },
   {
@@ -72,6 +92,16 @@ export const techStack = [
         name: "APIs & Web Tools",
         desc: "Students learn to connect to external data and services.",
         why: "Working with APIs introduces students to real-world data and integration, building skills in problem-solving and preparing them for modern software development.",
+      },
+      {
+        name: "Google Teachable Machine / ML5.js",
+        desc: "Accessible tools for building and experimenting with machine learning models in the browser.",
+        why: "Supports hands-on AI Explorers projects, making ML approachable and interactive for middle schoolers.",
+      },
+      {
+        name: "Arduino / Raspberry Pi",
+        desc: "Popular microcontrollers and single-board computers for IoT and smart device projects.",
+        why: "Used in Smart Devices Lab to teach automation, sensor integration, and real-world device prototyping.",
       },
     ],
   },
@@ -114,6 +144,16 @@ export const techStack = [
         name: "Cloud & DevOps Tools",
         desc: "Deployment, CI/CD, and cloud platforms for real-world product launches.",
         why: "Cloud and DevOps skills are critical for deploying and maintaining modern applications, giving students experience with real deployment workflows.",
+      },
+      {
+        name: "scikit-learn / TensorFlow",
+        desc: "Python libraries for building and training machine learning models.",
+        why: "Industry-standard tools for Machine Learning Studio, enabling students to work with real datasets and advanced AI concepts.",
+      },
+      {
+        name: "Advanced Robotics Kits (VEX, LEGO Mindstorms, Arduino)",
+        desc: "Comprehensive robotics platforms for building, programming, and automating robots.",
+        why: "Used in Robotics Engineering to teach hardware integration, autonomous navigation, and competition-level robotics.",
       },
     ],
   },
