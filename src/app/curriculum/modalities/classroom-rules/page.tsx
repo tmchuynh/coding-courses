@@ -2,7 +2,7 @@ import { classroomRules } from "@/lib/constants/pages/classroomRules";
 
 export default function ClassroomRulesPage() {
   return (
-    <div className="mx-auto pt-8 md:pt-12 lg:pt-16 w-10/12 md:w-11/12">
+    <div className="mx-auto pt-8 md:pt-12 lg:pt-24 w-10/12 md:w-11/12">
       <section>
         <h1>Classroom Rules</h1>
         <ul className="space-y-6">
