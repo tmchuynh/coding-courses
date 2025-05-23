@@ -61,3 +61,9 @@ export type CourseSchedule = {
   ageGroup: string;
   schedules: Schedules[];
 };
+
+export type Metrics = {
+  label: string;
+  value: string;
+  description: string;
+};
