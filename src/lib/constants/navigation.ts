@@ -102,16 +102,16 @@ export const navbarItems = [
         href: "/about/mission",
       },
       {
-        label: "Our Team",
-        href: "/about/team",
+        label: "Our Staff",
+        href: "/about/our-staff",
       },
       {
         label: "Careers",
         href: "/about/careers",
       },
       {
-        label: "Community Impact",
-        href: "/about/impact",
+        label: "Student Success Stories",
+        href: "/about/student-success-stories",
       },
     ],
   },
