@@ -130,3 +130,7 @@ export function groupAndSortByProperties<T>(
   // Flatten the sorted groups back into a single array
   return sortedGroups.flat();
 }
+
+export function uniqueArray(arr: string[]) {
+  return Array.from(new Set(arr));
+}
