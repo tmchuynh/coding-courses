@@ -57,10 +57,6 @@ export const navbarItems = [
         label: "Summer Camps",
         href: "/programs/summer-camps",
       },
-      {
-        label: "After-School",
-        href: "/programs/after-school",
-      },
     ],
   },
   {
@@ -68,7 +64,7 @@ export const navbarItems = [
     href: "/curriculum",
     dropdown: [
       {
-        label: "Our Curriculum Approach",
+        label: "Why Learn How to Code?",
         href: "/curriculum",
       },
       {
