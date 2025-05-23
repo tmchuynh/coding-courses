@@ -6,18 +6,41 @@ import { useRouter } from "next/navigation";
 export default function ModalitiesPage() {
   const router = useRouter();
   return (
-    <div className="mx-auto pt-8 md:pt-12 lg:pt-16 w-10/12 md:w-11/12">
+    <div className="mx-auto pt-8 md:pt-12 lg:pt-24 w-10/12 md:w-11/12">
       <section>
-        <h1>In-Person vs Online Classes</h1>
+        <h1>What to Expect in Every Class</h1>
+        <h5>Flexible Formats, Consistent Quality</h5>
         <p>
-          Our classes are designed to be interactive, supportive, and fun! Each
-          session begins with a warm welcome and a quick review of previous
-          lessons. Instructors introduce new coding concepts using
-          easy-to-understand examples, followed by hands-on activities where
-          students can practice and ask questions. We encourage teamwork,
-          creativity, and curiosity. At the end of each class, we recap what
-          we’ve learned and preview what’s coming next. Our goal is to make sure
-          every student feels confident and excited about coding!
+          Our classes are designed to be interactive, supportive, and genuinely
+          fun, blending structure with creativity to maximize engagement and
+          learning outcomes. Each session is thoughtfully crafted to foster both
+          technical growth and personal development.
+        </p>
+        <p>
+          We begin every class with a warm welcome and a quick review of
+          previous lessons. This reinforces learning and helps students feel
+          confident as they build on their existing knowledge. Our instructors
+          then introduce new coding concepts using clear, relatable
+          examples—connecting abstract ideas to real-world applications in a way
+          that makes learning intuitive and approachable. The core of each
+          session is hands-on coding practice. Students immediately apply what
+          they’ve learned in guided activities that encourage experimentation
+          and problem-solving. Instructors circulate to answer questions,
+          provide support, and challenge students with personalized feedback.
+          This ensures that each learner progresses at their own pace while
+          staying motivated and engaged.
+        </p>
+        <p>
+          Throughout the class, we emphasize collaboration and creativity.
+          Students often work in pairs or small groups to complete mini-projects
+          or solve coding challenges, developing critical teamwork and
+          communication skills. We create a classroom culture where curiosity is
+          celebrated and mistakes are viewed as important learning moments.
+          Every session wraps up with a recap of key takeaways and a sneak peek
+          at what’s coming next. This helps students retain information and stay
+          excited about their learning journey. Whether online or in person, our
+          goal remains the same: to ensure every student walks away feeling
+          empowered, confident, and excited about coding.
         </p>
       </section>
 
@@ -28,7 +51,7 @@ export default function ModalitiesPage() {
         </h2>
         <div className="flex md:flex-row flex-col justify-center gap-8">
           {/* In-Person Card */}
-          <div className="flex flex-col flex-1 items-center bg-white shadow-lg p-6 rounded-2xl">
+          <div className="flex flex-col flex-1 items-center bg-card shadow-lg p-6 border border-border rounded-2xl text-card-foreground">
             {/* Placeholder for icon/image */}
             <div className="flex justify-center items-center bg-blue-100 mb-4 rounded-xl w-24 h-24">
               {/* Example: User group icon */}
@@ -43,7 +66,7 @@ export default function ModalitiesPage() {
             <h3 className="mb-2 font-semibold text-center text-xl">
               In-Person Classes
             </h3>
-            <ul className="space-y-2 text-center text-gray-700">
+            <ul className="space-y-2 text-center">
               <li>Face-to-face interaction with instructors and peers</li>
               <li>Hands-on activities and group projects</li>
               <li>Immediate feedback and support</li>
@@ -52,7 +75,7 @@ export default function ModalitiesPage() {
             </ul>
           </div>
           {/* Online Card */}
-          <div className="flex flex-col flex-1 items-center bg-white shadow-lg p-6 rounded-2xl">
+          <div className="flex flex-col flex-1 items-center bg-card shadow-lg p-6 border border-border rounded-2xl text-card-foreground">
             {/* Placeholder for icon/image */}
             <div className="flex justify-center items-center bg-purple-100 mb-4 rounded-xl w-24 h-24">
               {/* Example: Laptop icon */}
@@ -88,7 +111,7 @@ export default function ModalitiesPage() {
             <h3 className="mb-2 font-semibold text-center text-xl">
               Online Classes
             </h3>
-            <ul className="space-y-2 text-center text-gray-700">
+            <ul className="space-y-2 text-center">
               <li>Learn from anywhere with internet access</li>
               <li>Flexible scheduling and self-paced options</li>
               <li>Access to digital resources and recordings</li>
@@ -101,69 +124,100 @@ export default function ModalitiesPage() {
 
       <section className="mt-8">
         <h2>In-Person Classes</h2>
+        <h5>A hands-on, community-centered experience.</h5>
         <p>
-          In-person classes are held at our learning center, where students can
-          collaborate with peers and receive immediate feedback from
-          instructors. This setting fosters a sense of community and allows for
-          hands-on learning experiences.
+          Our in-person classes are hosted at our state-of-the-art learning
+          center, where students benefit from a dynamic, collaborative
+          environment designed to inspire creativity and confidence. Learning
+          face-to-face with instructors and peers allows for real-time
+          interaction, immediate support, and the kind of spontaneous
+          collaboration that deepens understanding and sparks innovation.
         </p>
         <p>
-          In-person classes are typically 2 hours long, with a break in the
-          middle. Students are encouraged to bring their own laptops, but we
-          also provide computers for those who need them. We recommend that
-          students arrive 10-15 minutes early to set up their workstations and
-          get settled before class begins.
+          Each session lasts approximately 2 hours, with a scheduled mid-class
+          break to help students recharge and stay focused. We encourage
+          students to arrive 10–15 minutes early to get settled, set up their
+          workstations, and ease into the learning environment. While students
+          are welcome to bring their own laptops, devices are available onsite
+          for those who need them—ensuring technology access is never a barrier
+          to learning Our in-person program is open to students ages 7 to 18,
+          and is thoughtfully structured to accommodate a range of experience
+          levels—from complete beginners to advanced coders. Whether your child
+          is just starting out or ready to dive into more complex topics like
+          game development or algorithms, our instructors tailor guidance to
+          meet each student’s needs.
         </p>
         <p>
-          In-person classes are available for students ages 7-18. We offer
-          classes for beginners as well as more advanced students. Our
-          instructors are experienced in working with students of all skill
-          levels and are dedicated to helping each student reach their full
-          potential.
+          Classroom instruction is highly interactive. Students are encouraged
+          to ask questions, participate in discussions, and work on both
+          individual and group projects. The classroom environment fosters
+          social learning, peer mentorship, and a tangible sense of progress
+          that motivates students to push their boundaries. Above all, our
+          in-person classes emphasize experiential, hands-on learning. Students
+          gain practical experience by building real-world applications,
+          experimenting with code, and solving challenges collaboratively. This
+          immersive approach doesn’t just teach coding—it cultivates
+          problem-solving, resilience, and a genuine excitement for technology.
         </p>
         <p>
-          In-person classes are a great way for students to learn coding in a
-          supportive and engaging environment. We believe that the best way to
-          learn is by doing, and our in-person classes provide plenty of
-          opportunities for hands-on learning.
+          In-person instruction is ideal for families seeking a structured,
+          high-engagement educational experience where learners benefit from
+          close mentorship, immediate feedback, and a vibrant learning
+          community.
         </p>
         <Button
           onClick={() => router.push("/curriculum/modalities/classroom-rules")}
         >
           View Our Classroom Rules
         </Button>
-        <p>
-          If you have any questions about our in-person classes, please feel
-          free to reach out to us. We are happy to provide more information and
-          help you find the right class for your child.
-        </p>
       </section>
 
       <section className="mt-8">
         <h2>Online Classes</h2>
+        <h5>Flexible, accessible, and just as powerful.</h5>
         <p>
-          Our online classes are designed to be interactive and engaging,
-          providing students with the flexibility to learn from home. Each
-          session includes live instruction, hands-on activities, and
-          opportunities for collaboration with peers.
+          Our online classes bring high-quality coding education directly into
+          your home. Designed to be both interactive and engaging, each session
+          delivers a full classroom experience in a virtual format—complete with
+          live instruction, collaborative projects, and personalized feedback.
+          This flexible approach allows students to learn in a familiar
+          environment while maintaining the structure and support of in-person
+          learning.
         </p>
         <p>
-          Online classes are typically 1 hour long, with a break in the middle.
-          Students will need a computer with internet access and a webcam for
-          participation. We recommend that students log in 5-10 minutes early to
-          ensure their technology is working properly.
+          Each online session is 1 hour long, with a brief break to help
+          students reset and stay focused. We recommend logging in 5–10 minutes
+          early to troubleshoot any technical issues and ensure a smooth start.
+          Students will need a computer with internet access, a webcam, and a
+          quiet workspace to participate fully. Our platform is easy to use, and
+          our support team is available to help with setup as needed. Our
+          virtual classrooms are open to students ages 7 to 18, with
+          differentiated instruction for beginners through advanced learners.
+          Lessons are crafted to build foundational skills and progressively
+          introduce more complex topics such as animations, game logic, and web
+          development. No matter their experience level, students receive
+          targeted support that challenges and motivates them.
         </p>
         <p>
-          Online classes are available for students ages 7-18. We offer classes
-          for beginners as well as more advanced students. Our instructors are
-          experienced in working with students of all skill levels and are
-          dedicated to helping each student reach their full potential.
+          What sets our online program apart is the interactive, hands-on
+          approach. Students don’t just watch—they actively code during every
+          session. Using screen sharing, breakout rooms, and real-time guidance,
+          instructors foster collaboration and encourage peer-to-peer learning.
+          Every project is an opportunity to experiment, build confidence, and
+          explore creativity.
         </p>
         <p>
-          Online classes provide a great opportunity for students to learn
-          coding in a flexible and convenient format. We believe that coding is
-          an essential skill for the future, and our online classes make it
-          accessible to everyone.
+          Online learning is more than just a convenience—it’s a gateway to
+          equitable, future-ready education. We are committed to making our
+          programs accessible to students everywhere, regardless of geographic
+          or logistical barriers. By offering a robust online curriculum, we
+          ensure that every child has the opportunity to develop critical tech
+          skills from the comfort of their own home.
+        </p>
+        <p>
+          Whether your child is new to coding or looking to deepen their skills,
+          our online classes provide a safe, engaging, and flexible path to
+          success in the digital world.
         </p>
         <Button
           onClick={() =>
@@ -172,10 +226,13 @@ export default function ModalitiesPage() {
         >
           View Our Privacy & Compliance Statement
         </Button>
+      </section>
+
+      <section className="mt-12 text-sm">
         <p>
-          If you have any questions about our online classes, please feel free
-          to reach out to us. We are happy to provide more information and help
-          you find the right class for your child.
+          If you have any questions about our in-person or online classes,
+          please feel free to reach out to us. We are happy to provide more
+          information and help you find the right class for your child.
         </p>
       </section>
     </div>
