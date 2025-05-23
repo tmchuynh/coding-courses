@@ -40,7 +40,8 @@ export type FAQSection = {
 
 export type Course = {
   courseName: string;
-  level?: string;
+  subtitle?: string;
+  level?: "Beginner" | "Intermediate" | "Advanced";
   category?: string;
   duration?: string;
   format?: string;
