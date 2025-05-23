@@ -1,3 +1,5 @@
+import { Schedules } from "../interfaces/courses";
+
 export type NotFoundContextType = {
   isNotFound: boolean;
   setNotFound: (value: boolean) => void;
@@ -47,14 +49,15 @@ export type Course = {
   next?: string[];
 };
 
-export type Schedule = {
-  duration: string;
-  weeklySessions: string;
-  sessionLength: string;
-  options: string[];
+export type Times = {
+  durationWeeks: number;
+  startTime: string;
+  endTime: string;
+  days: string[];
+  options?: string[];
 };
 
 export type CourseSchedule = {
   ageGroup: string;
-  schedules: CourseSchedule[];
+  schedules: Schedules[];
 };
