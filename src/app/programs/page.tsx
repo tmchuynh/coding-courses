@@ -16,12 +16,17 @@ function getCoursesByCategory() {
   > = {};
   for (const group of curriculumCourses) {
     for (const course of group.courses) {
-      if (!categoryMap[course.category]) categoryMap[course.category] = [];
-      categoryMap[course.category].push({
-        courseName: course.courseName,
-        level: (course as any).level,
-        ageGroup: group.title,
-      });
+      const category = course.category;
+      if (typeof category === "string") {
+        if (!categoryMap[category]) {
+          categoryMap[category] = [];
+        }
+        categoryMap[category].push({
+          courseName: course.courseName,
+          level: (course as any).level,
+          ageGroup: group.title,
+        });
+      }
     }
   }
   return categoryMap;
