@@ -1,5 +1,6 @@
 "use client";
 
+import { Timeline } from "@/components/ui/timeline";
 import { learningRoadmap } from "@/lib/constants/courses/learningRoadmap";
 import { useState } from "react";
 
@@ -32,11 +33,7 @@ export default function LearningTracksPage() {
           <div key={index} className="mb-8">
             <h2>{roadmap.title}</h2>
             <div className="relative pl-6">
-              <ul className="space-y-8">
-                {roadmap.courses.map((course, index) => (
-                  <div key={index}></div>
-                ))}
-              </ul>
+              <Timeline data={roadmap.courses} key={index} />
             </div>
           </div>
         ))}
