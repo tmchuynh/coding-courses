@@ -14,7 +14,7 @@ import { NotFoundProvider } from "../context/NotFoundContext";
  */
 export function Providers({ children }: { children: ReactNode }): JSX.Element {
   return (
-    <ThemeProvider attribute="class" defaultTheme="light" enableSystem={true}>
+    <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
       <NotFoundProvider>{children}</NotFoundProvider>
     </ThemeProvider>
   );
