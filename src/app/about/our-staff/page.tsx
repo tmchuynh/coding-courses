@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function TeamPage() {
   return (
     <div className="mx-auto pt-8 md:pt-12 lg:pt-24 w-10/12 md:w-11/12">
-      <h1>Our Team</h1>
+      <h1>The People Behind the Code</h1>
       <h5>
         Experienced educators. Passionate technologists. Dedicated mentors.
       </h5>
