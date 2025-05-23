@@ -170,7 +170,7 @@ export default function ModalitiesPage() {
             router.push("/curriculum/modalities/privacy-and-compliance")
           }
         >
-          View Our Classroom Rules
+          View Our Privacy & Compliance Statement
         </Button>
         <p>
           If you have any questions about our online classes, please feel free
