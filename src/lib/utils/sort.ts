@@ -13,6 +13,17 @@ export function featuredArray(array: any[]) {
   return array.filter((item) => item?.featured === true);
 }
 
+export function sortByLength(
+  array: string[],
+  ascending: boolean = true
+): string[] {
+  return [...array].sort((a, b) => {
+    const lengthA = a.length;
+    const lengthB = b.length;
+    return ascending ? lengthA - lengthB : lengthB - lengthA;
+  });
+}
+
 export function sortByProperty<T>(
   array: T[],
   property: keyof T,
