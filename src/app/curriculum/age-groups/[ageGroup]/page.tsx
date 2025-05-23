@@ -27,8 +27,20 @@ export default function AgeGroupSchedulePage() {
     return Array.from(set).sort();
   }, [group]);
 
+  // Gather all unique days options from the group's courses
+  const daysOptions = useMemo(() => {
+    if (!group) return [];
+    const set = new Set<string>();
+    group.schedules.forEach((course) => {
+      course.schedule.days.forEach((day: string) => set.add(day));
+    });
+    return Array.from(set).sort();
+  }, [group]);
+
   // State for selected includes filters
   const [selectedIncludes, setSelectedIncludes] = useState<string[]>([]);
+  // State for selected days filters
+  const [selectedDays, setSelectedDays] = useState<string[]>([]);
 
   // Handler for toggling includes filter
   const handleIncludesChange = (inc: string) => {
@@ -37,14 +49,29 @@ export default function AgeGroupSchedulePage() {
     );
   };
 
-  // Filtered courses based on selected includes
+  // Handler for toggling days filter
+  const handleDaysChange = (day: string) => {
+    setSelectedDays((prev) =>
+      prev.includes(day) ? prev.filter((d) => d !== day) : [...prev, day]
+    );
+  };
+
+  // Filtered courses based on selected includes and days
   const filteredCourses = useMemo(() => {
     if (!group) return [];
-    if (selectedIncludes.length === 0) return group.schedules;
-    return group.schedules.filter((course) =>
-      selectedIncludes.every((inc) => course.includes.includes(inc))
-    );
-  }, [group, selectedIncludes]);
+    let courses = group.schedules;
+    if (selectedIncludes.length > 0) {
+      courses = courses.filter((course) =>
+        selectedIncludes.every((inc) => course.includes.includes(inc))
+      );
+    }
+    if (selectedDays.length > 0) {
+      courses = courses.filter((course) =>
+        selectedDays.every((day) => course.schedule.days.includes(day))
+      );
+    }
+    return courses;
+  }, [group, selectedIncludes, selectedDays]);
 
   if (!group) {
     return <div className="p-8">No schedule found for this age group.</div>;
@@ -67,6 +94,21 @@ export default function AgeGroupSchedulePage() {
               onChange={() => handleIncludesChange(inc)}
             />
             {inc}
+          </label>
+        ))}
+      </div>
+      {/* Days filter UI */}
+      <div className="mb-6">
+        <span className="mr-2 font-semibold">Filter by Days:</span>
+        {daysOptions.map((day) => (
+          <label key={day} className="inline-flex items-center mr-4">
+            <input
+              type="checkbox"
+              className="mr-1"
+              checked={selectedDays.includes(day)}
+              onChange={() => handleDaysChange(day)}
+            />
+            {day}
           </label>
         ))}
       </div>
