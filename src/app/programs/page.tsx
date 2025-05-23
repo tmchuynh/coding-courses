@@ -1,3 +1,6 @@
+"use client";
+
+import DynamicCTA from "@/components/CTAs/DynamicCTA";
 import {
   Accordion,
   AccordionContent,
@@ -5,10 +8,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { faqs } from "@/lib/constants/faqs";
+import { formatToSlug } from "@/lib/utils/format";
 import { CATEGORY_LABELS, getCoursesByCategory } from "@/lib/utils/get";
+import { useRouter } from "next/navigation";
 
 export default function ProgramsPage() {
   const coursesByCategory = getCoursesByCategory();
+  const router = useRouter();
 
   // Find the "Course Catalog FAQs" section
   const courseCatalogFaqSection = faqs.find(
@@ -33,6 +39,14 @@ export default function ProgramsPage() {
         with tools and projects aligned to their interests and developmental
         stage, fostering both confidence and competence in coding.
       </p>
+      <p className="mb-4 italic">
+        Click on the course title to learn more about what the program entails
+        and view the current schedule(s) available
+      </p>
+      <div className="flex lg:flex-row flex-col gap-3">
+        <DynamicCTA variant="enroll-today" />
+        <DynamicCTA variant="summer-camp" />
+      </div>
       <div className="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto pt-8 lg:pt-12">
         {Object.entries(coursesByCategory).map(([category, courses]) => (
           <div
@@ -53,7 +67,18 @@ export default function ProgramsPage() {
                   key={idx}
                   className="pb-2 last:pb-0 border-b last:border-b-0"
                 >
-                  <span className="font-medium">{course.courseName}</span>
+                  <span
+                    className="font-medium underline-offset-2 hover:underline"
+                    onClick={() =>
+                      router.push(
+                        `programs/courses/${formatToSlug(
+                          course.ageGroup
+                        )}/${formatToSlug(course.courseName)}`
+                      )
+                    }
+                  >
+                    {course.courseName}
+                  </span>
                   <span className="ml-2 text-gray-400 text-xs">
                     {course.level ? `(${course.level})` : ""}
                   </span>
