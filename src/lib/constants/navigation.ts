@@ -42,6 +42,10 @@ export const navbarItems = [
     href: "/programs",
     dropdown: [
       {
+        label: "Overview",
+        href: "/programs",
+      },
+      {
         label: "Learning Tracks",
         href: "/programs/tracks",
       },
@@ -57,16 +61,16 @@ export const navbarItems = [
         label: "After-School",
         href: "/programs/after-school",
       },
-      {
-        label: "In-Person vs Online",
-        href: "/programs/modalities",
-      },
     ],
   },
   {
     label: "Curriculum",
     href: "/curriculum",
     dropdown: [
+      {
+        label: "Our Curriculum Approach",
+        href: "/curriculum",
+      },
       {
         label: "By Age Group",
         href: "/curriculum/age-groups",
@@ -79,12 +83,20 @@ export const navbarItems = [
         label: "Educational Philosophy",
         href: "/curriculum/philosophy",
       },
+      {
+        label: "In-Person vs Online",
+        href: "/curriculum/modalities",
+      },
     ],
   },
   {
     label: "About",
     href: "/about",
     dropdown: [
+      {
+        label: "Our Company",
+        href: "/about",
+      },
       {
         label: "Our Mission",
         href: "/about/mission",
