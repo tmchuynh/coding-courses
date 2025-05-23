@@ -97,7 +97,7 @@ export const pricingPlans = [
   {
     planType: "Optional Add-Ons",
     items: [
-      { name: "1-on-1 Private Tutoring", price: "50/hr or $180 for 4-pack" },
+      { name: "1-on-1 Private Tutoring", price: "$50/hr or $180 for 4-pack" },
       { name: "Parent Workshop (online)", price: "$59/session" },
       { name: "Hardware Kit (optional for Grades 3+)", price: "$79" },
       { name: "Scholar Pack (income-based)", price: "Apply for up to 75% off" },
