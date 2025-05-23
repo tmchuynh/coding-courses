@@ -9,10 +9,15 @@ import {
 } from "@heroicons/react/20/solid";
 import { useState } from "react";
 import { ThemeToggle } from "./button/ThemeToggle";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
     <header className="top-0 z-50 absolute inset-x-0 bg-background">
@@ -44,35 +49,29 @@ export default function Header() {
         <div className="lg:flex lg:gap-x-6 hidden">
           {navbarItems.map((item) =>
             item.dropdown ? (
-              <div
-                key={item.label}
-                className="group relative"
-                onMouseEnter={() => setOpenDropdown(item.label)}
-                onMouseLeave={() => setOpenDropdown(null)}
-              >
-                <button
-                  className="flex items-center gap-1 font-semibold text-sm/6"
-                  type="button"
-                >
-                  {item.label}
-                  <ChevronDownIcon className="w-4 h-4" />
-                </button>
-                <div
-                  className={`absolute left-0 mt-2 min-w-[180px] bg-popover text-popover-foreground shadow-lg rounded-md py-2 z-50 ${
-                    openDropdown === item.label ? "block" : "hidden"
-                  }`}
-                >
+              <DropdownMenu key={item.label}>
+                <DropdownMenuTrigger asChild>
+                  <button
+                    className="flex items-center gap-1 font-semibold text-sm/6"
+                    type="button"
+                  >
+                    {item.label}
+                    <ChevronDownIcon className="w-4 h-4" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="min-w-[180px]">
                   {item.dropdown.map((sub) => (
-                    <a
-                      key={sub.label}
-                      href={sub.href}
-                      className="block hover:bg-gray-100 px-4 py-2 text-sm"
-                    >
-                      {sub.label}
-                    </a>
+                    <DropdownMenuItem asChild key={sub.label}>
+                      <a
+                        href={sub.href}
+                        className="block px-4 py-2 text-sm"
+                      >
+                        {sub.label}
+                      </a>
+                    </DropdownMenuItem>
                   ))}
-                </div>
-              </div>
+                </DropdownMenuContent>
+              </DropdownMenu>
             ) : (
               <a
                 key={item.label}
