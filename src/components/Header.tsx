@@ -1,15 +1,21 @@
 "use client";
 
-import { navigation } from "@/lib/constants/navigation";
+import { navbarItems } from "@/lib/constants/navigation";
 import { Dialog, DialogPanel } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
+import {
+  Bars3Icon,
+  ChevronDownIcon,
+  XMarkIcon,
+} from "@heroicons/react/20/solid";
 import { useState } from "react";
+import { ThemeToggle } from "./button/ThemeToggle";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
-    <header className="top-0 z-50 absolute inset-x-0">
+    <header className="top-0 z-50 absolute inset-x-0 bg-background">
       <nav
         aria-label="Global"
         className="flex justify-between items-center lg:px-8 p-6"
@@ -28,36 +34,71 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="inline-flex justify-center items-center -m-2.5 p-2.5 rounded-md text-gray-700"
+            className="inline-flex justify-center items-center -m-2.5 p-2.5 rounded-md"
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon aria-hidden="true" className="size-6" />
           </button>
         </div>
-        <div className="lg:flex lg:gap-x-12 hidden">
-          {navigation.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="font-semibold text-gray-900 text-sm/6"
-            >
-              {item.name}
-            </a>
-          ))}
+        {/* Desktop Navbar */}
+        <div className="lg:flex lg:gap-x-6 hidden">
+          {navbarItems.map((item) =>
+            item.dropdown ? (
+              <div
+                key={item.label}
+                className="group relative"
+                onMouseEnter={() => setOpenDropdown(item.label)}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
+                <button
+                  className="flex items-center gap-1 font-semibold text-sm/6"
+                  type="button"
+                >
+                  {item.label}
+                  <ChevronDownIcon className="w-4 h-4" />
+                </button>
+                <div
+                  className={`absolute left-0 mt-2 min-w-[180px] bg-popover text-popover-foreground shadow-lg rounded-md py-2 z-50 ${
+                    openDropdown === item.label ? "block" : "hidden"
+                  }`}
+                >
+                  {item.dropdown.map((sub) => (
+                    <a
+                      key={sub.label}
+                      href={sub.href}
+                      className="block hover:bg-gray-100 px-4 py-2 text-sm"
+                    >
+                      {sub.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <a
+                key={item.label}
+                href={item.href}
+                className="font-semibold text-sm/6"
+              >
+                {item.label}
+              </a>
+            )
+          )}
         </div>
         <div className="lg:flex lg:flex-1 lg:justify-end hidden">
-          <a href="#" className="font-semibold text-gray-900 text-sm/6">
+          <a href="#" className="font-semibold text-sm/6">
             Log in <span aria-hidden="true">&rarr;</span>
           </a>
+          <ThemeToggle />
         </div>
       </nav>
+      {/* Mobile Navbar */}
       <Dialog
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
         className="lg:hidden"
       >
         <div className="z-50 fixed inset-0" />
-        <DialogPanel className="right-0 z-50 fixed inset-y-0 bg-white px-6 py-6 sm:ring-1 sm:ring-gray-900/10 w-full sm:max-w-sm overflow-y-auto">
+        <DialogPanel className="right-0 z-50 fixed inset-y-0 px-6 py-6 sm:ring-1 sm:ring-gray-900/10 w-full sm:max-w-sm overflow-y-auto">
           <div className="flex justify-between items-center">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
@@ -70,7 +111,7 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
-              className="-m-2.5 p-2.5 rounded-md text-gray-700"
+              className="-m-2.5 p-2.5 rounded-md"
             >
               <span className="sr-only">Close menu</span>
               <XMarkIcon aria-hidden="true" className="size-6" />
@@ -79,20 +120,42 @@ export default function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="block hover:bg-gray-50 -mx-3 px-3 py-2 rounded-lg font-semibold text-base/7 text-gray-900"
-                  >
-                    {item.name}
-                  </a>
-                ))}
+                {navbarItems.map((item) =>
+                  item.dropdown ? (
+                    <div key={item.label}>
+                      <details>
+                        <summary className="block flex justify-between items-center hover:bg-gray-50 -mx-3 px-3 py-2 rounded-lg font-semibold text-base/7 cursor-pointer">
+                          {item.label}
+                          <ChevronDownIcon className="inline ml-2 w-4 h-4" />
+                        </summary>
+                        <div className="pl-4">
+                          {item.dropdown.map((sub) => (
+                            <a
+                              key={sub.label}
+                              href={sub.href}
+                              className="block hover:bg-gray-50 -mx-3 px-3 py-2 rounded-lg text-sm"
+                            >
+                              {sub.label}
+                            </a>
+                          ))}
+                        </div>
+                      </details>
+                    </div>
+                  ) : (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      className="block hover:bg-gray-50 -mx-3 px-3 py-2 rounded-lg font-semibold text-base/7"
+                    >
+                      {item.label}
+                    </a>
+                  )
+                )}
               </div>
               <div className="py-6">
                 <a
                   href="#"
-                  className="block hover:bg-gray-50 -mx-3 px-3 py-2.5 rounded-lg font-semibold text-base/7 text-gray-900"
+                  className="block hover:bg-gray-50 -mx-3 px-3 py-2.5 rounded-lg font-semibold text-base/7"
                 >
                   Log in
                 </a>

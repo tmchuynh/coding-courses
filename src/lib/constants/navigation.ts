@@ -30,3 +30,103 @@ export const navigation = [
   { name: "Marketplace", href: "#" },
   { name: "Company", href: "#" },
 ];
+
+
+export const navbarItems = [
+  {
+    label: "Home",
+    href: "/",
+  },
+  {
+    label: "Programs",
+    href: "/programs",
+    dropdown: [
+      {
+        label: "Learning Tracks",
+        href: "/programs/tracks",
+      },
+      {
+        label: "Course Catalog",
+        href: "/programs/courses",
+      },
+      {
+        label: "Summer Camps",
+        href: "/programs/summer-camps",
+      },
+      {
+        label: "After-School",
+        href: "/programs/after-school",
+      },
+      {
+        label: "In-Person vs Online",
+        href: "/programs/modalities",
+      },
+    ],
+  },
+  {
+    label: "Curriculum",
+    href: "/curriculum",
+    dropdown: [
+      {
+        label: "By Age Group",
+        href: "/curriculum/age-groups",
+      },
+      {
+        label: "Technology Stack",
+        href: "/curriculum/tech-stack",
+      },
+      {
+        label: "Educational Philosophy",
+        href: "/curriculum/philosophy",
+      },
+    ],
+  },
+  {
+    label: "About",
+    href: "/about",
+    dropdown: [
+      {
+        label: "Our Mission",
+        href: "/about/mission",
+      },
+      {
+        label: "Our Team",
+        href: "/about/team",
+      },
+      {
+        label: "Careers",
+        href: "/about/careers",
+      },
+      {
+        label: "Community Impact",
+        href: "/about/impact",
+      },
+    ],
+  },
+  {
+    label: "Resources",
+    href: "/resources",
+    dropdown: [
+      {
+        label: "Parent Guide",
+        href: "/resources/parent-guide",
+      },
+      {
+        label: "Blog",
+        href: "/resources/blog",
+      },
+      {
+        label: "FAQs",
+        href: "/resources/faqs",
+      },
+    ],
+  },
+  {
+    label: "Contact",
+    href: "/contact",
+  },
+  {
+    label: "Enroll Now",
+    href: "/enroll",
+  },
+];
