@@ -1,15 +1,10 @@
 "use client";
+import { Course } from "@/lib/types/types";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
-interface RoadmapCourse {
-  courseName: string;
-  focus: string[];
-  outcomes: string[];
-}
-
 interface TimelineProps {
-  data: RoadmapCourse[];
+  data: Course[];
   title?: string;
 }
 
@@ -34,15 +29,10 @@ export const Timeline = ({ data, title }: TimelineProps) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div
-      className="bg-white dark:bg-neutral-950 md:px-10 w-full font-sans"
-      ref={containerRef}
-    >
+    <div className="md:px-10 w-full font-sans" ref={containerRef}>
       {title && (
         <div className="mx-auto px-4 md:px-8 lg:px-10 py-8 max-w-7xl">
-          <h2 className="mb-4 max-w-4xl text-black text-lg md:text-3xl dark:text-white">
-            {title}
-          </h2>
+          <h2 className="mb-4 max-w-4xl text-lg md:text-3xl">{title}</h2>
         </div>
       )}
 
@@ -53,8 +43,10 @@ export const Timeline = ({ data, title }: TimelineProps) => {
             className="flex justify-start md:gap-10 pt-10 md:pt-24"
           >
             <div className="top-24 z-40 sticky flex md:flex-row flex-col items-center md:w-full max-w-xs lg:max-w-sm self-start">
-              <div className="left-3 md:left-3 absolute flex justify-center items-center bg-white dark:bg-black rounded-full w-10 h-10">
-                <div className="bg-neutral-200 dark:bg-neutral-800 p-2 border border-neutral-300 dark:border-neutral-700 rounded-full w-4 h-4" />
+              <div className="left-3 md:left-3 absolute flex justify-center items-center rounded-full w-10 h-10">
+                <div className="flex justify-center items-center bg-neutral-200 dark:bg-neutral-800 p-2 rounded-full w-8 h-8">
+                  {index + 1}
+                </div>
               </div>
               <h3 className="md:block hidden md:pl-20 font-bold text-neutral-500 text-xl md:text-2xl dark:text-neutral-500">
                 {item.courseName}
@@ -68,7 +60,7 @@ export const Timeline = ({ data, title }: TimelineProps) => {
               <div className="mb-2">
                 <span className="font-semibold text-indigo-600">Focus:</span>
                 <ul className="ml-6 text-neutral-800 dark:text-neutral-200 list-disc">
-                  {item.focus.map((f, i) => (
+                  {item.focus?.map((f, i) => (
                     <li key={i}>{f}</li>
                   ))}
                 </ul>
