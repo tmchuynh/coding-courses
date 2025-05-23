@@ -70,3 +70,17 @@ export type Metrics = {
   value: string;
   description: string;
 };
+
+export type Staff = {
+  name: string;
+  title: string;
+  bio: string;
+  image: string;
+};
+
+export type StaffTeams = {
+  category: string;
+  subtitle?: string;
+  description?: string;
+  members: Staff[];
+};

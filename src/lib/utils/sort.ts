@@ -56,9 +56,10 @@ export function groupAndSortByProperties<T>(
   array: T[],
   groupByProperty: keyof T,
   sortByPropertyKey?: keyof T,
-  ascending: boolean = true,
+  sortAscending: boolean = true,
   sortByLength: boolean = false,
-  groupByLength: boolean = false
+  groupByLength: boolean = false,
+  groupAscending: boolean = false
 ): T[] {
   // Group the array by the specified property or by the length of the property
   const grouped = array.reduce((acc, item) => {
@@ -75,13 +76,20 @@ export function groupAndSortByProperties<T>(
 
   // Sort the group keys to ensure the groups are processed in the correct order
   const sortedKeys = Object.keys(grouped).sort((a, b) => {
-    const numA = parseInt(a, 10);
-    const numB = parseInt(b, 10);
-    return groupByLength
-      ? ascending
-        ? numA - numB
-        : numB - numA
-      : a.localeCompare(b);
+    if (groupByLength) {
+      const numA = parseInt(a, 10);
+      const numB = parseInt(b, 10);
+      return groupAscending ? numA - numB : numB - numA;
+    } else {
+      // Try to compare as numbers if possible, else as strings
+      const isNumA = !isNaN(Number(a));
+      const isNumB = !isNaN(Number(b));
+      if (isNumA && isNumB) {
+        return groupAscending ? Number(a) - Number(b) : Number(b) - Number(a);
+      }
+      // Otherwise, compare as strings
+      return groupAscending ? a.localeCompare(b) : b.localeCompare(a);
+    }
   });
 
   // Sort each group by the specified property or by the length of the property
@@ -92,7 +100,7 @@ export function groupAndSortByProperties<T>(
           (a[sortByPropertyKey!] as unknown as string)?.length || 0;
         const lengthB =
           (b[sortByPropertyKey!] as unknown as string)?.length || 0;
-        return ascending ? lengthA - lengthB : lengthB - lengthA;
+        return sortAscending ? lengthA - lengthB : lengthB - lengthA;
       });
     } else if (sortByPropertyKey) {
       return [...grouped[key]].sort((a, b) => {
@@ -108,17 +116,17 @@ export function groupAndSortByProperties<T>(
         ) {
           const dateA = new Date(valueA);
           const dateB = new Date(valueB);
-          return ascending
+          return sortAscending
             ? dateA.getTime() - dateB.getTime()
             : dateB.getTime() - dateA.getTime();
         }
 
         // Default sorting for non-date properties
         if (valueA < valueB) {
-          return ascending ? -1 : 1;
+          return sortAscending ? -1 : 1;
         }
         if (valueA > valueB) {
-          return ascending ? 1 : -1;
+          return sortAscending ? 1 : -1;
         }
         return 0;
       });
