@@ -69,6 +69,48 @@ export default function PrivacyAndCompliancePage() {
           </p>
         </section>
         <section>
+          <h2>Cookies & Tracking Technologies</h2>
+          <p>
+            We use cookies and similar tracking technologies to enhance your
+            experience, analyze usage, and deliver relevant content. You can
+            manage your cookie preferences through your browser settings.
+          </p>
+        </section>
+        <section>
+          <h2>Third-Party Services</h2>
+          <p>
+            We may use third-party services (such as analytics providers or
+            payment processors) that collect, process, and store your
+            information according to their own privacy policies. We recommend
+            reviewing those policies for more information.
+          </p>
+        </section>
+        <section>
+          <h2>Data Retention</h2>
+          <p>
+            We retain your personal information only as long as necessary to
+            fulfill the purposes outlined in this policy, comply with legal
+            obligations, resolve disputes, and enforce our agreements.
+          </p>
+        </section>
+        <section>
+          <h2>Children’s Privacy</h2>
+          <p>
+            Our services are not directed to children under the age of 13. We do
+            not knowingly collect personal information from children. If you
+            believe a child has provided us with personal information, please
+            contact us so we can take appropriate action.
+          </p>
+        </section>
+        <section>
+          <h2>Updates to This Policy</h2>
+          <p>
+            We may update this Privacy & Compliance policy from time to time.
+            Any changes will be posted on this page with an updated effective
+            date. We encourage you to review this page periodically.
+          </p>
+        </section>
+        <section>
           <h2>Contact Us</h2>
           <p>
             If you have any questions or concerns about our privacy practices or
