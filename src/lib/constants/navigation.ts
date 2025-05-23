@@ -46,6 +46,10 @@ export const navbarItems = [
         href: "/programs",
       },
       {
+        label: "Pricing Plans",
+        href: "/programs/pricing-plans",
+      },
+      {
         label: "Learning Tracks",
         href: "/programs/tracks",
       },
@@ -123,11 +127,11 @@ export const navbarItems = [
         label: "Blog",
         href: "/resources/blog",
       },
-      {
-        label: "FAQs",
-        href: "/resources/faqs",
-      },
     ],
+  },
+  {
+    label: "FAQs",
+    href: "/frequently-asked-questions",
   },
   {
     label: "Contact",
