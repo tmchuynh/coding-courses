@@ -5,6 +5,8 @@ export const capitalize = (str: string) => {
     .replace(/\b[a-zA-Z]/g, (char) => char.toUpperCase());
 };
 
+
+
 export const formatDate = (date: string): string => {
   const options: Intl.DateTimeFormatOptions = {
     year: "numeric",
@@ -51,4 +53,22 @@ export function formatNumberToCurrency(
     minimumFractionDigits: min || 0,
     maximumFractionDigits: max || 0,
   }).format(value);
+}
+
+export function formatToSlug(str: string): string {
+  return str
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+export function formatGradeRangeSlug(slug: string): string {
+  // Match "grades-k-2" or "grades-3-5" etc.
+  const match = slug.match(/^grades-([a-zA-Z0-9]+)-([a-zA-Z0-9]+)$/);
+  if (!match) return slug;
+  const [_, start, end] = match;
+  // Capitalize K if present, otherwise just use as is
+  const formatPart = (part: string) =>
+    part.length === 1 ? part.toUpperCase() : part;
+  return `Grades ${formatPart(start)}–${formatPart(end)}`;
 }
