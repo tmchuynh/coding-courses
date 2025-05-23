@@ -88,11 +88,11 @@ export default function CourseDetailPage() {
 
   return (
     <div className="mx-auto pt-8 md:pt-12 lg:pt-16 w-10/12 md:w-11/12">
-      <h1 className="mb-2 font-bold text-3xl">{curriculumCourse.courseName}</h1>
-      <h3>{curriculumGroupTitle}</h3>
+      <h1>{curriculumCourse.courseName}</h1>
+      <h5>{curriculumGroupTitle}</h5>
       <p>{curriculumCourse.description}</p>
       <div className="mb-4">
-        <h4>Focus:</h4>
+        <h3>Focus:</h3>
         <ul className="ml-6 list-disc">
           {focus.map((f, i) => (
             <li key={i}>{f}</li>
@@ -100,7 +100,7 @@ export default function CourseDetailPage() {
         </ul>
       </div>
       <div className="mb-4">
-        <h4>Outcomes:</h4>
+        <h3>Outcomes:</h3>
         <ul className="ml-6 list-disc">
           {outcomes.map((o, i) => (
             <li key={i}>{o}</li>
@@ -109,7 +109,7 @@ export default function CourseDetailPage() {
       </div>
       {curriculumCourse.next && curriculumCourse.next.length > 0 && (
         <div className="mb-4">
-          <h4>Next Courses:</h4>
+          <h3>Next Courses:</h3>
           <ul className="ml-6 list-disc">
             {curriculumCourse.next.map((n: string, i: number) => {
               const ageGroup = findAgeGroupForCourse(n);
@@ -139,12 +139,8 @@ export default function CourseDetailPage() {
 
       {scheduleCourse && (
         <div className="mt-6 mb-4 pt-6 border-t">
-          <h2 className="mb-2 font-bold text-xl">Current Schedule</h2>
-          {scheduleCourse.subtitle && (
-            <div className="mb-1 text-indigo-700">
-              {scheduleCourse.subtitle}
-            </div>
-          )}
+          <h2>Current Schedule</h2>
+          {scheduleCourse.subtitle && <h4>{scheduleCourse.subtitle}</h4>}
           <div className="mb-2 text-gray-700">{scheduleCourse.description}</div>
           <div className="mb-2">
             <span className="font-semibold">Format:</span>{" "}
