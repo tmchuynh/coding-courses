@@ -13,8 +13,9 @@ import {
   ChevronDownIcon,
   XMarkIcon,
 } from "@heroicons/react/20/solid";
+import Image from "next/image";
 import { useState } from "react";
-import { ThemeToggle } from "./button/ThemeToggle";
+import { ThemeToggle } from "../button/ThemeToggle";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -28,10 +29,12 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img
+            <Image
               alt=""
               src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
               className="w-auto h-8"
+              width={32}
+              height={32}
             />
           </a>
         </div>
@@ -46,7 +49,7 @@ export default function Header() {
           </button>
         </div>
         {/* Desktop Navbar */}
-        <div className="lg:flex lg:gap-x-6 hidden">
+        <div className="lg:flex items-center lg:gap-x-6 hidden">
           {navbarItems.map((item) =>
             item.dropdown ? (
               <DropdownMenu key={item.label}>
@@ -79,8 +82,8 @@ export default function Header() {
               </a>
             )
           )}
+          <ThemeToggle />
         </div>
-        <ThemeToggle />
       </nav>
       {/* Mobile Navbar */}
       <Dialog
@@ -88,7 +91,7 @@ export default function Header() {
         onClose={setMobileMenuOpen}
         className="lg:hidden"
       >
-        <div className="z-50 fixed inset-0" />
+        <div className="z-50 fixed inset-0 bg-background" />
         <DialogPanel className="right-0 z-50 fixed inset-y-0 px-6 py-6 sm:ring-1 sm:ring-gray-900/10 w-full sm:max-w-sm overflow-y-auto">
           <div className="flex justify-between items-center">
             <a href="#" className="-m-1.5 p-1.5">
