@@ -5,12 +5,8 @@ import { learningRoadmap } from "@/lib/constants/courses/learningRoadmap";
 import { yearRoundSchedule } from "@/lib/constants/courses/yearRoundSchedule";
 import { capitalize, formatToSlug } from "@/lib/utils/format";
 import { findAgeGroupForCourse } from "@/lib/utils/get";
-import { sortByLength } from "@/lib/utils/sort";
+import { sortByLength, uniqueArray } from "@/lib/utils/sort";
 import { useParams, useRouter } from "next/navigation";
-
-function uniqueArray(arr: string[]) {
-  return Array.from(new Set(arr));
-}
 
 export default function CourseDetailPage() {
   const params = useParams();
@@ -93,7 +89,7 @@ export default function CourseDetailPage() {
   console.log("scheduleGroup", scheduleGroup);
 
   return (
-    <div className="mx-auto pt-8 md:pt-12 lg:pt-16 w-10/12 md:w-11/12">
+    <div className="mx-auto pt-8 md:pt-12 lg:pt-24 w-10/12 md:w-11/12">
       <h1>{curriculumCourse.courseName}</h1>
       <h5>
         {scheduleCourse.subtitle && <>{scheduleCourse.subtitle}</>}
