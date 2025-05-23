@@ -3,7 +3,7 @@ import { CourseSchedule } from "@/lib/types/types";
 // Grades K–2
 export const yearRoundSchedule: CourseSchedule[] = [
   {
-    ageGroup: "Grades 9-12",
+    ageGroup: "Grades K–2",
     schedules: [
       {
         courseName: "Code Through Stories",
@@ -166,7 +166,7 @@ export const yearRoundSchedule: CourseSchedule[] = [
 
   // Grades 3–5
   {
-    ageGroup: "Grades 9-12",
+    ageGroup: "Grades 3–5",
     schedules: [
       {
         courseName: "Game Builders Club",
@@ -329,7 +329,7 @@ export const yearRoundSchedule: CourseSchedule[] = [
 
   // Grades 6–8
   {
-    ageGroup: "Grades 9-12",
+    ageGroup: "Grades 6–8",
     schedules: [
       {
         courseName: "Game Studio",
