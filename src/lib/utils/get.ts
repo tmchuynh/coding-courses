@@ -13,10 +13,13 @@ export function findAgeGroupForCourse(courseName: string): string | undefined {
 export const CATEGORY_LABELS: Record<string, string> = {
   "block-coding": "Block Coding",
   "game-dev": "Game Development",
-  "web-dev": "Web Development",
+  "web-and-app-dev": "Web & App Development",
   hardware: "Hardware & Robotics",
   business: "Business & Entrepreneurship",
-  ai: "AI & Algorithms",
+  "college-prep": "College Prep",
+  "app-dev": "App Development",
+  "cyber-security": "Cyber Security",
+  "data-science-ml-ai": "Data Science, ML & AI",
 };
 
 export function getCoursesByCategory() {
