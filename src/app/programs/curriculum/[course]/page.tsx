@@ -48,7 +48,7 @@ export default function CurriculumPage() {
       <h1>{courseTitle} Curriculum Preview</h1>
       <h5>
         {curriculumData.length} Week
-        {curriculumData.length > 1 ? "s" : ""} Available
+        {curriculumData.length > 1 ? "s" : ""} of Curriculum Available
         {curriculumData.length > 0 && ` for ${courseTitle}`}
       </h5>
       <p>
@@ -59,79 +59,97 @@ export default function CurriculumPage() {
       </p>
 
       <div className="flex flex-col gap-9">
-        <div className="border rounded-md overflow-auto">
-          <table className="min-w-full text-left text-sm">
-            <thead className="font-semibold text-xs uppercase tracking-wide">
-              <tr>
-                <th className="px-4 py-3 text-center">
-                  <h4>Week</h4>
-                </th>
-                <th className="px-4 py-3">
-                  <h4>Topic</h4>
-                </th>
-                <th className="hidden px-4 py-3 md:table-cell">
-                  <h4>Focus</h4>
-                </th>
-                <th className="hidden px-4 py-3 lg:table-cell">
-                  <h4>Outcomes</h4>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {curriculumData.map((weekItem) => (
-                <tr
-                  key={weekItem.week}
-                  className="hover:bg-muted border-t hover:text-muted-foreground"
-                >
-                  <td className="px-4 py-3 w-1/14 font-medium text-center">
-                    {weekItem.week}
-                  </td>
-                  <td className="px-4 py-3 w-1/5 font-semibold text-pretty">
-                    {weekItem.title}
-                  </td>
-                  <td className="hidden px-4 py-3 w-2/5 md:table-cell">
-                    {weekItem.focus}
-                  </td>
-                  <td className="hidden px-4 py-3 lg:table-cell">
-                    {weekItem.outcomes}
-                  </td>
+        <div>
+          <h2>Tentative Course Schedule</h2>
+          <p className="mb-4">
+            The following table outlines the weekly projects and their
+            descriptions. Please note that this schedule is subject to change
+            based on the course's progress and student needs.
+          </p>
+
+          <div className="mt-4 border rounded-md overflow-auto">
+            <table className="min-w-full text-left text-sm">
+              <thead className="font-semibold text-xs uppercase tracking-wide">
+                <tr>
+                  <th className="px-4 py-3 text-center">
+                    <h4>Week</h4>
+                  </th>
+                  <th className="px-4 py-3">
+                    <h4>Topic</h4>
+                  </th>
+                  <th className="hidden px-4 py-3 md:table-cell">
+                    <h4>Focus</h4>
+                  </th>
+                  <th className="hidden px-4 py-3 lg:table-cell">
+                    <h4>Outcomes</h4>
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {curriculumData.map((weekItem) => (
+                  <tr
+                    key={weekItem.week}
+                    className="hover:bg-muted border-t hover:text-muted-foreground"
+                  >
+                    <td className="px-4 py-3 w-1/14 font-medium text-center">
+                      {weekItem.week}
+                    </td>
+                    <td className="px-4 py-3 w-1/5 font-semibold text-pretty">
+                      {weekItem.title}
+                    </td>
+                    <td className="hidden px-4 py-3 w-2/5 md:table-cell">
+                      {weekItem.focus}
+                    </td>
+                    <td className="hidden px-4 py-3 lg:table-cell">
+                      {weekItem.outcomes}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
-        <div className="border rounded-md overflow-auto">
-          <table className="min-w-full text-left text-sm">
-            <thead className="font-semibold text-xs uppercase tracking-wide">
-              <tr>
-                <th className="px-4 py-3 text-center">
-                  <h4>Week</h4>
-                </th>
-                <th className="px-4 py-3">
-                  <h4>Project</h4>
-                </th>
-                <th className="hidden px-4 py-3 md:table-cell">
-                  <h4>Project Description</h4>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {curriculumData.map((weekItem) => (
-                <tr
-                  key={weekItem.week}
-                  className="hover:bg-muted border-t hover:text-muted-foreground"
-                >
-                  <td className="px-4 py-3 w-1/14 font-medium text-center">
-                    {weekItem.week}
-                  </td>
-                  <td className="px-4 py-3 w-1/5">{weekItem.project}</td>
-                  <td className="hidden px-4 py-3 text-balance md:table-cell">
-                    {weekItem.projectDescription}
-                  </td>
+        <div>
+          <h2>Weekly Projects</h2>
+          <p>
+            Each week culminates in a hands-on project that reinforces the
+            concepts learned. These projects are designed to be engaging and
+            relevant, allowing students to apply their skills in practical
+            scenarios.
+          </p>
+          <div className="mt-4 border rounded-md overflow-auto">
+            <table className="min-w-full text-left text-sm">
+              <thead className="font-semibold text-xs uppercase tracking-wide">
+                <tr>
+                  <th className="px-4 py-3 text-center">
+                    <h4>Week</h4>
+                  </th>
+                  <th className="px-4 py-3">
+                    <h4>Project</h4>
+                  </th>
+                  <th className="hidden px-4 py-3 md:table-cell">
+                    <h4>Project Description</h4>
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {curriculumData.map((weekItem) => (
+                  <tr
+                    key={weekItem.week}
+                    className="hover:bg-muted border-t hover:text-muted-foreground"
+                  >
+                    <td className="px-4 py-3 w-1/14 font-medium text-center">
+                      {weekItem.week}
+                    </td>
+                    <td className="px-4 py-3 w-1/5">{weekItem.project}</td>
+                    <td className="hidden px-4 py-3 text-balance md:table-cell">
+                      {weekItem.projectDescription}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
