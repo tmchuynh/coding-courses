@@ -22,6 +22,7 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "Bitsbox and Bots",
           },
         ],
+        price: { online: 149 * 4, inPerson: 179 * 4 }, // 4 courses
       },
       {
         title: "Story-Based Coding",
@@ -38,6 +39,7 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "Mini Makers",
           },
         ],
+        price: { online: 149 * 3, inPerson: 179 * 3 }, // 3 courses
       },
       {
         title: "AI & Circuits for Early Learners",
@@ -51,6 +53,7 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "Sensory Circuits Lab",
           },
         ],
+        price: { online: 149 * 2, inPerson: 179 * 2 }, // 2 courses
       },
     ],
   },
@@ -72,6 +75,7 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "App Explorers",
           },
         ],
+        price: { online: 199 * 3, inPerson: 229 * 3 }, // 3 courses
       },
       {
         title: "Creative Expression Through Code",
@@ -88,6 +92,7 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "Code a Storybook",
           },
         ],
+        price: { online: 199 * 3, inPerson: 229 * 3 }, // 3 courses
       },
       {
         title: "AI & Hardware Exploration",
@@ -101,6 +106,7 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "Inventing Workshop",
           },
         ],
+        price: { online: 199 * 2, inPerson: 229 * 2 }, // 2 courses
       },
     ],
   },
@@ -125,6 +131,7 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "Web Dev and App Creation",
           },
         ],
+        price: { online: 249 * 4, inPerson: 279 * 4 }, // 4 courses
       },
       {
         title: "Games & Simulations",
@@ -141,6 +148,7 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "Unity Game Dev 6 to 8",
           },
         ],
+        price: { online: 249 * 3, inPerson: 279 * 3 }, // 3 courses
       },
       {
         title: "AI & Smart Devices",
@@ -154,6 +162,7 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "Smart Devices Lab",
           },
         ],
+        price: { online: 249 * 2, inPerson: 279 * 2 }, // 2 courses
       },
     ],
   },
@@ -187,6 +196,7 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "Advanced Web Dev",
           },
         ],
+        price: { online: 349 * 7, inPerson: 399 * 7 }, // 7 courses
       },
       {
         title: "Game Design",
@@ -203,6 +213,7 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "Unity Game Dev 9 to 12",
           },
         ],
+        price: { online: 349 * 3, inPerson: 399 * 3 }, // 3 courses
       },
       {
         title: "CS Prep & Career Pathway",
@@ -222,6 +233,7 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "Capstone Accelerator",
           },
         ],
+        price: { online: 349 * 4, inPerson: 399 * 4 }, // 4 courses
       },
       {
         title: "Startup & Product Track",
@@ -241,6 +253,7 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "Capstone Accelerator",
           },
         ],
+        price: { online: 349 * 4, inPerson: 399 * 4 }, // 4 courses
       },
       {
         title: "AI & Robotics Engineering",
@@ -260,6 +273,7 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "Robotics Engineering",
           },
         ],
+        price: { online: 349 * 4, inPerson: 399 * 4 }, // 4 courses
       },
     ],
   },
