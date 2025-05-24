@@ -59,7 +59,7 @@ export const curriculumCourses: Curriculum[] = [
         next: ["Game Builders Club"],
       },
       {
-        courseName: "Code & Play",
+        courseName: "Code and Play",
         category: "block-coding",
         level: "Beginner",
         description:
@@ -113,24 +113,6 @@ export const curriculumCourses: Curriculum[] = [
         next: ["Mini Makers", "Code Through Stories"],
       },
       {
-        courseName: "AI Storytellers",
-        category: "data-science-ml-ai",
-        level: "Beginner",
-        description:
-          "Young learners use simple AI tools to create interactive stories and characters. They explore how computers can 'think' and make choices in storytelling.",
-        focus: [
-          "AI-powered story generation",
-          "Voice and image recognition basics",
-          "Creative play with AI assistants",
-        ],
-        outcomes: [
-          "Understand basic AI concepts through stories",
-          "Interact with AI-driven characters",
-          "Spark curiosity about technology and intelligence",
-        ],
-        next: ["Code Through Stories", "Mini Makers"],
-      },
-      {
         courseName: "Sensory Circuits Lab",
         category: "hardware",
         level: "Beginner",
@@ -147,6 +129,23 @@ export const curriculumCourses: Curriculum[] = [
           "Develop fine motor and logical skills",
         ],
         next: ["Tinker Time", "Mini Makers"],
+      },
+      {
+        courseName: "Bitsbox and Bots",
+        category: "block-coding",
+        level: "Beginner",
+        description:
+          "Students learn to code using Bitsbox, a fun platform that teaches coding through app creation. They also explore robotics with simple bots, integrating coding and hardware.",
+        focus: [
+          "Creating apps with Bitsbox and block coding",
+          "Basic robotics with programmable bots",
+          "Understanding app logic and hardware interaction",
+        ],
+        outcomes: [
+          "Build and publish simple apps using Bitsbox",
+          "Program robots to perform tasks and respond to input",
+          "Develop problem-solving skills through coding challenges",
+        ],
       },
     ],
   },
@@ -170,6 +169,24 @@ export const curriculumCourses: Curriculum[] = [
           "Gain confidence to advance into web or app development",
         ],
         next: ["Web Wonders", "App Explorers"],
+      },
+      {
+        courseName: "AI Storytellers",
+        category: "data-science-ml-ai",
+        level: "Beginner",
+        description:
+          "Young learners use simple AI tools to create interactive stories and characters. They explore how computers can 'think' and make choices in storytelling.",
+        focus: [
+          "AI-powered story generation",
+          "Voice and image recognition basics",
+          "Creative play with AI assistants",
+        ],
+        outcomes: [
+          "Understand basic AI concepts through stories",
+          "Interact with AI-driven characters",
+          "Spark curiosity about technology and intelligence",
+        ],
+        next: ["Code Through Stories", "Mini Makers"],
       },
       {
         courseName: "Web Wonders",
@@ -205,10 +222,10 @@ export const curriculumCourses: Curriculum[] = [
           "Design user-friendly interfaces with logic-based behavior",
           "Foundation for full-stack mobile/web app development",
         ],
-        next: ["Creative Code & Art", "Code for Music"],
+        next: ["Creative Code with Art", "Code for Music"],
       },
       {
-        courseName: "Creative Code & Art",
+        courseName: "Creative Code with Art",
         category: "game-dev",
         level: "Intermediate",
         description:
@@ -241,7 +258,7 @@ export const curriculumCourses: Curriculum[] = [
           "Understand the logic behind musical structure",
           "Develop creativity with technical coding foundations",
         ],
-        next: ["Creative Code & Art", "Game Studio"],
+        next: ["Creative Code with Art", "Game Studio"],
       },
       {
         courseName: "Code a Storybook",
@@ -259,7 +276,7 @@ export const curriculumCourses: Curriculum[] = [
           "Use conditionals and loops for narrative branching",
           "Introduce creative writing into tech curriculum",
         ],
-        next: ["Creative Code & Art"],
+        next: ["Creative Code with Art"],
       },
       {
         courseName: "AI Playground",
@@ -277,7 +294,7 @@ export const curriculumCourses: Curriculum[] = [
           "Understand how AI learns from data",
           "Discuss responsible AI use",
         ],
-        next: ["AI + Code", "Creative Code & Art"],
+        next: ["AI Basics", "Creative Code with Art"],
       },
       {
         courseName: "Inventor's Workshop",
@@ -336,7 +353,7 @@ export const curriculumCourses: Curriculum[] = [
           "Understand game development pipelines and tools",
           "Explore career paths in game design and development",
         ],
-        next: ["Game Studio", "3D Animation & Game Dev"],
+        next: ["Game Studio", "3D Animation and Game Dev"],
       },
       {
         courseName: "Interactive Elements",
@@ -394,7 +411,7 @@ export const curriculumCourses: Curriculum[] = [
           "Understand neural network fundamentals",
           "Discuss AI's role in the world",
         ],
-        next: ["AI + Code", "Simulators & Physics"],
+        next: ["AI Basics", "Simulators and Physics"],
       },
       {
         courseName: "Smart Devices Lab",
@@ -436,13 +453,13 @@ export const curriculumCourses: Curriculum[] = [
           "Contribute to real open-source or community projects",
         ],
         next: [
-          "Advanced Backend & DevOps",
+          "Advanced Backend and DevOps",
           "Startup Studio",
           "Advanced Web Dev",
         ],
       },
       {
-        courseName: "Simulators & Physics",
+        courseName: "Simulators and Physics",
         category: "data-science-ml-ai",
         level: "Advanced",
         description:
@@ -511,7 +528,7 @@ export const curriculumCourses: Curriculum[] = [
           "Understand client-server data relationships",
           "Prepare for full-stack applications",
         ],
-        next: ["APIs & Integrations", "Advanced Backend & DevOps"],
+        next: ["APIs & Integrations", "Advanced Backend and DevOps"],
       },
       {
         courseName: "Startup Studio",
@@ -529,10 +546,10 @@ export const curriculumCourses: Curriculum[] = [
           "Build and launch a functional prototype",
           "Learn teamwork, product thinking, and real-world application",
         ],
-        next: ["Next.js Essentials", "AI + Code", "Startup Accelerator"],
+        next: ["Next.js Essentials", "AI Basics", "Startup Accelerator"],
       },
       {
-        courseName: "AI + Code",
+        courseName: "AI Basics",
         category: "data-science-ml-ai",
         level: "Advanced",
         description:
@@ -550,7 +567,7 @@ export const curriculumCourses: Curriculum[] = [
         next: ["Startup Studio", "Next.js Essentials (9–12)"],
       },
       {
-        courseName: "Advanced Backend & DevOps",
+        courseName: "Advanced Backend and DevOps",
         category: "web-and-app-dev",
         level: "Advanced",
         description:
@@ -601,7 +618,7 @@ export const curriculumCourses: Curriculum[] = [
           "Understand modern web architecture and best practices",
           "Prepare for internships or college-level CS courses",
         ],
-        next: ["Full Stack Foundations", "Next.js Essentials", "AI + Code"],
+        next: ["Full Stack Foundations", "Next.js Essentials", "AI Basics"],
       },
       {
         courseName: "Capstone Project",
@@ -622,7 +639,7 @@ export const curriculumCourses: Curriculum[] = [
         next: ["Startup Accelerator"],
       },
       {
-        courseName: "3D Animation & Game Dev",
+        courseName: "3D Animation and Game Dev",
         category: "game-dev",
         level: "Advanced",
         description:
@@ -640,7 +657,7 @@ export const curriculumCourses: Curriculum[] = [
         next: ["Game Studio", "Unity Game Dev"],
       },
       {
-        courseName: "CS Prep + Algorithms",
+        courseName: "Algorithms",
         category: "college-prep",
         level: "Advanced",
         description:
@@ -659,7 +676,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Internship Program",
-        category: "business",
+        category: "college-prep",
         level: "Advanced",
         description:
           "Students gain real-world experience through internships with tech companies. They work on projects, collaborate with professionals, and build their resumes.",
@@ -676,7 +693,7 @@ export const curriculumCourses: Curriculum[] = [
         next: [],
       },
       {
-        courseName: "Entrepreneurship & Innovation",
+        courseName: "Entrepreneurship Basics",
         category: "business",
         level: "Intermediate",
         description:
@@ -709,7 +726,7 @@ export const curriculumCourses: Curriculum[] = [
           "Analyze and visualize datasets",
           "Understand real-world AI applications",
         ],
-        next: ["AI + Code", "Simulators & Physics"],
+        next: ["AI Basics", "Simulators and Physics"],
       },
       {
         courseName: "Robotics Engineering",
@@ -727,7 +744,43 @@ export const curriculumCourses: Curriculum[] = [
           "Understand robotics systems integration",
           "Prepare for robotics competitions or engineering careers",
         ],
-        next: ["Startup Studio", "Advanced Backend & DevOps"],
+        next: ["Startup Studio", "Advanced Backend and DevOps"],
+      },
+      {
+        category: "college-prep",
+        courseName: "Capstone Accelerator",
+        level: "Advanced",
+        description:
+          "Students work on a comprehensive capstone project that showcases their skills. They integrate front-end and back-end technologies, focusing on deployment and user experience.",
+        focus: [
+          "Full-stack architecture and deployment",
+          "User experience design and testing",
+          "Project management and collaboration",
+        ],
+        outcomes: [
+          "Launch a full-stack application with real users",
+          "Understand the full development lifecycle",
+          "Prepare for internships or job applications",
+        ],
+        next: ["Startup Accelerator"],
+      },
+      {
+        category: "hardware",
+        courseName: "Robotics & AI",
+        level: "Advanced",
+        description:
+          "Students explore the intersection of robotics and AI. They build robots that can learn from their environment and make decisions based on data.",
+        focus: [
+          "Machine learning for robotics",
+          "Sensor integration and data analysis",
+          "Autonomous navigation and decision-making",
+        ],
+        outcomes: [
+          "Build robots that learn and adapt",
+          "Understand the principles of AI in robotics",
+          "Prepare for careers in robotics and AI",
+        ],
+        next: ["Robotics Engineering", "Machine Learning Studio"],
       },
     ],
   },
