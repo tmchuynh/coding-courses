@@ -54,9 +54,10 @@ export const navbarItems = [
         href: "/programs/course-roadmaps",
       },
       {
-        label: "Course Catalog",
-        href: "/programs/courses",
+        label: "Curriculum Preview",
+        href: "/programs/curriculum",
       },
+
       {
         label: "Summer Camps",
         href: "/programs/summer-camps",
@@ -64,28 +65,28 @@ export const navbarItems = [
     ],
   },
   {
+    label: "Course Catalog",
+    href: "/programs/courses",
+  },
+  {
     label: "Curriculum",
-    href: "/curriculum",
+    href: "/overview",
     dropdown: [
       {
         label: "Why Learn How to Code?",
-        href: "/curriculum",
-      },
-      {
-        label: "By Age Group",
-        href: "/curriculum/age-groups",
+        href: "/overview",
       },
       {
         label: "Technology Stack",
-        href: "/curriculum/tech-stack",
+        href: "/overview/tech-stack",
       },
       {
         label: "Educational Philosophy",
-        href: "/curriculum/philosophy",
+        href: "/overview/philosophy",
       },
       {
         label: "In-Person vs Online",
-        href: "/curriculum/modalities",
+        href: "/overview/modalities",
       },
     ],
   },
