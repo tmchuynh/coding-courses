@@ -50,6 +50,7 @@ export type Course = {
   focus?: string[];
   outcomes?: string[];
   next?: string[];
+  price?: Price | number;
 };
 
 export type Schedule = {
@@ -86,3 +87,5 @@ export type StaffTeams = {
   description?: string;
   members: Staff[];
 };
+
+export type Price = { online: number; inPerson: number };
