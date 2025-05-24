@@ -353,7 +353,7 @@ export const curriculumCourses: Curriculum[] = [
           "Understand game development pipelines and tools",
           "Explore career paths in game design and development",
         ],
-        next: ["Game Studio", "3D Animation and Game Dev"],
+        next: ["Game Studio", "Animation and Game Dev"],
       },
       {
         courseName: "Interactive Elements",
@@ -707,7 +707,7 @@ export const curriculumCourses: Curriculum[] = [
         next: ["Startup Accelerator", "Algorithms"],
       },
       {
-        courseName: "3D Animation and Game Dev",
+        courseName: "Animation and Game Dev",
         category: "game-dev",
         level: "Advanced",
         description:
@@ -866,7 +866,7 @@ export const curriculumCourses: Curriculum[] = [
           "Understand game development pipelines and tools",
           "Explore career paths in game design and development",
         ],
-        next: ["Game Studio", "3D Animation and Game Dev"],
+        next: ["Game Studio", "Animation and Game Dev"],
       },
       {
         courseName: "Game Design and Development",
@@ -884,7 +884,7 @@ export const curriculumCourses: Curriculum[] = [
           "Understand the principles of game mechanics and user experience",
           "Prepare for careers in game design and development",
         ],
-        next: ["Unity Game Dev 9 to 12", "3D Animation and Game Dev"],
+        next: ["Unity Game Dev 9 to 12", "Animation and Game Dev"],
       },
     ],
   },
