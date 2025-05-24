@@ -1,4 +1,5 @@
 "use client";
+import DynamicCTA from "@/components/CTAs/DynamicCTA";
 import { summerCourses } from "@/lib/constants/courses/summerCourses";
 import { useState } from "react";
 
@@ -12,7 +13,7 @@ export default function SummerCampsPage() {
         Immersive, hands-on tech experiences that spark curiosity and build real
         skills
       </h5>
-      <p>
+      <p className="mb-4">
         Our Summer Coding Camps are designed to turn vacation time into a season
         of exploration and innovation. Through full-day, week-long programs,
         students dive deep into coding, game development, robotics, and
@@ -23,6 +24,8 @@ export default function SummerCampsPage() {
         child is a beginner or an experienced coder, our camps offer the perfect
         mix of learning and play to make their summer unforgettable.
       </p>
+
+      <DynamicCTA variant="summer-camp" />
 
       {/* Tabs */}
       <div className="flex gap-4 mt-8 border-b border-border">
@@ -63,7 +66,7 @@ export default function SummerCampsPage() {
                   <span className="font-semibold">Key Projects:</span>
                   <ul className="ml-4 list-disc list-inside">
                     {course.keyProjects.map((project, idx) => (
-                      <li key={idx}>{project}</li>
+                      <li key={`${project}-${idx}`}>{project}</li>
                     ))}
                   </ul>
                 </div>
@@ -73,7 +76,7 @@ export default function SummerCampsPage() {
                   <span className="font-semibold">Outcomes:</span>
                   <ul className="ml-4 list-disc list-inside">
                     {course.outcomes.map((outcome, idx) => (
-                      <li key={idx}>{outcome}</li>
+                      <li key={`${outcome}-${idx}`}>{outcome}</li>
                     ))}
                   </ul>
                 </div>
