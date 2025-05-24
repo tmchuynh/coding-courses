@@ -18,6 +18,9 @@ export const learningRoadmap: Roadmap[] = [
           {
             courseName: "Tinker Time",
           },
+          {
+            courseName: "Bitsbox and Bots",
+          },
         ],
       },
       {
@@ -95,7 +98,7 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "AI Playground",
           },
           {
-            courseName: "Inventor's Workshop",
+            courseName: "Inventing Workshop",
           },
         ],
       },
@@ -105,7 +108,7 @@ export const learningRoadmap: Roadmap[] = [
     gradeGroup: "6–8",
     roadmaps: [
       {
-        title: "Web Dev + App Creation",
+        title: "Web Dev and App Creation",
         description:
           "Students dive deeper into web development and app creation, learning modern tools and frameworks to build responsive websites and interactive applications. This roadmap covers frontend and backend concepts, user interface design, and dynamic web experiences, preparing learners for more advanced programming challenges.",
         courses: [
@@ -113,13 +116,13 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "Frontend Fundamentals",
           },
           {
-            courseName: "Web Wonders",
-          },
-          {
             courseName: "Interactive Elements",
           },
           {
-            courseName: "App Explorers",
+            courseName: "UX/UI Design",
+          },
+          {
+            courseName: "Web Dev and App Creation",
           },
         ],
       },
@@ -135,7 +138,7 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "Simulators and Physics",
           },
           {
-            courseName: "Unity Game Dev",
+            courseName: "Unity Game Dev 6 to 8",
           },
         ],
       },
@@ -172,7 +175,7 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "Full Stack Foundations",
           },
           {
-            courseName: "APIs & Integrations",
+            courseName: "APIs and Integrations",
           },
           {
             courseName: "Database Basics",
@@ -194,10 +197,10 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "3D Animation and Game Dev",
           },
           {
-            courseName: "Game Studio",
+            courseName: "Game Design and Development",
           },
           {
-            courseName: "Unity Game Dev",
+            courseName: "Unity Game Dev 9 to 12",
           },
         ],
       },
@@ -210,7 +213,13 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "Algorithms",
           },
           {
+            courseName: "Capstone Project",
+          },
+          {
             courseName: "Internship Program",
+          },
+          {
+            courseName: "Capstone Accelerator",
           },
         ],
       },
@@ -238,6 +247,12 @@ export const learningRoadmap: Roadmap[] = [
         description:
           "This advanced roadmap delves into machine learning, robotics, and autonomous systems. Students design, build, and program intelligent robots, develop ML models, and prepare for competitions, gaining deep technical expertise and hands-on engineering experience.",
         courses: [
+          {
+            courseName: "AI Basics",
+          },
+          {
+            courseName: "AI and Robotics Introduction",
+          },
           {
             courseName: "Machine Learning Studio",
           },

@@ -297,7 +297,7 @@ export const curriculumCourses: Curriculum[] = [
         next: ["AI Basics", "Creative Code with Art"],
       },
       {
-        courseName: "Inventor's Workshop",
+        courseName: "Inventing Workshop",
         category: "hardware",
         level: "Intermediate",
         description:
@@ -312,7 +312,7 @@ export const curriculumCourses: Curriculum[] = [
           "Combine hardware and software creatively",
           "Develop problem-solving and engineering skills",
         ],
-        next: ["Game Studio", "Unity Game Dev"],
+        next: ["Game Studio"],
       },
     ],
   },
@@ -335,10 +335,10 @@ export const curriculumCourses: Curriculum[] = [
           "Understand architecture behind gaming frameworks",
           "Explore careers in game development",
         ],
-        next: ["Database Basics", "Unity Game Dev"],
+        next: ["Database Basics", "Unity Game Dev 6 to 8"],
       },
       {
-        courseName: "Unity Game Dev",
+        courseName: "Unity Game Dev 6 to 8",
         category: "game-dev",
         level: "Advanced",
         description:
@@ -390,7 +390,7 @@ export const curriculumCourses: Curriculum[] = [
           "Prepare for advanced web development topics",
         ],
         next: [
-          "Next.js Essentials",
+          "Nextjs Essentials",
           "Full Stack Foundations",
           "Interactive Elements",
         ],
@@ -431,14 +431,48 @@ export const curriculumCourses: Curriculum[] = [
         ],
         next: ["Unity Game Dev", "Database Basics"],
       },
+      {
+        courseName: "UX/UI Design",
+        category: "web-and-app-dev",
+        level: "Intermediate",
+        description:
+          "Students learn the principles of user experience and interface design. They explore design thinking, wireframing, and prototyping tools to create user-friendly applications.",
+        focus: [
+          "User-centered design principles",
+          "Wireframing and prototyping tools",
+          "Usability testing and feedback loops",
+        ],
+        outcomes: [
+          "Design user-friendly interfaces for web and mobile apps",
+          "Conduct usability tests and iterate on designs",
+          "Understand the importance of UX in software development",
+        ],
+      },
+      {
+        courseName: "Web Dev and App Creation",
+        category: "web-and-app-dev",
+        level: "Intermediate",
+        description:
+          "Students dive deeper into web development and app creation, learning modern tools and frameworks to build responsive websites and interactive applications. This roadmap covers frontend and backend concepts, user interface design, and dynamic web experiences, preparing learners for more advanced programming challenges.",
+        focus: [
+          "Frontend and backend development concepts",
+          "Responsive design and user interface principles",
+          "Dynamic web experiences with modern frameworks",
+        ],
+        outcomes: [
+          "Build responsive websites and interactive applications",
+          "Understand the full web development stack",
+          "Prepare for advanced programming challenges",
+        ],
+      },
     ],
   },
   {
     title: "Grades 9–12",
     courses: [
       {
-        courseName: "Next.js Essentials",
-        category: "web-and-app-dev",
+        courseName: "Nextjs Essentials",
+        category: "full-stack-web",
         level: "Advanced",
         description:
           "Advanced React and Next.js development for high schoolers focused on real-world projects. Students build scalable SPAs with hooks, authentication, forms, and server-side rendering.",
@@ -474,11 +508,11 @@ export const curriculumCourses: Curriculum[] = [
           "Use math and physics to create interactive experiences",
           "Explore STEM applications of coding",
         ],
-        next: ["APIs & Integrations", "Database Basics"],
+        next: ["APIs and Integrations", "Database Basics"],
       },
       {
         courseName: "Full Stack Foundations",
-        category: "web-and-app-dev",
+        category: "full-stack-web",
         level: "Intermediate",
         description:
           "Students take on real-world development using HTML, CSS, and JavaScript to create dynamic websites. Projects emphasize responsive design, client-server thinking, and component-based structures.",
@@ -492,10 +526,15 @@ export const curriculumCourses: Curriculum[] = [
           "Use GitHub for version control and collaboration",
           "Prepare for deeper backend and framework learning",
         ],
-        next: ["APIs & Integrations", "Database Basics", "Advanced Web Dev"],
+        next: [
+          "APIs and Integrations",
+          "Database Basics",
+          "Advanced Web Dev",
+          "Algorithms",
+        ],
       },
       {
-        courseName: "APIs & Integrations",
+        courseName: "APIs and Integrations",
         category: "web-and-app-dev",
         level: "Intermediate",
         description:
@@ -510,11 +549,16 @@ export const curriculumCourses: Curriculum[] = [
           "Use APIs to add external functionality",
           "Connect projects to useful, real-world services",
         ],
-        next: ["Next.js Essentials", "Startup Studio", "Database Basics"],
+        next: [
+          "Nextjs Essentials",
+          "Startup Studio",
+          "Database Basics",
+          "Algorithms",
+        ],
       },
       {
         courseName: "Database Basics",
-        category: "web-and-app-dev",
+        category: "full-stack-web",
         level: "Intermediate",
         description:
           "Students explore structured data using JSON, local storage, and simple databases. They learn how data moves between front-end and back-end systems through interactive mini-projects.",
@@ -528,7 +572,11 @@ export const curriculumCourses: Curriculum[] = [
           "Understand client-server data relationships",
           "Prepare for full-stack applications",
         ],
-        next: ["APIs & Integrations", "Advanced Backend and DevOps"],
+        next: [
+          "APIs and Integrations",
+          "Advanced Backend and DevOps",
+          "Algorithms",
+        ],
       },
       {
         courseName: "Startup Studio",
@@ -546,7 +594,7 @@ export const curriculumCourses: Curriculum[] = [
           "Build and launch a functional prototype",
           "Learn teamwork, product thinking, and real-world application",
         ],
-        next: ["Next.js Essentials", "AI Basics", "Startup Accelerator"],
+        next: ["Nextjs Essentials", "AI Basics", "Startup Accelerator"],
       },
       {
         courseName: "AI Basics",
@@ -564,11 +612,11 @@ export const curriculumCourses: Curriculum[] = [
           "Understand the role of AI in modern apps",
           "Develop critical thinking around emerging tech",
         ],
-        next: ["Startup Studio", "Next.js Essentials (9–12)"],
+        next: ["Startup Studio", "Nextjs Essentials (9–12)"],
       },
       {
         courseName: "Advanced Backend and DevOps",
-        category: "web-and-app-dev",
+        category: "full-stack-web",
         level: "Advanced",
         description:
           "Students explore databases, authentication, server logic, and deployment pipelines. Topics include Node.js, Express, PostgreSQL, and tools like Docker and CI/CD flows.",
@@ -582,7 +630,7 @@ export const curriculumCourses: Curriculum[] = [
           "Understand infrastructure and dev lifecycle",
           "Prepare for professional web or SaaS careers",
         ],
-        next: ["Startup Accelerator"],
+        next: ["Startup Accelerator", "Algorithms", "Internship Program"],
       },
       {
         courseName: "Startup Accelerator",
@@ -604,7 +652,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Advanced Web Dev",
-        category: "web-and-app-dev",
+        category: "full-stack-web",
         level: "Advanced",
         description:
           "Students master modern web development using React, TypeScript, and Next.js. They build complex applications with state management, routing, and server-side rendering.",
@@ -618,7 +666,12 @@ export const curriculumCourses: Curriculum[] = [
           "Understand modern web architecture and best practices",
           "Prepare for internships or college-level CS courses",
         ],
-        next: ["Full Stack Foundations", "Next.js Essentials", "AI Basics"],
+        next: [
+          "Full Stack Foundations",
+          "Nextjs Essentials",
+          "AI Basics",
+          "Algorithms",
+        ],
       },
       {
         courseName: "Capstone Project",
@@ -636,7 +689,7 @@ export const curriculumCourses: Curriculum[] = [
           "Understand the full development lifecycle",
           "Prepare for internships or job applications",
         ],
-        next: ["Startup Accelerator"],
+        next: ["Startup Accelerator", "Algorithms"],
       },
       {
         courseName: "3D Animation and Game Dev",
@@ -747,8 +800,8 @@ export const curriculumCourses: Curriculum[] = [
         next: ["Startup Studio", "Advanced Backend and DevOps"],
       },
       {
-        category: "college-prep",
         courseName: "Capstone Accelerator",
+        category: "college-prep",
         level: "Advanced",
         description:
           "Students work on a comprehensive capstone project that showcases their skills. They integrate front-end and back-end technologies, focusing on deployment and user experience.",
@@ -765,8 +818,8 @@ export const curriculumCourses: Curriculum[] = [
         next: ["Startup Accelerator"],
       },
       {
+        courseName: "AI and Robotics Introduction",
         category: "hardware",
-        courseName: "Robotics & AI",
         level: "Advanced",
         description:
           "Students explore the intersection of robotics and AI. They build robots that can learn from their environment and make decisions based on data.",
@@ -781,6 +834,42 @@ export const curriculumCourses: Curriculum[] = [
           "Prepare for careers in robotics and AI",
         ],
         next: ["Robotics Engineering", "Machine Learning Studio"],
+      },
+      {
+        courseName: "Unity Game Dev 9 to 12",
+        category: "game-dev",
+        level: "Advanced",
+        description:
+          "Students learn to build 2D and 3D games using Unity and C#. They explore game mechanics, physics, and user interface design, preparing them for advanced game development.",
+        focus: [
+          "Game mechanics and physics engines",
+          "User interface design and user experience",
+          "Game publishing and distribution",
+        ],
+        outcomes: [
+          "Create and publish 2D/3D games using Unity",
+          "Understand game development pipelines and tools",
+          "Explore career paths in game design and development",
+        ],
+        next: ["Game Studio", "3D Animation and Game Dev"],
+      },
+      {
+        courseName: "Game Design and Development",
+        category: "game-dev",
+        level: "Advanced",
+        description:
+          "Students learn advanced game design principles and development techniques. They create complex games with rich narratives, mechanics, and user experiences.",
+        focus: [
+          "Game design theory and mechanics",
+          "User experience and narrative design",
+          "Advanced programming concepts in game development",
+        ],
+        outcomes: [
+          "Design and develop complex games with rich narratives",
+          "Understand the principles of game mechanics and user experience",
+          "Prepare for careers in game design and development",
+        ],
+        next: ["Unity Game Dev 9 to 12", "3D Animation and Game Dev"],
       },
     ],
   },
