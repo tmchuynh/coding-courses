@@ -43,15 +43,89 @@ export default function CurriculumPage() {
 
   return (
     <div className="mx-auto pt-8 md:pt-12 lg:pt-24 w-10/12 md:w-11/12">
-      <h1>Curriculum Overview</h1>
+      <h1>{courseTitle} Curriculum Preview</h1>
+      <h5>
+        {curriculumData.length} Week
+        {curriculumData.length > 1 ? "s" : ""} Available
+        {curriculumData.length > 0 && ` for ${courseTitle}`}
+      </h5>
       <p>
-        Explore our comprehensive curriculum designed to provide a structured
-        learning path for each age group.
+        Our curriculum is designed to provide a comprehensive learning
+        experience, covering essential topics and skills in a structured manner.
+        Each week focuses on specific concepts and outcomes to ensure students
+        build a solid foundation in coding and problem-solving.
       </p>
-      <p>
-        Our curriculum is divided into age groups, each with a tailored set of
-        courses that build foundational skills and knowledge progressively.
-      </p>
+
+      <div className="flex flex-col gap-9">
+        <div className="border rounded-md overflow-auto">
+          <table className="min-w-full text-left text-sm">
+            <thead className="font-semibold text-xs uppercase tracking-wide">
+              <tr>
+                <th className="px-4 py-3 text-center">
+                  <h4>Week</h4>
+                </th>
+                <th className="px-4 py-3">
+                  <h4>Topic</h4>
+                </th>
+                <th className="px-4 py-3">
+                  <h4>Focus</h4>
+                </th>
+                <th className="px-4 py-3">
+                  <h4>Outcomes</h4>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {curriculumData.map((weekItem) => (
+                <tr
+                  key={weekItem.week}
+                  className="hover:bg-muted border-t hover:text-muted-foreground"
+                >
+                  <td className="px-4 py-3 font-medium text-center">
+                    {weekItem.week}
+                  </td>
+                  <td className="px-4 py-3 font-semibold">{weekItem.title}</td>
+                  <td className="px-4 py-3">{weekItem.focus}</td>
+                  <td className="px-4 py-3">{weekItem.outcomes}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="border rounded-md overflow-auto">
+          <table className="min-w-full text-left text-sm">
+            <thead className="font-semibold text-xs uppercase tracking-wide">
+              <tr>
+                <th className="px-4 py-3 text-center">
+                  <h4>Week</h4>
+                </th>
+                <th className="px-4 py-3">
+                  <h4>Project</h4>
+                </th>
+                <th className="px-4 py-3">
+                  <h4>Project Description</h4>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {curriculumData.map((weekItem) => (
+                <tr
+                  key={weekItem.week}
+                  className="hover:bg-muted border-t hover:text-muted-foreground"
+                >
+                  <td className="px-4 py-3 font-medium text-center">
+                    {weekItem.week}
+                  </td>
+                  <td className="px-4 py-3 w-1/4">{weekItem.project}</td>
+                  <td className="px-4 py-3 text-balance">
+                    {weekItem.projectDescription}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 }
