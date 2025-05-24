@@ -48,7 +48,7 @@ export const Timeline = ({ data, title }: TimelineProps) => {
                   {index + 1}
                 </div>
               </div>
-              <h3 className="md:block hidden md:pl-20 font-bold text-neutral-500 text-xl md:text-2xl dark:text-neutral-500">
+              <h3 className="md:block hidden md:pl-20 font-bold text-xl md:text-2xl">
                 {item.courseName}
               </h3>
             </div>
@@ -58,7 +58,7 @@ export const Timeline = ({ data, title }: TimelineProps) => {
                 {item.courseName}
               </h3>
               <div className="mb-2">
-                <span className="font-semibold text-indigo-600">Focus:</span>
+                <h3>Focus:</h3>
                 <ul className="ml-6 text-neutral-800 dark:text-neutral-200 list-disc">
                   {item.focus?.map((f, i) => (
                     <li key={i}>{f}</li>
@@ -66,9 +66,9 @@ export const Timeline = ({ data, title }: TimelineProps) => {
                 </ul>
               </div>
               <div>
-                <span className="font-semibold text-indigo-600">Outcomes:</span>
+                <h3>Outcomes:</h3>
                 <ul className="ml-6 text-neutral-800 dark:text-neutral-200 list-disc">
-                  {item.outcomes.map((o, i) => (
+                  {item.outcomes?.map((o, i) => (
                     <li key={i}>{o}</li>
                   ))}
                 </ul>
