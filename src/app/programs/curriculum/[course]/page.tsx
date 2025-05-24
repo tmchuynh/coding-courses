@@ -84,8 +84,10 @@ export default function CurriculumPage() {
                   <td className="px-4 py-3 font-medium text-center">
                     {weekItem.week}
                   </td>
-                  <td className="px-4 py-3 font-semibold">{weekItem.title}</td>
-                  <td className="px-4 py-3">{weekItem.focus}</td>
+                  <td className="px-4 py-3 w-1/5 font-semibold">
+                    {weekItem.title}
+                  </td>
+                  <td className="px-4 py-3 w-2/5">{weekItem.focus}</td>
                   <td className="px-4 py-3">{weekItem.outcomes}</td>
                 </tr>
               ))}
@@ -116,7 +118,7 @@ export default function CurriculumPage() {
                   <td className="px-4 py-3 font-medium text-center">
                     {weekItem.week}
                   </td>
-                  <td className="px-4 py-3 w-1/4">{weekItem.project}</td>
+                  <td className="px-4 py-3 w-1/5">{weekItem.project}</td>
                   <td className="px-4 py-3 text-balance">
                     {weekItem.projectDescription}
                   </td>
