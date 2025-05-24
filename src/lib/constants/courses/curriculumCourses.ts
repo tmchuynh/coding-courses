@@ -114,7 +114,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "AI Storytellers",
-        category: "ai",
+        category: "data-science-ml-ai",
         level: "Beginner",
         description:
           "Young learners use simple AI tools to create interactive stories and characters. They explore how computers can 'think' and make choices in storytelling.",
@@ -173,7 +173,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Web Wonders",
-        category: "web-dev",
+        category: "web-and-app-dev",
         level: "Beginner",
         description:
           "An engaging intro to web development where students create personal websites. They'll explore HTML for structure, CSS for styling, and layout principles to express themselves online.",
@@ -191,7 +191,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "App Explorers",
-        category: "web-dev",
+        category: "web-and-app-dev",
         level: "Beginner",
         description:
           "Students transition from games to mobile functionality by building drag-and-drop apps with interactive forms, sound, and logic. Emphasis is placed on user input, design iteration, and real-world utility.",
@@ -263,7 +263,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "AI Playground",
-        category: "ai",
+        category: "data-science-ml-ai",
         level: "Beginner",
         description:
           "Students experiment with visual and audio AI tools to create art, music, and games. They learn about training data, pattern recognition, and ethical AI use.",
@@ -340,7 +340,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Interactive Elements",
-        category: "web-dev",
+        category: "web-and-app-dev",
         level: "Intermediate",
         description:
           "Students learn to create interactive web applications using JavaScript and APIs. They explore dynamic page updates, user input handling, and event-driven programming.",
@@ -358,7 +358,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Frontend Fundamentals",
-        category: "web-dev",
+        category: "web-and-app-dev",
         level: "Intermediate",
         description:
           "Students learn the basics of front-end development using HTML, CSS, and JavaScript. They explore responsive design, accessibility, and modern web standards.",
@@ -380,7 +380,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "AI Explorers",
-        category: "ai",
+        category: "data-science-ml-ai",
         level: "Intermediate",
         description:
           "Students dive into machine learning by building simple models for image and text recognition. They explore neural networks, datasets, and real-world AI applications.",
@@ -421,7 +421,7 @@ export const curriculumCourses: Curriculum[] = [
     courses: [
       {
         courseName: "Next.js Essentials",
-        category: "web-dev",
+        category: "web-and-app-dev",
         level: "Advanced",
         description:
           "Advanced React and Next.js development for high schoolers focused on real-world projects. Students build scalable SPAs with hooks, authentication, forms, and server-side rendering.",
@@ -443,7 +443,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Simulators & Physics",
-        category: "ai",
+        category: "data-science-ml-ai",
         level: "Advanced",
         description:
           "Students learn to simulate real-world systems using code. They explore physics engines, data visualization, and interactive simulations, applying math concepts in a fun way.",
@@ -461,7 +461,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Full Stack Foundations",
-        category: "web-dev",
+        category: "web-and-app-dev",
         level: "Intermediate",
         description:
           "Students take on real-world development using HTML, CSS, and JavaScript to create dynamic websites. Projects emphasize responsive design, client-server thinking, and component-based structures.",
@@ -479,7 +479,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "APIs & Integrations",
-        category: "web-dev",
+        category: "web-and-app-dev",
         level: "Intermediate",
         description:
           "Students tap into the wider internet by integrating public APIs like weather, music, and sports data. Focus is on understanding requests, JSON parsing, and data-driven interfaces.",
@@ -497,7 +497,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Database Basics",
-        category: "web-dev",
+        category: "web-and-app-dev",
         level: "Intermediate",
         description:
           "Students explore structured data using JSON, local storage, and simple databases. They learn how data moves between front-end and back-end systems through interactive mini-projects.",
@@ -533,7 +533,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "AI + Code",
-        category: "ai",
+        category: "data-science-ml-ai",
         level: "Advanced",
         description:
           "Introduces students to artificial intelligence through coding. They train basic models, create chatbots, and explore ethical issues in AI deployment.",
@@ -547,11 +547,11 @@ export const curriculumCourses: Curriculum[] = [
           "Understand the role of AI in modern apps",
           "Develop critical thinking around emerging tech",
         ],
-        next: ["Startup Studio", "Next.js Essentials (Grades 9–12)"],
+        next: ["Startup Studio", "Next.js Essentials (9–12)"],
       },
       {
         courseName: "Advanced Backend & DevOps",
-        category: "web-dev",
+        category: "web-and-app-dev",
         level: "Advanced",
         description:
           "Students explore databases, authentication, server logic, and deployment pipelines. Topics include Node.js, Express, PostgreSQL, and tools like Docker and CI/CD flows.",
@@ -587,7 +587,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Advanced Web Dev",
-        category: "web-dev",
+        category: "web-and-app-dev",
         level: "Advanced",
         description:
           "Students master modern web development using React, TypeScript, and Next.js. They build complex applications with state management, routing, and server-side rendering.",
@@ -605,7 +605,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Capstone Project",
-        category: "web-dev",
+        category: "college-prep",
         level: "Advanced",
         description:
           "Students apply their full-stack skills to build a comprehensive project. They integrate front-end and back-end technologies, focusing on deployment and user experience.",
@@ -641,7 +641,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "CS Prep + Algorithms",
-        category: "ai",
+        category: "college-prep",
         level: "Advanced",
         description:
           "Students prepare for AP Computer Science and college-level CS courses. They learn algorithms, data structures, and problem-solving techniques using Python or Java.",
@@ -695,7 +695,7 @@ export const curriculumCourses: Curriculum[] = [
       },
       {
         courseName: "Machine Learning Studio",
-        category: "ai",
+        category: "data-science-ml-ai",
         level: "Advanced",
         description:
           "Students build real machine learning models for image, text, and data analysis. They use Python and open-source libraries to explore supervised and unsupervised learning.",
