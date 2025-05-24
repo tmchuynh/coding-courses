@@ -1,11 +1,11 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { curriculumCourses } from "@/lib/constants/courses/curriculumCourses";
-import { learningRoadmap } from "@/lib/constants/courses/learningRoadmap";
 import { yearRoundSchedule } from "@/lib/constants/courses/yearRoundSchedule";
+import { Times } from "@/lib/types/types";
 import { capitalize, formatToSlug } from "@/lib/utils/format";
 import { findAgeGroupForCourse } from "@/lib/utils/get";
-import { sortByLength, uniqueArray } from "@/lib/utils/sort";
+import { groupAndSortByProperties } from "@/lib/utils/sort";
 import { useParams, useRouter } from "next/navigation";
 
 export default function CourseDetailPage() {
@@ -29,23 +29,6 @@ export default function CourseDetailPage() {
     }
   }
 
-  // Find course in learningRoadmap
-  let roadmapCourse: any = null;
-  for (const group of learningRoadmap) {
-    for (const roadmap of group.roadmaps) {
-      const found = roadmap.courses.find(
-        (c) =>
-          c.courseName.replace(/\s/g, "").toLowerCase() ===
-          capitalize(courseNameParam).replace(/\s/g, "").toLowerCase()
-      );
-      if (found) {
-        roadmapCourse = found;
-        break;
-      }
-    }
-    if (roadmapCourse) break;
-  }
-
   // Find course in yearRoundSchedule
   let scheduleCourse: any = null;
   let scheduleGroup: any = null;
@@ -62,31 +45,15 @@ export default function CourseDetailPage() {
     }
   }
 
+  const sortedSchedule = groupAndSortByProperties(
+    scheduleCourse.schedule,
+    "days",
+    "format"
+  );
+
   if (!curriculumCourse) {
     return <div className="p-8">Course not found.</div>;
   }
-
-  // Combine focus and outcomes arrays, removing duplicates
-  const focus = sortByLength(
-    uniqueArray([
-      ...(curriculumCourse.focus || []),
-      ...(roadmapCourse?.focus || []),
-      ...(scheduleCourse?.focus || []),
-    ])
-  );
-  const outcomes = sortByLength(
-    uniqueArray([
-      ...(curriculumCourse.outcomes || []),
-      ...(roadmapCourse?.outcomes || []),
-      ...(scheduleCourse?.outcomes || []),
-    ])
-  );
-
-  console.log("scheduleCourse", scheduleCourse);
-  console.log("roadmapCourse", roadmapCourse);
-  console.log("curriculumCourse", curriculumCourse);
-  console.log("curriculumGroupTitle", curriculumGroupTitle);
-  console.log("scheduleGroup", scheduleGroup);
 
   return (
     <div className="mx-auto pt-8 md:pt-12 lg:pt-24 w-10/12 md:w-11/12">
@@ -101,7 +68,7 @@ export default function CourseDetailPage() {
       <div className="mb-4">
         <h3>Focus:</h3>
         <ul className="ml-6 list-disc">
-          {focus.map((f, i) => (
+          {curriculumCourse.focus.map((f: string, i: number) => (
             <li key={i}>{f}</li>
           ))}
         </ul>
@@ -109,7 +76,7 @@ export default function CourseDetailPage() {
       <div className="mb-4">
         <h3>Outcomes:</h3>
         <ul className="ml-6 list-disc">
-          {outcomes.map((o, i) => (
+          {curriculumCourse.outcomes.map((o: string, i: number) => (
             <li key={i}>{o}</li>
           ))}
         </ul>
@@ -148,47 +115,52 @@ export default function CourseDetailPage() {
       {scheduleCourse && (
         <div className="mt-6 mb-4 pt-6 border-t">
           <h2>Current Schedule</h2>
-          <div className="flex flex-col gap-2 md:grid grid-cols-2 mt-2">
-            <div className="flex flex-col gap-2">
-              <div>
-                <span className="font-semibold">Meeting Days:</span>{" "}
-                {scheduleCourse.schedule.days.map(
-                  (day: string, index: number) => (
+          <div>
+            <span className="font-semibold">Currently Includes:</span>{" "}
+            {scheduleCourse.includes?.join(", ")}
+          </div>
+          <div className="gap-2 space-y-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-4">
+            {sortedSchedule.map((schedule: Times, i: number) => (
+              <div key={i} className="flex flex-col gap-1">
+                <div>
+                  <span className="font-semibold">Meeting Days:</span>{" "}
+                  {schedule.days.map((day: string, index: number) => (
                     <span key={index}>
                       {day}'s
-                      {index < scheduleCourse.schedule.days.length - 1
-                        ? ", "
-                        : ""}
+                      {index < schedule.days.length - 1 ? ", " : ""}
                     </span>
-                  )
-                )}
+                  ))}
+                </div>
+                <div>
+                  <span className="font-semibold">Meeting Time:</span>{" "}
+                  {schedule.startTime &&
+                    `${schedule.startTime} - ${schedule.endTime}`}{" "}
+                </div>
+                <div>
+                  <span className="font-semibold">Duration:</span>{" "}
+                  {schedule.durationWeeks && `${schedule.durationWeeks} weeks`}
+                </div>
+                <div>
+                  <span className="font-semibold">Format:</span>{" "}
+                  {schedule.format && `${schedule.format}`}
+                </div>
+                <div>
+                  <span className="font-semibold">Instructors:</span>{" "}
+                  {schedule.instructors && schedule.instructors.length > 0 ? (
+                    schedule.instructors?.map(
+                      (instructor: string, index: number) => (
+                        <span key={index}>
+                          {instructor}
+                          {index < instructor.length - 1 ? ", " : ""}
+                        </span>
+                      )
+                    )
+                  ) : (
+                    <span>Not assigned</span>
+                  )}
+                </div>
               </div>
-              <div>
-                <span className="font-semibold">Meeting Time:</span>{" "}
-                {scheduleCourse.schedule.startTime &&
-                  `${scheduleCourse.schedule.startTime} - ${scheduleCourse.schedule.endTime}`}{" "}
-              </div>
-              <div>
-                <span className="font-semibold">Duration:</span>{" "}
-                {scheduleCourse.schedule.durationWeeks &&
-                  `${scheduleCourse.schedule.durationWeeks} weeks`}
-              </div>
-
-              <div>
-                <span className="font-semibold">Instructors:</span>{" "}
-                {scheduleCourse.instructors}
-              </div>
-            </div>
-            <div className="flex flex-col gap-2">
-              <div>
-                <span className="font-semibold">Format Options:</span>{" "}
-                {scheduleCourse.formatOptions?.join(", ")}
-              </div>
-              <div>
-                <span className="font-semibold">Includes:</span>{" "}
-                {scheduleCourse.includes?.join(", ")}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       )}
