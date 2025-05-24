@@ -21,8 +21,7 @@ export default function DynamicCTA({
   return (
     <section>
       <h2>{content.heading}</h2>
-      <p>{content.paragraphs[0]}</p>
-      <p className="mt-4">
+      <p>
         <strong>{content.paragraphs[0]}</strong>
         {content.paragraphs.slice(1).map((para, i) => (
           <span key={i} className="block">

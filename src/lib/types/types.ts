@@ -48,7 +48,7 @@ export type Course = {
   keyProjects?: string[];
   description?: string;
   focus?: string[];
-  outcomes: string[];
+  outcomes?: string[];
   next?: string[];
 };
 
