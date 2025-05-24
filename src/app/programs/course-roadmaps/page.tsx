@@ -22,9 +22,6 @@ export default function LearningTracksPage() {
   const getCourseDetails = (courseName: string) =>
     curriculum.find((c) => c.courseName === courseName);
 
-  console.log("curriculum", curriculum);
-  console.log("learningRoadmap", learningRoadmap);
-
   return (
     <div className="mx-auto pt-8 md:pt-12 lg:pt-24 w-10/12 md:w-11/12">
       <h1>Learning Tracks</h1>
