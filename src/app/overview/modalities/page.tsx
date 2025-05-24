@@ -166,7 +166,7 @@ export default function ModalitiesPage() {
           community.
         </p>
         <Button
-          onClick={() => router.push("/curriculum/modalities/classroom-rules")}
+          onClick={() => router.push("/overview/modalities/classroom-rules")}
         >
           View Our Classroom Rules
         </Button>
@@ -221,7 +221,7 @@ export default function ModalitiesPage() {
         </p>
         <Button
           onClick={() =>
-            router.push("/curriculum/modalities/privacy-and-compliance")
+            router.push("/overview/modalities/privacy-and-compliance")
           }
         >
           View Our Privacy & Compliance Statement
