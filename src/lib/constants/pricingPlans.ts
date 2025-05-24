@@ -52,12 +52,12 @@ export const pricingPlans = [
       {
         name: "Starter Plan",
         pricePerMonth: 89,
-        includes: "1 course track/month (online only)",
+        includes: "1 course (online only)",
       },
       {
         name: "Explorer Plan",
         pricePerMonth: 149,
-        includes: "Up to 2 course tracks/month, access to clubs",
+        includes: "Up to 2 courses, access to metors",
       },
       {
         name: "Creator Plan",
@@ -103,8 +103,8 @@ export const pricingPlans = [
       },
     ],
     includes: [
-      "4–6 sequential courses",
-      "Capstone project + demo day access",
+      "Subject specific 3–6 sequential courses",
+      "Capstone projects",
       "Portfolio creation (GitHub/LinkedIn prep for teens)",
       "Ongoing mentorship",
     ],
@@ -132,12 +132,6 @@ export const pricingPlans = [
         price: "$79",
         description:
           "A curated kit including essential tools and devices to complement hands-on coding projects. Enables students to build, program, and experiment with physical components, enhancing practical STEM skills. Perfect for robotics, electronics, and IoT projects.",
-      },
-      {
-        name: "Scholar Pack (income-based)",
-        price: "Apply for up to 75% off",
-        description:
-          "We believe every child deserves access to quality coding education. Families who qualify for need-based assistance can apply for substantial tuition discounts to ensure affordability. This program is designed to support families facing financial challenges while fostering a love for technology and learning.",
       },
     ],
   },
