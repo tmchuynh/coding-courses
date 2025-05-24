@@ -64,7 +64,7 @@ export const techStack = [
       {
         name: "Micro:bit / Arduino Starter Kits",
         desc: "Beginner-friendly microcontrollers for building interactive hardware projects.",
-        why: "Empowers students to prototype inventions and learn about sensors, circuits, and coding in Inventor's Workshop.",
+        why: "Empowers students to prototype inventions and learn about sensors, circuits, and coding in Inventing Workshop.",
       },
     ],
   },
