@@ -1,4 +1,5 @@
 import { curriculumCourses } from "../constants/courses/curriculumCourses";
+import { Course } from "../types/types";
 
 // Utility function to find age group for a given course name
 export function findAgeGroupForCourse(courseName: string): string | undefined {
@@ -17,7 +18,7 @@ export const CATEGORY_LABELS: Record<string, string> = {
   hardware: "Hardware & Robotics",
   business: "Business & Entrepreneurship",
   "college-prep": "College Prep",
-  "app-dev": "App Development",
+  "full-stack-web": "Full Stack Web Development",
   "cyber-security": "Cyber Security",
   "data-science-ml-ai": "Data Science, ML & AI",
 };
@@ -43,4 +44,9 @@ export function getCoursesByCategory() {
     }
   }
   return categoryMap;
+}
+
+export function getCourseDetails(courseName: string, curriculum: Course[]) {
+  console.log("courseName", courseName);
+  return curriculum.find((c) => c.courseName === courseName);
 }
