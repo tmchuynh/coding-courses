@@ -10,7 +10,7 @@ export const learningRoadmap: Roadmap[] = [
           "This roadmap introduces young learners to the foundational concepts of computational thinking through playful, hands-on activities. Students engage in logic games, pattern recognition, and tactile exploration with simple robots, helping them develop early problem-solving skills, understand cause and effect, and build confidence with technology in a supportive environment.",
         courses: [
           {
-            courseName: "Code & Play",
+            courseName: "Code and Play",
           },
           {
             courseName: "Pattern Makers",
@@ -76,7 +76,7 @@ export const learningRoadmap: Roadmap[] = [
           "Students explore the intersection of art, music, and storytelling with programming. By creating generative art, composing music, and building interactive digital stories, learners discover how code can be a powerful tool for creative expression, mathematical thinking, and bringing their unique ideas to life.",
         courses: [
           {
-            courseName: "Creative Code & Art",
+            courseName: "Creative Code with Art",
           },
           {
             courseName: "Code for Music",
@@ -132,7 +132,7 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "Game Studio",
           },
           {
-            courseName: "Simulators & Physics",
+            courseName: "Simulators and Physics",
           },
           {
             courseName: "Unity Game Dev",
@@ -191,7 +191,7 @@ export const learningRoadmap: Roadmap[] = [
           "Students master advanced game development techniques, including 2D and 3D game creation, animation, and multiplayer design. This roadmap covers the full game development lifecycle, from prototyping and physics to user interface and publishing, enabling learners to build portfolio-ready projects.",
         courses: [
           {
-            courseName: "3D Animation & Game Dev",
+            courseName: "3D Animation and Game Dev",
           },
           {
             courseName: "Game Studio",
@@ -207,7 +207,7 @@ export const learningRoadmap: Roadmap[] = [
           "Focused on preparing students for computer science careers and higher education, this roadmap covers algorithms, data structures, and problem-solving strategies. Learners gain real-world experience through internships and mentorship, building strong resumes and professional networks for future success.",
         courses: [
           {
-            courseName: "CS Prep + Algorithms",
+            courseName: "Algorithms",
           },
           {
             courseName: "Internship Program",
@@ -226,7 +226,7 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "Startup Accelerator",
           },
           {
-            courseName: "Entrepreneurship & Innovation",
+            courseName: "Entrepreneurship Basics",
           },
           {
             courseName: "Capstone Accelerator",
