@@ -500,7 +500,7 @@ export const yearRoundSchedule: CourseSchedule[] = [
             days: ["Saturday", "Monday"],
             startTime: "1:00 PM",
             endTime: "2:30 PM",
-            durationWeeks: 12,
+            durationWeeks: 7,
           },
           {
             format: "In-person",
