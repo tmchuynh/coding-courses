@@ -24,7 +24,7 @@ export default function AgeGroupSchedulePage() {
     if (!group) return [];
     const set = new Set<string>();
     group.schedules.forEach((course) => {
-      course.includes.forEach((inc: string) => set.add(inc));
+      course.includes.forEach((inc) => set.add(inc));
     });
     return Array.from(set).sort();
   }, [group]);
@@ -34,7 +34,9 @@ export default function AgeGroupSchedulePage() {
     if (!group) return [];
     const set = new Set<string>();
     group.schedules.forEach((course) => {
-      course.schedule.days.forEach((day: string) => set.add(day));
+      course.schedule.forEach((sched) => {
+        sched.days.forEach((day: string) => set.add(day));
+      });
     });
     return Array.from(set).sort();
   }, [group]);
@@ -62,14 +64,11 @@ export default function AgeGroupSchedulePage() {
   const filteredCourses = useMemo(() => {
     if (!group) return [];
     let courses = group.schedules;
-    if (selectedIncludes.length > 0) {
-      courses = courses.filter((course) =>
-        selectedIncludes.every((inc) => course.includes.includes(inc))
-      );
-    }
     if (selectedDays.length > 0) {
       courses = courses.filter((course) =>
-        selectedDays.every((day) => course.schedule.days.includes(day))
+        course.schedule.some((sched) =>
+          selectedDays.every((day) => sched.days.includes(day))
+        )
       );
     }
     return courses;
@@ -154,26 +153,55 @@ export default function AgeGroupSchedulePage() {
             <div className="mb-2">
               <span className="font-semibold">Outcomes:</span>
               <ul className="ml-6 list-disc">
-                {course.outcomes.map((o, i) => (
+                {course.outcomes?.map((o, i) => (
                   <li key={i}>{o}</li>
                 ))}
               </ul>
             </div>
             <div className="mb-2">
-              <span className="font-semibold">Format:</span>{" "}
-              {course.formatOptions.join(", ")}
-            </div>
-            <div className="mb-2">
               <span className="font-semibold">Schedule:</span>{" "}
-              {course.schedule.days.join(", ")}{" "}
-              {course.schedule.startTime &&
-                `| ${course.schedule.startTime} - ${course.schedule.endTime}`}{" "}
-              {course.schedule.durationWeeks &&
-                `| ${course.schedule.durationWeeks} weeks`}
-            </div>
-            <div className="mb-2">
-              <span className="font-semibold">Instructors:</span>{" "}
-              {course.instructors}
+              {course.schedule.map((schedule, index) => (
+                <div key={index} className="flex flex-col gap-1">
+                  <div>
+                    <span className="font-semibold">Meeting Days:</span>{" "}
+                    {schedule.days.map((day: string, index: number) => (
+                      <span key={index}>
+                        {day}'s
+                        {index < schedule.days.length - 1 ? ", " : ""}
+                      </span>
+                    ))}
+                  </div>
+                  <div>
+                    <span className="font-semibold">Meeting Time:</span>{" "}
+                    {schedule.startTime &&
+                      `${schedule.startTime} - ${schedule.endTime}`}{" "}
+                  </div>
+                  <div>
+                    <span className="font-semibold">Duration:</span>{" "}
+                    {schedule.durationWeeks &&
+                      `${schedule.durationWeeks} weeks`}
+                  </div>
+                  <div>
+                    <span className="font-semibold">Format:</span>{" "}
+                    {schedule.format && `${schedule.format}`}
+                  </div>
+                  <div>
+                    <span className="font-semibold">Instructors:</span>{" "}
+                    {schedule.instructors && schedule.instructors.length > 0 ? (
+                      schedule.instructors?.map(
+                        (instructor: string, index: number) => (
+                          <span key={index}>
+                            {instructor}
+                            {index < instructor.length - 1 ? ", " : ""}
+                          </span>
+                        )
+                      )
+                    ) : (
+                      <span>Not assigned</span>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
             <div>
               <span className="font-semibold">Includes:</span>{" "}
