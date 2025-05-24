@@ -125,6 +125,18 @@ export const navbarItems = [
         href: "/resources/parent-guide",
       },
       {
+        label: "Hear What Our Staff Say",
+        href: "/resources/staff-testimonials",
+      },
+      {
+        label: "What Our Students Say",
+        href: "/resources/student-testimonials",
+      },
+      {
+        label: "What Parents Say",
+        href: "/resources/parent-testimonials",
+      },
+      {
         label: "Blog",
         href: "/resources/blog",
       },
