@@ -1,4 +1,6 @@
 "use client";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
 import { learningRoadmap } from "@/lib/constants/courses/learningRoadmap";
 import { yearRoundSchedule } from "@/lib/constants/courses/yearRoundSchedule";
 import { pricingPlans } from "@/lib/constants/pricingPlans";
@@ -21,37 +23,6 @@ function getGradeGroups() {
     { label: "6–8", value: "Grades 6–8" },
     { label: "9–12", value: "Grades 9-12" },
   ];
-}
-
-function getPlanPricing(planType: string, grade: string) {
-  if (planType === "Single Course Enrollment") {
-    const plan = pricingPlans.find((p) => p.planType === planType);
-    if (!plan) return null;
-    const group = plan.pricing?.find((g: any) =>
-      grade.includes(g.ageGroup.replace("Grades ", ""))
-    );
-    return group
-      ? { online: group.priceOnline, inPerson: group.priceInPerson }
-      : null;
-  }
-  if (planType === "Full-Year Learning Path") {
-    const plan = pricingPlans.find((p) => p.planType === planType);
-    if (!plan) return null;
-    const group = plan.plans?.find((g: any) =>
-      grade.includes(g.name.split(" ")[0])
-    );
-    return group
-      ? {
-          online: group.annualPriceOnline,
-          inPerson: group.annualPriceInPersonHybrid,
-        }
-      : null;
-  }
-  if (planType === "Monthly Memberships") {
-    const plan = pricingPlans.find((p) => p.planType === planType);
-    return plan?.tiers || [];
-  }
-  return null;
 }
 
 function getAddOns() {
@@ -174,11 +145,9 @@ export default function EnrollPage() {
               <h2 className="mb-2 font-semibold">2. Select Grade Level</h2>
               <div className="flex flex-wrap gap-2">
                 {getGradeGroups().map((g) => (
-                  <button
+                  <Button
                     key={g.value}
-                    className={`px-3 py-1 rounded border ${
-                      grade === g.value ? "bg-blue-500 text-white" : "bg-white"
-                    }`}
+                    variant={grade === g.value ? "default" : "outline"}
                     onClick={() => {
                       setGrade(g.value);
                       setSelectedCourse(null);
@@ -187,7 +156,7 @@ export default function EnrollPage() {
                     }}
                   >
                     Grades {g.label}
-                  </button>
+                  </Button>
                 ))}
               </div>
             </div>
@@ -201,11 +170,11 @@ export default function EnrollPage() {
                   <h2 className="mb-2 font-semibold">3. Choose a Course</h2>
                   <div className="gap-3 grid grid-cols-1 md:grid-cols-2">
                     {getCoursesForGrade(grade).map((course) => (
-                      <label
+                      <Label
                         key={course.courseName}
                         className={`border rounded p-3 cursor-pointer ${
                           selectedCourse?.courseName === course.courseName
-                            ? "border-blue-500 bg-blue-50"
+                            ? "border-blue-500 "
                             : ""
                         }`}
                       >
@@ -218,13 +187,11 @@ export default function EnrollPage() {
                           }
                           onChange={() => setSelectedCourse(course)}
                         />
-                        <span className="font-semibold">
-                          {course.courseName}
-                        </span>
-                        <span className="block text-gray-600 text-sm">
+                        <p className="font-semibold">{course.courseName}</p>
+                        <p className="block text-gray-600 text-sm">
                           {course.subtitle}
-                        </span>
-                      </label>
+                        </p>
+                      </Label>
                     ))}
                   </div>
                   {/* Show available schedule for selected course */}
@@ -267,7 +234,7 @@ export default function EnrollPage() {
                         key={roadmap.title}
                         className={`border rounded p-3 cursor-pointer ${
                           selectedRoadmap?.title === roadmap.title
-                            ? "border-blue-500 bg-blue-50"
+                            ? "border-blue-500 "
                             : ""
                         }`}
                       >
@@ -310,7 +277,7 @@ export default function EnrollPage() {
                         key={tier.name}
                         className={`border rounded p-3 cursor-pointer ${
                           monthlyTier?.name === tier.name
-                            ? "border-blue-500 bg-blue-50"
+                            ? "border-blue-500 "
                             : ""
                         }`}
                       >
@@ -346,7 +313,7 @@ export default function EnrollPage() {
                               key={roadmap.title}
                               className={`border rounded p-2 cursor-pointer ${
                                 selectedRoadmap?.title === roadmap.title
-                                  ? "border-blue-500 bg-blue-50"
+                                  ? "border-blue-500 "
                                   : ""
                               }`}
                             >
@@ -366,14 +333,20 @@ export default function EnrollPage() {
                                 {roadmap.title}
                               </span>
                               <br />
-                              {roadmap.courses.map((course, index) => (
-                                <span key={index}>
-                                  {course.courseName}
-                                  {index < roadmap.courses.length - 1
-                                    ? ", "
-                                    : ""}
-                                </span>
-                              ))}
+                              <div className="ml-5">
+                                {" "}
+                                {roadmap.courses.map((course, index) => (
+                                  <span
+                                    key={index}
+                                    className="text-gray-600 text-sm"
+                                  >
+                                    {course.courseName}
+                                    {index < roadmap.courses.length - 1
+                                      ? ", "
+                                      : ""}
+                                  </span>
+                                ))}
+                              </div>
                             </label>
                           ))}
                         </div>
@@ -388,7 +361,7 @@ export default function EnrollPage() {
                                 selectedCourses.some(
                                   (c) => c.courseName === course.courseName
                                 )
-                                  ? "border-blue-500 bg-blue-50"
+                                  ? "border-blue-500 "
                                   : ""
                               }`}
                             >
@@ -419,39 +392,6 @@ export default function EnrollPage() {
                   )}
                 </>
               )}
-            </div>
-          )}
-          {/* Optional Add-Ons */}
-          {planType && (
-            <div className="mb-6">
-              <h2 className="mb-2 font-semibold">4. Optional Add-Ons</h2>
-              <div className="gap-2 grid grid-cols-1">
-                {getAddOns().map((addOn) => (
-                  <label
-                    key={addOn.name}
-                    className={`border rounded p-2 cursor-pointer flex items-center gap-2 ${
-                      selectedAddOns.includes(addOn)
-                        ? "border-blue-500 bg-blue-50"
-                        : ""
-                    }`}
-                  >
-                    <input
-                      type="checkbox"
-                      checked={selectedAddOns.includes(addOn)}
-                      onChange={() => handleAddOnToggle(addOn)}
-                    />
-                    <div>
-                      <span className="font-semibold">{addOn.name}</span>
-                      <span className="block text-gray-600 text-sm">
-                        {addOn.description}
-                      </span>
-                      <span className="block text-gray-500 text-xs">
-                        {addOn.price}
-                      </span>
-                    </div>
-                  </label>
-                ))}
-              </div>
             </div>
           )}
         </section>
@@ -521,6 +461,39 @@ export default function EnrollPage() {
                 Total: <span className="font-bold">${total.toFixed(2)}</span>
               </div>
             </div>
+
+            {/* Optional Add-Ons */}
+            {planType && (
+              <div className="my-4">
+                <h2 className="mb-2 font-semibold">Add-Ons</h2>
+                <div className="gap-2 grid grid-cols-1">
+                  {getAddOns().map((addOn) => (
+                    <label
+                      key={addOn.name}
+                      className={`border rounded p-2 cursor-pointer flex items-start gap-2 ${
+                        selectedAddOns.includes(addOn) ? "border-blue-500 " : ""
+                      }`}
+                    >
+                      <input
+                        type="checkbox"
+                        className="mt-2"
+                        checked={selectedAddOns.includes(addOn)}
+                        onChange={() => handleAddOnToggle(addOn)}
+                      />
+                      <div>
+                        <p className="font-semibold">{addOn.name}</p>
+                        <span className="block mb-2 text-gray-400 text-xs">
+                          {addOn.price}
+                        </span>
+                        <span className="block text-sm">
+                          {addOn.description}
+                        </span>
+                      </div>
+                    </label>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="mt-12 lg:mt-0 text-sm">
