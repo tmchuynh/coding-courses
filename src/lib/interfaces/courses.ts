@@ -32,4 +32,6 @@ export interface CourseSchedule {
   title: string;
   focus: string;
   outcomes: string;
+  project?: string;
+  projectDescription?: string;
 }
