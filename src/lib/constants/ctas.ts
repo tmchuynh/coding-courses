@@ -50,7 +50,7 @@ export const ctaContent: Record<
     buttons: [
       {
         label: "Register Now",
-        onClick: (router) => router.push("/enroll?camp=summer"),
+        onClick: (router) => router.push("/enroll/summer-camps"),
         variant: "accent",
       },
       {
