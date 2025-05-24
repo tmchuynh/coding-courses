@@ -52,6 +52,42 @@ export function sortByPropertyByLength<T>(
   });
 }
 
+/**
+ * Groups and sorts an array of objects based on specified properties.
+ * 
+ * @template T - The type of objects in the array.
+ * 
+ * @param {T[]} array - The array to be grouped and sorted.
+ * @param {keyof T} groupByProperty - The property key to group the array by.
+ * @param {keyof T} [sortByPropertyKey] - Optional property key to sort each group by.
+ * @param {boolean} [sortAscending=true] - Whether to sort in ascending order (true) or descending order (false).
+ * @param {boolean} [sortByLength=false] - Whether to sort by the length of the property value instead of the value itself.
+ * @param {boolean} [groupByLength=false] - Whether to group by the length of the property value instead of the value itself.
+ * @param {boolean} [groupAscending=false] - Whether to sort groups in ascending order (true) or descending order (false).
+ * 
+ * @returns {T[]} A new array with elements grouped and sorted according to the specified parameters.
+ * 
+ * @example
+ * // Group courses by difficulty and sort each group by date
+ * const sortedCourses = groupAndSortByProperties(
+ *   courses,
+ *   'difficulty',  // Group by difficulty
+ *   'publishDate', // Sort each group by publishDate
+ *   false          // Sort dates in descending order (newest first)
+ * );
+ * 
+ * @example
+ * // Group products by category name length and sort by price
+ * const sortedProducts = groupAndSortByProperties(
+ *   products,
+ *   'category',    // Group by category
+ *   'price',       // Sort each group by price
+ *   true,          // Sort prices in ascending order
+ *   false,         // Don't sort by length of price
+ *   true,          // Group by length of category name
+ *   true           // Sort groups in ascending order (shorter category names first)
+ * );
+ */
 export function groupAndSortByProperties<T>(
   array: T[],
   groupByProperty: keyof T,

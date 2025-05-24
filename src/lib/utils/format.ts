@@ -5,8 +5,6 @@ export const capitalize = (str: string) => {
     .replace(/\b[a-zA-Z]/g, (char) => char.toUpperCase());
 };
 
-
-
 export const formatDate = (date: string): string => {
   const options: Intl.DateTimeFormatOptions = {
     year: "numeric",
@@ -70,6 +68,17 @@ export function formatToSlug(str: string): string {
     .replace(/^-|-$/g, "");
 }
 
+/**
+ * Formats a grade range slug into a human-readable string.
+ * 
+ * @param slug - The slug to format, e.g., "grades-k-2" or "grades-3-5"
+ * @returns A formatted string, e.g., "Grades K–2" or "Grades 3–5"
+ * 
+ * @example
+ * formatGradeRangeSlug("grades-k-2") // returns "Grades K–2"
+ * formatGradeRangeSlug("grades-3-5") // returns "Grades 3–5"
+ * formatGradeRangeSlug("invalid-slug") // returns "invalid-slug"
+ */
 export function formatGradeRangeSlug(slug: string): string {
   // Match "grades-k-2" or "grades-3-5" etc.
   const match = slug.match(/^grades-([a-zA-Z0-9]+)-([a-zA-Z0-9]+)$/);
