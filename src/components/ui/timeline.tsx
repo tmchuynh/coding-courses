@@ -48,13 +48,16 @@ export const Timeline = ({ data, title }: TimelineProps) => {
                   {index + 1}
                 </div>
               </div>
-              <h3 className="md:block hidden md:pl-20 font-bold text-xl md:text-2xl">
-                {item.courseName}
-              </h3>
+              <div className="md:flex flex-col gap-2 hidden mx-auto md:pl-20">
+                <h3 className="text-start text-xl md:text-2xl">
+                  {item.courseName}
+                </h3>
+                <p className="text-xs lg:text-sm">{item.description}</p>
+              </div>
             </div>
 
             <div className="relative pr-4 pl-20 md:pl-4 w-full">
-              <h3 className="block md:hidden mb-4 font-bold text-left text-neutral-500 text-xl dark:text-neutral-500">
+              <h3 className="block md:hidden mb-4 text-left text-neutral-500 text-xl dark:text-neutral-500">
                 {item.courseName}
               </h3>
               <div className="mb-2">
@@ -87,7 +90,7 @@ export const Timeline = ({ data, title }: TimelineProps) => {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="top-0 absolute inset-x-0 bg-gradient-to-t from-[0%] from-purple-500 via-[10%] via-blue-500 to-transparent rounded-full w-[2px]"
+            className="top-0 absolute inset-x-0 bg-gradient-to-t from-[0%] from-primary via-[40%] via-accent to-transparent rounded-full w-[2px]"
           />
         </div>
       </div>
