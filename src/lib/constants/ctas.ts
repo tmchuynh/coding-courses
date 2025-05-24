@@ -6,7 +6,9 @@ export const ctaContent: Record<
   | "trial-class"
   | "meet-the-team"
   | "view-programs"
-  | "enroll-today",
+  | "enroll-today"
+  | "student-guide"
+  | "parent-guide",
   {
     heading: string;
     subtitle?: string;
@@ -35,7 +37,7 @@ export const ctaContent: Record<
       {
         label: "Enroll Today",
         onClick: (router) => router.push("/enroll"),
-        variant: "accent",
+        variant: "tertiary",
       },
     ],
   },
@@ -51,7 +53,7 @@ export const ctaContent: Record<
       {
         label: "Register Now",
         onClick: (router) => router.push("/enroll/summer-camps"),
-        variant: "accent",
+        variant: "tertiary",
       },
     ],
   },
@@ -67,7 +69,12 @@ export const ctaContent: Record<
       {
         label: "Book Trial",
         onClick: (router) => router.push("/enroll/trial-class"),
-        variant: "accent",
+        variant: "tertiary",
+      },
+      {
+        label: "View Pricing Plans",
+        onClick: (router) => router.push("/programs/pricing-plans"),
+        variant: "default",
       },
     ],
   },
@@ -101,6 +108,11 @@ export const ctaContent: Record<
         onClick: (router) => router.push("/overview/curriculum"),
         variant: "default",
       },
+      {
+        label: "View Pricing Plans",
+        onClick: (router) => router.push("/programs/pricing-plans"),
+        variant: "default",
+      },
     ],
   },
   "enroll-today": {
@@ -115,12 +127,84 @@ export const ctaContent: Record<
       {
         label: "Enroll Today",
         onClick: (router) => router.push("/enroll"),
-        variant: "accent",
+        variant: "tertiary",
       },
       {
         label: "View Pricing Plans",
         onClick: (router) => router.push("/programs/pricing-plans"),
-        variant: "outline",
+        variant: "default",
+      },
+    ],
+  },
+  "student-guide": {
+    heading: "Ready to Get Started?",
+    subtitle: "Empowering students to create, innovate, and thrive.",
+    paragraphs: [
+      "At [Your Company Name], we believe every student can be a creator, not just a consumer of technology.",
+      "Whether you're new to coding or already building amazing things, this guide will help you understand the tools, expectations, and opportunities that lie ahead. We’re excited to help you build your first game, app, or digital story. Bring your curiosity. Bring your questions. And most of all, bring your imagination.",
+      "Because the world doesn’t just need more coders — it needs more creators.",
+    ],
+    buttons: [
+      {
+        label: "Get Started",
+        onClick: (router) => router.push("/enroll"),
+        variant: "tertiary",
+      },
+      {
+        label: "Explore Curriculum",
+        onClick: (router) => router.push("/overview/curriculum"),
+        variant: "secondary",
+      },
+      {
+        label: "Student Testimonials",
+        onClick: (router) => router.push("/resources/student-testimonials"),
+        variant: "default",
+      },
+      {
+        label: "Technical Requirements",
+        onClick: (router) => router.push("/resources/technical-requirements"),
+        variant: "default",
+      },
+    ],
+  },
+  "parent-guide": {
+    heading: "Let’s Build the Future Together",
+    subtitle: "Empowering Parents to Support the Next Generation of Coders",
+    paragraphs: [
+      "We understand that as a parent, you want the best for your child—an education that prepares them for the future, cultivates their passions, and develops real-world skills. Our programs are designed with those goals in mind.",
+      "Whether your child is just starting out or already diving into complex coding projects, this guide will help you understand how our curriculum works, what your child will gain, and how you can play a supportive role in their coding journey.",
+      "You don’t need a background in technology to help your child succeed in coding. Your support at home, paired with our expert instruction, creates the perfect environment for your child to thrive. Together, we can help your child become not just a great coder, but a confident, creative, and capable learner ready for the challenges of tomorrow.",
+    ],
+    buttons: [
+      {
+        label: "Enroll Today",
+        onClick: (router) => router.push("/enroll"),
+        variant: "tertiary",
+      },
+      {
+        label: "View Curriculum",
+        onClick: (router) => router.push("/overview/curriculum"),
+        variant: "secondary",
+      },
+      {
+        label: "Technical Requirements",
+        onClick: (router) => router.push("/resources/technical-requirements"),
+        variant: "default",
+      },
+      {
+        label: "Safety & Privacy",
+        onClick: (router) => router.push("/resources/safety-and-privacy"),
+        variant: "default",
+      },
+      {
+        label: "Parent Testimonials",
+        onClick: (router) => router.push("/resources/parent-testimonials"),
+        variant: "tertiary",
+      },
+      {
+        label: "Student Testimonials",
+        onClick: (router) => router.push("/resources/student-testimonials"),
+        variant: "tertiary",
       },
     ],
   },
