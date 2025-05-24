@@ -470,7 +470,7 @@ export const yearRoundSchedule: CourseSchedule[] = [
       {
         courseName: "Unity Game Dev 6 to 8",
         subtitle: "Unity & C# Game Design",
-        next: ["Game Studio", "3D Animation and Game Dev"],
+        next: ["Game Studio", "Animation and Game Dev"],
         schedule: [
           {
             format: "Online",
@@ -896,7 +896,7 @@ export const yearRoundSchedule: CourseSchedule[] = [
         price: { online: 349, inPerson: 399 },
       },
       {
-        courseName: "3D Animation and Game Dev",
+        courseName: "Animation and Game Dev",
         subtitle: "Blender & Unity 3D",
         next: ["Game Studio", "Unity Game Dev 9 to 12"],
         schedule: [
@@ -1036,7 +1036,7 @@ export const yearRoundSchedule: CourseSchedule[] = [
       {
         courseName: "Unity Game Dev 9 to 12",
         subtitle: "Advanced Game Development with Unity",
-        next: ["Game Studio", "3D Animation and Game Dev"],
+        next: ["Game Studio", "Animation and Game Dev"],
         schedule: [
           {
             format: "In-person",
