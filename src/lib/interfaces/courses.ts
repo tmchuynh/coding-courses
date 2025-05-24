@@ -16,6 +16,7 @@ export interface Roadmap {
 
 export interface Curriculum {
   title: string;
+  description?: string;
   courses: Course[];
 }
 
