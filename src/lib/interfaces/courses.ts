@@ -26,3 +26,10 @@ export interface Schedules extends Course {
   schedule: Schedule[];
   includes: string[];
 }
+
+export interface CourseSchedule {
+  week: number;
+  title: string;
+  focus: string;
+  outcomes: string;
+}
