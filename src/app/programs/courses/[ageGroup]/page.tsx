@@ -1,15 +1,19 @@
 "use client";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { curriculumCourses } from "@/lib/constants/courses/curriculumCourses";
 import { yearRoundSchedule } from "@/lib/constants/courses/yearRoundSchedule";
 import { formatGradeRangeSlug, formatToSlug } from "@/lib/utils/format";
-import { useParams, useRouter } from "next/navigation";
+import { getCourseDetails } from "@/lib/utils/get";
+import { useParams, usePathname, useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 
 export default function AgeGroupSchedulePage() {
   const params = useParams();
   const ageGroupParam = decodeURIComponent(params.ageGroup as string);
   const router = useRouter();
+  const segments = usePathname().split("/");
+  console.log("segments", segments);
 
   const group = yearRoundSchedule.find(
     (g) =>
@@ -121,94 +125,91 @@ export default function AgeGroupSchedulePage() {
         </div>
       </div>
       <div className="gap-8 grid grid-cols-1 lg:grid-cols-2">
-        {filteredCourses.map((course) => (
-          <div
-            key={course.courseName}
-            className="bg-white shadow-sm p-6 border rounded-lg"
-          >
-            <h2
-              className="mb-2 font-semibold text-xl underline underline-offset-2 hover:no-underline cursor-pointer"
-              onClick={() =>
-                router.push(
-                  `/programs/courses/${formatToSlug(
-                    group.ageGroup
-                  )}/${formatToSlug(course.courseName)}`
-                )
-              }
+        {filteredCourses.map((course) => {
+          console.log("group.ageGroup", group.ageGroup);
+          console.log("course", course);
+          console.log("segments[3]", segments[3]);
+          console.log("course.courseName", course.courseName);
+          const curriculum =
+            curriculumCourses.find(
+              (c) => c.title.replace("", "") === group.ageGroup
+            )?.courses || [];
+
+          const courseDetails = getCourseDetails(course.courseName, curriculum);
+          console.log("courseDetails", courseDetails);
+          if (!courseDetails) {
+            return null; // Skip rendering if course details are not found
+          }
+          return (
+            <div
+              key={course.courseName}
+              className="shadow p-6 border rounded-lg"
             >
-              {course.courseName}
-            </h2>
-            {course.subtitle && (
-              <div className="mb-1 text-indigo-700">{course.subtitle}</div>
-            )}
-            <div className="mb-2 text-gray-700">{course.description}</div>
-            <div className="mb-2">
-              <span className="font-semibold">Focus:</span>
-              <ul className="ml-6 list-disc">
-                {course.focus?.map((f, i) => (
-                  <li key={i}>{f}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="mb-2">
-              <span className="font-semibold">Outcomes:</span>
-              <ul className="ml-6 list-disc">
-                {course.outcomes?.map((o, i) => (
-                  <li key={i}>{o}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="mb-2">
-              <span className="font-semibold">Schedule:</span>{" "}
-              {course.schedule.map((schedule, index) => (
-                <div key={index} className="flex flex-col gap-1">
-                  <div>
-                    <span className="font-semibold">Meeting Days:</span>{" "}
-                    {schedule.days.map((day: string, index: number) => (
-                      <span key={index}>
-                        {day}'s
-                        {index < schedule.days.length - 1 ? ", " : ""}
-                      </span>
-                    ))}
-                  </div>
-                  <div>
-                    <span className="font-semibold">Meeting Time:</span>{" "}
-                    {schedule.startTime &&
-                      `${schedule.startTime} - ${schedule.endTime}`}{" "}
-                  </div>
-                  <div>
-                    <span className="font-semibold">Duration:</span>{" "}
-                    {schedule.durationWeeks &&
-                      `${schedule.durationWeeks} weeks`}
-                  </div>
-                  <div>
-                    <span className="font-semibold">Format:</span>{" "}
-                    {schedule.format && `${schedule.format}`}
-                  </div>
-                  <div>
-                    <span className="font-semibold">Instructors:</span>{" "}
-                    {schedule.instructors && schedule.instructors.length > 0 ? (
-                      schedule.instructors?.map(
-                        (instructor: string, index: number) => (
+              <h2
+                className="font-semibold text-xl underline underline-offset-2 hover:no-underline cursor-pointer"
+                onClick={() =>
+                  router.push(
+                    `/programs/courses/${formatToSlug(
+                      group.ageGroup
+                    )}/${formatToSlug(course.courseName)}`
+                  )
+                }
+              >
+                {course.courseName}
+              </h2>
+              {course.subtitle && <h5>{course.subtitle}</h5>}
+              <div className="mb-2">{courseDetails.description}</div>
+              <div className="my-2">
+                <h4>Available Schedule(s):</h4>{" "}
+                <div className="divide-y">
+                  {course.schedule.map((schedule, index) => (
+                    <div key={index} className="flex flex-col gap-1 py-2">
+                      <div>
+                        <span className="font-semibold">Meeting Days:</span>{" "}
+                        {schedule.days.map((day: string, index: number) => (
                           <span key={index}>
-                            {instructor}
-                            {index < instructor.length - 1 ? ", " : ""}
+                            {day}'s
+                            {index < schedule.days.length - 1 ? ", " : ""}
                           </span>
-                        )
-                      )
-                    ) : (
-                      <span>Not assigned</span>
-                    )}
-                  </div>
+                        ))}
+                      </div>
+                      <div>
+                        <span className="font-semibold">Meeting Time:</span>{" "}
+                        {schedule.startTime &&
+                          `${schedule.startTime} - ${schedule.endTime}`}{" "}
+                      </div>
+                      <div>
+                        <span className="font-semibold">Duration:</span>{" "}
+                        {schedule.durationWeeks &&
+                          `${schedule.durationWeeks} weeks`}
+                      </div>
+                      <div>
+                        <span className="font-semibold">Format:</span>{" "}
+                        {schedule.format && `${schedule.format}`}
+                      </div>
+                      <div>
+                        <span className="font-semibold">Instructors:</span>{" "}
+                        {schedule.instructors &&
+                        schedule.instructors.length > 0 ? (
+                          schedule.instructors?.map(
+                            (instructor: string, index: number) => (
+                              <span key={index}>
+                                {instructor}
+                                {index < instructor.length - 1 ? ", " : ""}
+                              </span>
+                            )
+                          )
+                        ) : (
+                          <span>Not assigned</span>
+                        )}
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
-            <div>
-              <span className="font-semibold">Includes:</span>{" "}
-              {course.includes.join(", ")}
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
