@@ -4,6 +4,7 @@ import { Timeline } from "@/components/ui/timeline";
 import { curriculumCourses } from "@/lib/constants/courses/curriculumCourses";
 import { learningRoadmap } from "@/lib/constants/courses/learningRoadmap";
 import { Course } from "@/lib/types/types";
+import { getCourseDetails } from "@/lib/utils/get";
 import { useState } from "react";
 
 export default function LearningTracksPage() {
@@ -19,8 +20,6 @@ export default function LearningTracksPage() {
     )?.courses || [];
 
   // Helper to get full course details by name
-  const getCourseDetails = (courseName: string) =>
-    curriculum.find((c) => c.courseName === courseName);
 
   return (
     <div className="mx-auto pt-8 md:pt-12 lg:pt-24 w-10/12 md:w-11/12">
@@ -68,8 +67,8 @@ export default function LearningTracksPage() {
                   roadmap.courses
                     .map((c) =>
                       typeof c === "string"
-                        ? getCourseDetails(c)
-                        : getCourseDetails(c.courseName)
+                        ? getCourseDetails(c, curriculum)
+                        : getCourseDetails(c.courseName, curriculum)
                     )
                     .filter(Boolean) as Course[]
                 }
