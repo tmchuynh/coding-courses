@@ -10,7 +10,7 @@ export const summerCourses: Curriculum[] = [
           "Fun programming fundamentals with interactive stories and games",
         level: "Beginner",
         duration: "4 weeks (Mon-Fri, 9:00 AM – 12:00 PM)",
-        format: "In-person only",
+        format: "In-Person",
         description:
           "Introduce basic programming concepts through interactive stories, animations, and games using Scratch’s visual blocks. Students will learn to think like programmers by sequencing instructions, using loops, and responding to events. Through hands-on projects, they will create their own interactive stories and games, fostering creativity and logical thinking. The course encourages collaboration by sharing and remixing projects within the Scratch community, helping students build confidence in coding from an early age.",
         keyProjects: [
@@ -54,7 +54,7 @@ export const summerCourses: Curriculum[] = [
         subtitle: "Hands-on robotics and coding with Dash & Dot robots",
         level: "Beginner",
         duration: "4 weeks (Mon-Fri, 9:00 AM – 12:00 PM)",
-        format: "In-person only",
+        format: "In-Person",
         description:
           "Hands-on introduction to robotics using Dash & Dot robots to teach basic coding and physical computing. Students will learn how to program robots to move, make sounds, and interact with their environment using sensors. Through engaging challenges like obstacle courses and dance routines, they will develop problem-solving skills and understand the basics of robotics. The course emphasizes teamwork, creativity, and the excitement of bringing code to life in the physical world.",
         keyProjects: [
@@ -81,7 +81,7 @@ export const summerCourses: Curriculum[] = [
         subtitle: "Build games and learn Python programming basics",
         level: "Beginner",
         duration: "6 weeks (Mon-Fri, 1:00 PM – 4:00 PM)",
-        format: "In-person only",
+        format: "In-Person",
         description:
           "Develop interactive games using Python and Pygame, focusing on programming fundamentals and game mechanics. Students will learn Python syntax, control structures, and how to manage game graphics and sound. The course guides them through building classic arcade-style games and introduces multiplayer concepts. Emphasis is placed on debugging, iterative development, and enhancing games with creative features, providing a solid foundation in both programming and game design.",
         keyProjects: [
@@ -125,7 +125,7 @@ export const summerCourses: Curriculum[] = [
         subtitle: "Explore Arduino, sensors, and electronics through projects",
         level: "Beginner",
         duration: "6 weeks (Mon-Fri, 1:00 PM – 4:00 PM)",
-        format: "In-person only",
+        format: "In-Person",
         description:
           "Explore microcontrollers and sensors using Arduino kits to build simple automated devices and learn electronics basics. Students will gain hands-on experience with circuits, sensors, and actuators, learning how to program Arduino boards to respond to environmental inputs. Projects include building automated plant watering systems and motion-activated alarms, fostering troubleshooting skills and an understanding of how software and hardware interact.",
         keyProjects: [
@@ -219,7 +219,7 @@ export const summerCourses: Curriculum[] = [
         subtitle: "Intro to data science and machine learning with Python",
         level: "Intermediate",
         duration: "8 weeks (Mon-Fri, 9:00 AM – 1:00 PM)",
-        format: "In-person only",
+        format: "In-Person",
         description:
           "Explore data science workflows and build machine learning models using Python and popular libraries like Scikit-learn and TensorFlow. Students will learn to manipulate and visualize data, understand key algorithms, and apply AI techniques to solve real-world problems. The course includes hands-on projects such as image classification and sentiment analysis, providing a strong foundation in both the theory and practice of machine learning.",
         keyProjects: [
@@ -246,7 +246,7 @@ export const summerCourses: Curriculum[] = [
         subtitle: "Learn game design principles and Unity basics",
         level: "Beginner",
         duration: "2-day weekend intensive (Sat-Sun, 10:00 AM – 3:00 PM)",
-        format: "Online only",
+        format: "Online",
         description:
           "Learn the essentials of game design, including level design, storytelling, and mechanics using game engines like Unity. This intensive workshop introduces students to the process of designing engaging games, from concept to prototype. Participants will explore scripting basic game logic and testing gameplay for fun and fairness, gaining insight into the creative and technical aspects of game development.",
         keyProjects: [],
@@ -263,7 +263,7 @@ export const summerCourses: Curriculum[] = [
         subtitle: "Build IoT devices and automate with microcontrollers",
         level: "Beginner",
         duration: "2-day weekend intensive (Sat-Sun, 10:00 AM – 3:00 PM)",
-        format: "Online only",
+        format: "Online",
         description:
           "Build connected devices using microcontrollers and cloud services, focusing on automation and sensor integration. Students will learn to program IoT devices, integrate sensors, and exchange data with cloud platforms. The workshop emphasizes collaborative project management and provides hands-on experience with the latest trends in robotics and the Internet of Things.",
         keyProjects: [],
@@ -280,7 +280,7 @@ export const summerCourses: Curriculum[] = [
         subtitle: "Analyze and visualize data with Python",
         level: "Beginner",
         duration: "2-day weekend intensive (Sat-Sun, 10:00 AM – 3:00 PM)",
-        format: "Online only",
+        format: "Online",
         description:
           "Analyze datasets and visualize data using Python, applying basic statistics and exploratory analysis. Students will learn to clean and prepare data, create effective visualizations, and perform statistical analysis. The workshop culminates in a hands-on data project, giving participants practical experience in the data science workflow.",
         keyProjects: [],
@@ -297,7 +297,7 @@ export const summerCourses: Curriculum[] = [
         subtitle: "Design accessible, user-friendly websites",
         level: "Beginner",
         duration: "2-day weekend intensive (Sat-Sun, 10:00 AM – 3:00 PM)",
-        format: "Online only",
+        format: "Online",
         description:
           "Create inclusive and accessible websites by learning accessibility standards, user testing, and best design practices. Students will explore the principles of inclusive design, implement accessibility features in HTML and CSS, and conduct user testing to gather feedback. The workshop provides practical skills for building websites that are usable by everyone, regardless of ability.",
         keyProjects: [],
