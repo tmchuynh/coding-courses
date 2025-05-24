@@ -29,7 +29,7 @@ export const ctaContent: Record<
     buttons: [
       {
         label: "View Curriculum",
-        onClick: (router) => router.push("/curriculum/age-groups"),
+        onClick: (router) => router.push("/overview/curriculum"),
         variant: "default",
       },
       {
@@ -98,7 +98,7 @@ export const ctaContent: Record<
     buttons: [
       {
         label: "View Curriculum",
-        onClick: (router) => router.push("/curriculum/age-groups"),
+        onClick: (router) => router.push("/overview/curriculum"),
         variant: "default",
       },
     ],
