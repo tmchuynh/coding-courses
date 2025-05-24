@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { curriculumCourses } from "@/lib/constants/courses/curriculumCourses";
 import { yearRoundSchedule } from "@/lib/constants/courses/yearRoundSchedule";
-import { Times } from "@/lib/types/types";
+import { Schedule } from "@/lib/types/types";
 import { capitalize, formatToSlug } from "@/lib/utils/format";
 import { findAgeGroupForCourse } from "@/lib/utils/get";
 import { groupAndSortByProperties } from "@/lib/utils/sort";
@@ -49,7 +49,7 @@ export default function CourseDetailPage() {
     scheduleCourse.schedule,
     "days",
     "format"
-  );
+  ) as Schedule[];
 
   if (!curriculumCourse) {
     return <div className="p-8">Course not found.</div>;
@@ -69,7 +69,7 @@ export default function CourseDetailPage() {
         <h3>Focus:</h3>
         <ul className="ml-6 list-disc">
           {curriculumCourse.focus.map((f: string, i: number) => (
-            <li key={i}>{f}</li>
+            <li key={`${f}-${i}`}>{f}</li>
           ))}
         </ul>
       </div>
@@ -77,7 +77,7 @@ export default function CourseDetailPage() {
         <h3>Outcomes:</h3>
         <ul className="ml-6 list-disc">
           {curriculumCourse.outcomes.map((o: string, i: number) => (
-            <li key={i}>{o}</li>
+            <li key={`${o}-${i}`}>{o}</li>
           ))}
         </ul>
       </div>
@@ -88,10 +88,10 @@ export default function CourseDetailPage() {
             {curriculumCourse.next.map((n: string, i: number) => {
               const ageGroup = findAgeGroupForCourse(n);
               if (!ageGroup) {
-                return <li key={i}>{n}</li>;
+                return <li key={`${i}-${n}`}>{n}</li>;
               }
               return (
-                <li key={i}>
+                <li key={`${i}-${n}`}>
                   <Button
                     variant={"link"}
                     className="m-0"
@@ -120,12 +120,15 @@ export default function CourseDetailPage() {
             {scheduleCourse.includes?.join(", ")}
           </div>
           <div className="gap-2 space-y-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-4">
-            {sortedSchedule.map((schedule: Times, i: number) => (
-              <div key={i} className="flex flex-col gap-1">
+            {sortedSchedule.map((schedule: Schedule, i: number) => (
+              <div
+                key={`${i}-${schedule.format}-${schedule.durationWeeks}-${schedule.days[0]}`}
+                className="flex flex-col gap-1"
+              >
                 <div>
                   <span className="font-semibold">Meeting Days:</span>{" "}
                   {schedule.days.map((day: string, index: number) => (
-                    <span key={index}>
+                    <span key={`${index}-${day}`}>
                       {day}'s
                       {index < schedule.days.length - 1 ? ", " : ""}
                     </span>
@@ -149,7 +152,7 @@ export default function CourseDetailPage() {
                   {schedule.instructors && schedule.instructors.length > 0 ? (
                     schedule.instructors?.map(
                       (instructor: string, index: number) => (
-                        <span key={index}>
+                        <span key={`${index}-${instructor}`}>
                           {instructor}
                           {index < instructor.length - 1 ? ", " : ""}
                         </span>
