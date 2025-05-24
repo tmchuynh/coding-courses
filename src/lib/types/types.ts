@@ -52,12 +52,14 @@ export type Course = {
   next?: string[];
 };
 
-export type Times = {
+export type Schedule = {
   durationWeeks: number;
   startTime: string;
+  format: string;
   endTime: string;
   days: string[];
   options?: string[];
+  instructors?: string[];
 };
 
 export type CourseSchedule = {
