@@ -165,7 +165,10 @@ export default function PricingPlans() {
           <h2 className="mb-4 font-bold text-2xl">{pricingFaqSection.title}</h2>
           <Accordion type="single" collapsible className="w-full">
             {pricingFaqSection.faqs.map((faq, idx) => (
-              <AccordionItem key={idx} value={`faq-${idx}`}>
+              <AccordionItem
+                key={faq.question || `faq-${idx}`}
+                value={`faq-${idx}`}
+              >
                 <AccordionTrigger>{faq.question}</AccordionTrigger>
                 <AccordionContent>{faq.answer}</AccordionContent>
               </AccordionItem>
