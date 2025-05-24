@@ -40,7 +40,7 @@ export default function CurriculumCourseCard({ course }: { course: Course }) {
       <div className="mb-2">
         <h3 className="font-semibold">Outcomes:</h3>
         <ul className="ml-4 list-disc list-inside">
-          {course.outcomes.map((item, idx) => (
+          {course.outcomes?.map((item, idx) => (
             <li key={idx}>{item}</li>
           ))}
         </ul>
