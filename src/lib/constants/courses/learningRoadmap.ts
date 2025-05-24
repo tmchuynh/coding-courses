@@ -6,92 +6,46 @@ export const learningRoadmap: Roadmap[] = [
     roadmaps: [
       {
         title: "Intro to Computational Thinking",
+        description:
+          "This roadmap introduces young learners to the foundational concepts of computational thinking through playful, hands-on activities. Students engage in logic games, pattern recognition, and tactile exploration with simple robots, helping them develop early problem-solving skills, understand cause and effect, and build confidence with technology in a supportive environment.",
         courses: [
           {
             courseName: "Code & Play",
-            focus: ["Hands-on logic games with basic coding ideas"],
-            outcomes: [
-              "Understanding sequences",
-              "Cause-effect reasoning",
-              "Intro to digital literacy",
-            ],
           },
           {
             courseName: "Pattern Makers",
-            focus: ["Explore patterns using unplugged and digital tools"],
-            outcomes: [
-              "Foundational math skills",
-              "Pattern recognition",
-              "Visual sequencing",
-            ],
           },
           {
             courseName: "Tinker Time",
-            focus: ["Tactile activities with simple robots and block coding"],
-            outcomes: [
-              "Intro to robotics",
-              "Sensory engagement",
-              "Early problem-solving",
-            ],
           },
         ],
       },
       {
         title: "Story-Based Coding",
+        description:
+          "Students learn to code by weaving stories, solving puzzles, and creating interactive projects. This roadmap emphasizes narrative logic, sequencing, and creative expression, using tools like Scratch Jr and physical logic puzzles. Learners build collaboration skills and gain an understanding of programming flow by bringing their own stories and ideas to life through code.",
         courses: [
           {
             courseName: "Code Through Stories",
-            focus: ["Interactive storytelling with Scratch Jr"],
-            outcomes: [
-              "Narrative logic",
-              "Basic programming flow",
-              "Creative storytelling",
-            ],
           },
           {
             courseName: "Digital Discovery Lab",
-            focus: [
-              "Pattern recognition and sequencing using physical logic puzzles",
-            ],
-            outcomes: [
-              "Build early logic and reasoning skills",
-              "Collaboration and problem-solving",
-              "Order of operations",
-            ],
           },
           {
             courseName: "Mini Makers",
-            focus: ["Design and code mini-projects with robotics"],
-            outcomes: [
-              "Intro to robotics",
-              "Creative coding",
-              "User interaction design",
-            ],
           },
         ],
       },
       {
         title: "AI & Circuits for Early Learners",
+        description:
+          "Young students are introduced to the basics of artificial intelligence and electronics in a playful, age-appropriate way. Through interactive stories with AI tools and hands-on circuit building, learners explore concepts like voice and image recognition, input/output logic, and basic electronics, fostering curiosity and early digital literacy.",
         courses: [
           {
             courseName: "AI Storytellers",
-            focus: ["Create interactive stories with AI tools and characters"],
-            outcomes: [
-              "Intro to AI concepts",
-              "Voice/image recognition basics",
-              "Creative digital play",
-            ],
           },
           {
             courseName: "Sensory Circuits Lab",
-            focus: [
-              "Build simple circuits and use sensors for interactive projects",
-            ],
-            outcomes: [
-              "Basic electronics",
-              "Input/output logic",
-              "Hands-on tech exploration",
-            ],
           },
         ],
       },
@@ -102,86 +56,46 @@ export const learningRoadmap: Roadmap[] = [
     roadmaps: [
       {
         title: "Creative Coding Path",
+        description:
+          "This roadmap empowers students to unleash their creativity by building games, web pages, and interactive applications. Learners gain a strong foundation in coding concepts, web design, and user interaction, while developing problem-solving skills and confidence to experiment with technology in fun, meaningful ways.",
         courses: [
           {
             courseName: "Game Builders Club",
-            focus: ["Create basic games by building 2D games"],
-            outcomes: [
-              "Game logic",
-              "Event-based programming",
-              "User interaction",
-            ],
           },
           {
             courseName: "Web Wonders",
-            focus: ["Build and style web pages with HTML/CSS"],
-            outcomes: [
-              "Understanding HTML structure",
-              "Styling basics",
-              "Page design",
-            ],
           },
           {
             courseName: "App Explorers",
-            focus: ["Create interactive web applications using JS and APIs"],
-            outcomes: ["Dynamic pages", "API integration", "Intermediate JS"],
           },
         ],
       },
       {
         title: "Creative Expression Through Code",
+        description:
+          "Students explore the intersection of art, music, and storytelling with programming. By creating generative art, composing music, and building interactive digital stories, learners discover how code can be a powerful tool for creative expression, mathematical thinking, and bringing their unique ideas to life.",
         courses: [
           {
             courseName: "Creative Code & Art",
-            focus: ["Generative art with p5.js and Processing"],
-            outcomes: [
-              "Coordinate systems",
-              "Visual rhythm",
-              "Mathematical creativity",
-            ],
           },
           {
             courseName: "Code for Music",
-            focus: ["Create soundscapes and musical loops with code"],
-            outcomes: [
-              "Audio synthesis",
-              "Loops & tempo",
-              "Interactive sound design",
-            ],
           },
           {
             courseName: "Code a Storybook",
-            focus: ["Interactive digital stories using programming logic"],
-            outcomes: [
-              "Digital storytelling",
-              "Sequencing",
-              "Loops and conditions",
-            ],
           },
         ],
       },
       {
         title: "AI & Hardware Exploration",
+        description:
+          "This roadmap invites students to experiment with artificial intelligence and hardware projects. Through hands-on activities with AI tools, microcontrollers, and sensors, learners develop prototyping skills, explore ethical questions, and gain experience integrating software and hardware to invent new solutions.",
         courses: [
           {
             courseName: "AI Playground",
-            focus: ["Experiment with AI tools for art, music, and games"],
-            outcomes: [
-              "Hands-on AI projects",
-              "Pattern recognition",
-              "Ethical AI discussion",
-            ],
           },
           {
             courseName: "Inventor's Workshop",
-            focus: [
-              "Design and build gadgets with microcontrollers and sensors",
-            ],
-            outcomes: [
-              "Prototyping skills",
-              "Hardware/software integration",
-              "Engineering problem-solving",
-            ],
           },
         ],
       },
@@ -192,89 +106,49 @@ export const learningRoadmap: Roadmap[] = [
     roadmaps: [
       {
         title: "Web Dev + App Creation",
+        description:
+          "Students dive deeper into web development and app creation, learning modern tools and frameworks to build responsive websites and interactive applications. This roadmap covers frontend and backend concepts, user interface design, and dynamic web experiences, preparing learners for more advanced programming challenges.",
         courses: [
           {
             courseName: "Frontend Fundamentals",
-            focus: ["Learn responsive web design with Tailwind CSS"],
-            outcomes: ["Mobile-first layout", "Component design", "Clean UI"],
           },
           {
             courseName: "Web Wonders",
-            focus: ["Build and style web pages with HTML/CSS"],
-            outcomes: [
-              "Understanding HTML structure",
-              "Styling basics",
-              "Page design",
-            ],
           },
           {
             courseName: "Interactive Elements",
-            focus: ["Use JavaScript to create forms and buttons"],
-            outcomes: [
-              "Intro to scripting",
-              "User input handling",
-              "Web interactions",
-            ],
           },
           {
             courseName: "App Explorers",
-            focus: ["Create interactive web applications using JS and APIs"],
-            outcomes: ["Dynamic pages", "API integration", "Intermediate JS"],
           },
         ],
       },
       {
         title: "Games & Simulations",
+        description:
+          "Learners design and build their own games and simulations, applying programming logic to model real-world systems and create engaging user experiences. This roadmap covers game mechanics, physics engines, and debugging, encouraging students to think critically and creatively while developing technical skills.",
         courses: [
           {
             courseName: "Game Studio",
-            focus: ["Game dev with Python or JavaScript"],
-            outcomes: [
-              "Multiplayer logic",
-              "User feedback systems",
-              "Game loop mechanics",
-            ],
           },
           {
             courseName: "Simulators & Physics",
-            focus: ["Simulate systems with code (weather, physics, etc.)"],
-            outcomes: [
-              "Variables over time",
-              "Real-world modeling",
-              "Debugging logic",
-            ],
           },
           {
             courseName: "Unity Game Dev",
-            focus: ["Build 2D/3D games with Unity and C#"],
-            outcomes: [
-              "Game mechanics",
-              "Physics engines",
-              "User interface design",
-            ],
           },
         ],
       },
       {
         title: "AI & Smart Devices",
+        description:
+          "Students explore the world of artificial intelligence, machine learning, and the Internet of Things (IoT). Through practical projects, they build simple ML models, create smart devices with sensors, and learn about automation and ethical considerations, gaining hands-on experience with emerging technologies.",
         courses: [
           {
             courseName: "AI Explorers",
-            focus: ["Build simple ML models for image/text recognition"],
-            outcomes: [
-              "Neural network basics",
-              "Model training/testing",
-              "AI ethics awareness",
-            ],
           },
           {
             courseName: "Smart Devices Lab",
-            focus: ["Create IoT gadgets with sensors and code"],
-            outcomes: [
-              "IoT prototyping",
-              "Automation concepts",
-              "Real-world device building",
-            ],
           },
         ],
       },
@@ -285,178 +159,90 @@ export const learningRoadmap: Roadmap[] = [
     roadmaps: [
       {
         title: "Full Stack Web Dev Track",
+        description:
+          "This comprehensive roadmap guides students through the entire web development process, from designing responsive frontends to building robust backends with APIs and databases. Learners gain practical experience with modern frameworks, authentication, deployment, and collaborative project management, preparing them for real-world software development.",
         courses: [
           {
             courseName: "Interactive Elements",
-            focus: ["Use JavaScript to create forms and buttons"],
-            outcomes: [
-              "Intro to scripting",
-              "User input handling",
-              "Web interactions",
-            ],
           },
           {
             courseName: "Frontend Fundamentals",
-            focus: ["Learn responsive web design with Tailwind CSS"],
-            outcomes: ["Mobile-first layout", "Component design", "Clean UI"],
           },
           {
             courseName: "Full Stack Foundations",
-            focus: ["Build full-stack apps with Node.js and Express"],
-            outcomes: [
-              "RESTful APIs",
-              "Database integration",
-              "Server-side rendering",
-            ],
           },
           {
             courseName: "APIs & Integrations",
-            focus: ["Connect to external APIs and services"],
-            outcomes: [
-              "API authentication",
-              "Data fetching and manipulation",
-              "Real-time data handling",
-            ],
           },
           {
             courseName: "Database Basics",
-            focus: ["Learn SQL and NoSQL databases"],
-            outcomes: [
-              "Database design",
-              "CRUD operations",
-              "Data relationships",
-            ],
           },
           {
             courseName: "Capstone Project",
-            focus: ["Build a full-stack application from scratch"],
-            outcomes: [
-              "Project management",
-              "Team collaboration",
-              "Portfolio-ready project",
-            ],
           },
           {
             courseName: "Advanced Web Dev",
-            focus: ["Explore advanced topics in web development"],
-            outcomes: [
-              "Progressive web apps",
-              "Authentication and security",
-              "Deployment strategies",
-            ],
           },
         ],
       },
       {
         title: "Game Design",
+        description:
+          "Students master advanced game development techniques, including 2D and 3D game creation, animation, and multiplayer design. This roadmap covers the full game development lifecycle, from prototyping and physics to user interface and publishing, enabling learners to build portfolio-ready projects.",
         courses: [
           {
             courseName: "3D Animation & Game Dev",
-            focus: ["Create 3D games and animations using Unity"],
-            outcomes: [
-              "3D modeling and animation",
-              "Game physics and AI",
-              "Multiplayer game design",
-            ],
           },
           {
             courseName: "Game Studio",
-            focus: ["Build 2D games with Pygame or Unity"],
-            outcomes: [
-              "Game mechanics and physics engines",
-              "Sprite handling and UI elements",
-              "Testing, balancing, and publishing games",
-            ],
           },
           {
             courseName: "Unity Game Dev",
-            focus: ["Build 2D/3D games with Unity and C#"],
-            outcomes: [
-              "Game mechanics",
-              "Physics engines",
-              "User interface design",
-            ],
           },
         ],
       },
       {
         title: "CS Prep & Career Pathway",
+        description:
+          "Focused on preparing students for computer science careers and higher education, this roadmap covers algorithms, data structures, and problem-solving strategies. Learners gain real-world experience through internships and mentorship, building strong resumes and professional networks for future success.",
         courses: [
           {
             courseName: "CS Prep + Algorithms",
-            focus: ["Study data structures, sorting, and problem-solving"],
-            outcomes: [
-              "Interview readiness",
-              "Algorithm design",
-              "Time/space analysis",
-            ],
           },
           {
             courseName: "Internship Program",
-            focus: [
-              "Match with tech nonprofits or startups for real-world coding",
-            ],
-            outcomes: [
-              "Job experience",
-              "Resume building",
-              "Mentor connections",
-            ],
           },
         ],
       },
       {
         title: "Startup & Product Track",
+        description:
+          "Students learn the essentials of entrepreneurship and product development, working in teams to take ideas from concept to launch. This roadmap covers agile methods, business skills, pitching, and market validation, empowering learners to innovate and lead in the tech industry.",
         courses: [
           {
             courseName: "Startup Studio",
-            focus: ["From idea to MVP in teams"],
-            outcomes: ["Agile methods", "Product management", "Public launch"],
           },
           {
             courseName: "Startup Accelerator",
-            focus: ["Develop a startup idea into a prototype"],
-            outcomes: ["Pitch deck", "Prototype demo", "Market validation"],
           },
           {
             courseName: "Entrepreneurship & Innovation",
-            focus: ["Learn business skills for tech startups"],
-            outcomes: [
-              "Business model canvas",
-              "Pitching and funding",
-              "Market research",
-            ],
           },
           {
             courseName: "Capstone Accelerator",
-            focus: ["Develop and present a full-scale app or system"],
-            outcomes: [
-              "Final portfolio",
-              "Demo day pitch",
-              "Professional polish",
-            ],
           },
         ],
       },
       {
         title: "AI & Robotics Engineering",
+        description:
+          "This advanced roadmap delves into machine learning, robotics, and autonomous systems. Students design, build, and program intelligent robots, develop ML models, and prepare for competitions, gaining deep technical expertise and hands-on engineering experience.",
         courses: [
           {
             courseName: "Machine Learning Studio",
-            focus: ["Build ML models for image, text, and data analysis"],
-            outcomes: [
-              "Python ML basics",
-              "Data visualization",
-              "Model evaluation",
-            ],
           },
           {
             courseName: "Robotics Engineering",
-            focus: ["Design, build, and program advanced robots"],
-            outcomes: [
-              "Robotics systems integration",
-              "Autonomous navigation",
-              "Competition readiness",
-            ],
           },
         ],
       },
