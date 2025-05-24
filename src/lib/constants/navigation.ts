@@ -50,8 +50,8 @@ export const navbarItems = [
         href: "/programs/pricing-plans",
       },
       {
-        label: "Learning Tracks",
-        href: "/programs/tracks",
+        label: "Course Roadmaps",
+        href: "/programs/course-roadmaps",
       },
       {
         label: "Course Catalog",
