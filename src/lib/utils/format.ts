@@ -53,6 +53,28 @@ export function formatNumberToCurrency(
   }).format(value);
 }
 
+/**
+ * Converts a kebab-case string to camelCase.
+ *
+ * @param str - The kebab-case string to convert.
+ * @returns The camelCase version of the string.
+ *
+ * @example
+ * formatKebabToCamelCase("code-through-stories") // returns "codeThroughStories"
+ * formatKebabToCamelCase("another-example-string") // returns "anotherExampleString"
+ */
+export function formatKebabToCamelCase(str: string): string {
+  return str
+    .split("-")
+    .map((word, index) => {
+      if (index === 0) {
+        return word;
+      }
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join("");
+}
+
 export function formatToSlug(str: string): string {
   console.log("formatToSlug", str);
   console.log(
@@ -70,10 +92,10 @@ export function formatToSlug(str: string): string {
 
 /**
  * Formats a grade range slug into a human-readable string.
- * 
+ *
  * @param slug - The slug to format, e.g., "grades-k-2" or "grades-3-5"
  * @returns A formatted string, e.g., "Grades K–2" or "Grades 3–5"
- * 
+ *
  * @example
  * formatGradeRangeSlug("grades-k-2") // returns "Grades K–2"
  * formatGradeRangeSlug("grades-3-5") // returns "Grades 3–5"
