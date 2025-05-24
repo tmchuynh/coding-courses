@@ -48,48 +48,73 @@ export default function ProgramsPage() {
         <DynamicCTA variant="summer-camp" />
       </div>
       <div className="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto pt-8 lg:pt-12">
-        {Object.entries(coursesByCategory).map(([category, courses]) => {
-          return (
-            <div
-              key={category}
-              className="flex flex-col bg-card shadow p-6 border border-border rounded-2xl text-card-foreground"
-            >
-              <div className="mb-4">
-                <div className="mb-1 font-bold text-lg">
-                  {CATEGORY_LABELS[category] || category}
+        {Object.entries(coursesByCategory)
+          // Sort categories alphabetically by label
+          .sort(([catA], [catB]) => {
+            const labelA = CATEGORY_LABELS[catA] || catA;
+            const labelB = CATEGORY_LABELS[catB] || catB;
+            return labelA.localeCompare(labelB);
+          })
+          .map(([category, courses]) => {
+            // Group courses by ageGroup
+            const coursesByAgeGroup: Record<string, typeof courses> = {};
+            courses.forEach((course) => {
+              if (!coursesByAgeGroup[course.ageGroup]) {
+                coursesByAgeGroup[course.ageGroup] = [];
+              }
+              coursesByAgeGroup[course.ageGroup].push(course);
+            });
+
+            // Sort ageGroups alphabetically
+            const sortedAgeGroups = Object.keys(coursesByAgeGroup).sort();
+
+            return (
+              <div
+                key={category}
+                className="flex flex-col bg-card shadow p-6 border border-border rounded-2xl text-card-foreground"
+              >
+                <div className="mb-4">
+                  <div className="mb-1 font-bold text-lg">
+                    {CATEGORY_LABELS[category] || category}
+                  </div>
+                  <div className="text-sm">
+                    {courses.length} course{courses.length > 1 ? "s" : ""}
+                  </div>
                 </div>
-                <div className="text-sm">
-                  {courses.length} course{courses.length > 1 ? "s" : ""}
-                </div>
+                <ul className="flex-1 space-y-2">
+                  {sortedAgeGroups.map((ageGroup) => {
+                    // Sort courses within ageGroup by courseName
+                    const sortedCourses = coursesByAgeGroup[ageGroup]
+                      .slice()
+                      .sort((a, b) => a.courseName.localeCompare(b.courseName));
+                    return sortedCourses.map((course, idx) => (
+                      <li
+                        key={`${ageGroup}-${course.courseName}`}
+                        className="pb-2 last:pb-0 border-b last:border-b-0"
+                      >
+                        <span
+                          className="font-medium underline-offset-2 hover:underline"
+                          onClick={() =>
+                            router.push(
+                              `programs/courses/${formatToSlug(
+                                course.ageGroup
+                              )}/${formatToSlug(course.courseName)}`
+                            )
+                          }
+                        >
+                          {course.courseName}
+                        </span>
+                        <span className="ml-2 text-gray-400 text-xs">
+                          {course.level ? `(${course.level})` : ""}
+                        </span>
+                        <div className="text-xs">{course.ageGroup}</div>
+                      </li>
+                    ));
+                  })}
+                </ul>
               </div>
-              <ul className="flex-1 space-y-2">
-                {courses.map((course, idx) => (
-                  <li
-                    key={idx}
-                    className="pb-2 last:pb-0 border-b last:border-b-0"
-                  >
-                    <span
-                      className="font-medium underline-offset-2 hover:underline"
-                      onClick={() =>
-                        router.push(
-                          `programs/courses/${formatToSlug(
-                            course.ageGroup
-                          )}/${formatToSlug(course.courseName)}`
-                        )
-                      }
-                    >
-                      {course.courseName}
-                    </span>
-                    <span className="ml-2 text-gray-400 text-xs">
-                      {course.level ? `(${course.level})` : ""}
-                    </span>
-                    <div className="text-xs">{course.ageGroup}</div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          );
-        })}
+            );
+          })}
       </div>
       {/* FAQ Accordion for Course Catalog FAQs */}
       {courseCatalogFaqSection && (
