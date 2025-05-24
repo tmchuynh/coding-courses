@@ -1,8 +1,41 @@
 export const capitalize = (str: string) => {
-  return str
-    .replace(/-/g, " ")
-    .replace(/_/g, " ")
-    .replace(/\b[a-zA-Z]/g, (char) => char.toUpperCase());
+  if (!str) return "";
+
+  const normalizedStr = str.replace(/-/g, " ").replace(/_/g, " ");
+  const wordsToIgnore = new Set([
+    "a",
+    "an",
+    "and",
+    "as",
+    "at",
+    "but",
+    "by",
+    "for",
+    "in",
+    "nor",
+    "of",
+    "on",
+    "or",
+    "the",
+    "up",
+  ]);
+
+  const words = normalizedStr.split(" ");
+  const capitalizedWords = words
+    .filter((word) => word.length > 0) // Remove empty strings from multiple spaces
+    .map((word, index, arr) => {
+      const lowerWord = word.toLowerCase();
+      if (
+        index === 0 ||
+        (index === arr.length - 1 && arr.length > 1) ||
+        !wordsToIgnore.has(lowerWord)
+      ) {
+        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+      }
+      return lowerWord;
+    });
+
+  return capitalizedWords.join(" ");
 };
 
 export const formatDate = (date: string): string => {
@@ -94,11 +127,11 @@ export function formatToSlug(str: string): string {
  * Formats a grade range slug into a human-readable string.
  *
  * @param slug - The slug to format, e.g., "grades-k-2" or "grades-3-5"
- * @returns A formatted string, e.g., "Grades K–2" or "Grades 3–5"
+ * @returns A formatted string, e.g., "Grades K to 2" or "Grades 3 to 5"
  *
  * @example
- * formatGradeRangeSlug("grades-k-2") // returns "Grades K–2"
- * formatGradeRangeSlug("grades-3-5") // returns "Grades 3–5"
+ * formatGradeRangeSlug("grades-k-2") // returns "Grades K to 2"
+ * formatGradeRangeSlug("grades-3-5") // returns "Grades 3 to 5"
  * formatGradeRangeSlug("invalid-slug") // returns "invalid-slug"
  */
 export function formatGradeRangeSlug(slug: string): string {
