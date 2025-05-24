@@ -37,34 +37,39 @@ export default function PricingPlans() {
 
             {/* Single Course Enrollment */}
             {"pricing" in plan && (
-              <table className="mb-4 border w-full text-sm">
-                <thead>
-                  <tr>
-                    <th className="px-2 py-1 border">
-                      <h4>Age Group</h4>
-                    </th>
-                    <th className="px-2 py-1 border">
-                      <h4>Duration</h4>
-                    </th>
-                    <th className="px-2 py-1 border">
-                      <h4>Online</h4>
-                    </th>
-                    <th className="px-2 py-1 border">
-                      <h4>In-Person</h4>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {plan.pricing?.map((row, i) => (
-                    <tr key={i}>
-                      <td className="px-2 py-1 border">{row.ageGroup}</td>
-                      <td className="px-2 py-1 border">{row.duration}</td>
-                      <td className="px-2 py-1 border">${row.priceOnline}</td>
-                      <td className="px-2 py-1 border">${row.priceInPerson}</td>
+              <div className="my-5 border rounded-md overflow-auto">
+                <table className="min-w-full text-left text-sm">
+                  <thead className="font-semibold text-xs uppercase tracking-wide">
+                    <tr>
+                      <th className="px-4 py-3">
+                        <h4>Age Group</h4>
+                      </th>
+                      <th className="px-4 py-3">
+                        <h4>Duration</h4>
+                      </th>
+                      <th className="px-4 py-3">
+                        <h4>Online</h4>
+                      </th>
+                      <th className="px-4 py-3">
+                        <h4>In-Person</h4>
+                      </th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {plan.pricing?.map((row, i) => (
+                      <tr
+                        className="hover:bg-muted border-t hover:text-muted-foreground"
+                        key={i}
+                      >
+                        <td className="px-4 py-3">{row.ageGroup}</td>
+                        <td className="px-4 py-3">{row.duration}</td>
+                        <td className="px-4 py-3">${row.priceOnline}</td>
+                        <td className="px-4 py-3">${row.priceInPerson}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             )}
 
             {/* Monthly Memberships */}
@@ -84,34 +89,37 @@ export default function PricingPlans() {
 
             {/* Full-Year Learning Path */}
             {"plans" in plan && (
-              <table className="mb-4 border w-full text-sm">
-                <thead>
-                  <tr>
-                    <th className="px-2 py-1 border">
-                      <h4>Path</h4>
-                    </th>
-                    <th className="px-2 py-1 border">
-                      <h4>Online</h4>
-                    </th>
-                    <th className="px-2 py-1 border">
-                      <h4>In-Person/Hybrid</h4>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {plan.plans?.map((p, i) => (
-                    <tr key={i}>
-                      <td className="px-2 py-1 border">{p.name}</td>
-                      <td className="px-2 py-1 border">
-                        ${p.annualPriceOnline}
-                      </td>
-                      <td className="px-2 py-1 border">
-                        ${p.annualPriceInPersonHybrid}
-                      </td>
+              <div className="my-5 border rounded-md overflow-auto">
+                <table className="min-w-full text-left text-sm">
+                  <thead className="font-semibold text-xs uppercase tracking-wide">
+                    <tr>
+                      <th className="px-4 py-3">
+                        <h4>Path</h4>
+                      </th>
+                      <th className="px-4 py-3">
+                        <h4>Online</h4>
+                      </th>
+                      <th className="px-4 py-3">
+                        <h4>In-Person/Hybrid</h4>
+                      </th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {plan.plans?.map((p, i) => (
+                      <tr
+                        key={i}
+                        className="hover:bg-muted border-t hover:text-muted-foreground"
+                      >
+                        <td className="px-4 py-3">{p.name}</td>
+                        <td className="px-4 py-3">${p.annualPriceOnline}</td>
+                        <td className="px-4 py-3">
+                          ${p.annualPriceInPersonHybrid}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             )}
 
             {/* Optional Add-Ons */}
