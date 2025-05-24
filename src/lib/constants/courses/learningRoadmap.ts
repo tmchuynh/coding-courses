@@ -204,7 +204,7 @@ export const learningRoadmap: Roadmap[] = [
           "Students master advanced game development techniques, including 2D and 3D game creation, animation, and multiplayer design. This roadmap covers the full game development lifecycle, from prototyping and physics to user interface and publishing, enabling learners to build portfolio-ready projects.",
         courses: [
           {
-            courseName: "3D Animation and Game Dev",
+            courseName: "Animation and Game Dev",
           },
           {
             courseName: "Game Design and Development",
