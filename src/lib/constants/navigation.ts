@@ -125,20 +125,32 @@ export const navbarItems = [
         href: "/resources/parent-guide",
       },
       {
-        label: "Hear What Our Staff Say",
-        href: "/resources/staff-testimonials",
+        label: "Student Guide",
+        href: "/resources/student-guide",
       },
       {
-        label: "What Our Students Say",
-        href: "/resources/student-testimonials",
+        label: "Basic Technical Requirements",
+        href: "/resources/technical-requirements",
       },
       {
-        label: "What Parents Say",
+        label: "Key Vocabulary Terms",
+        href: "/resources/key-vocabulary-terms",
+      },
+      {
+        label: "Safety and Privacy",
+        href: "/resources/safety-and-privacy",
+      },
+      {
+        label: "Parent Testimonials",
         href: "/resources/parent-testimonials",
       },
       {
-        label: "Blog",
-        href: "/resources/blog",
+        label: "Staff Testimonials",
+        href: "/resources/staff-testimonials",
+      },
+      {
+        label: "Student Testimonials",
+        href: "/resources/student-testimonials",
       },
     ],
   },
