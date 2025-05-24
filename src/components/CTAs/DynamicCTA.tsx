@@ -13,7 +13,9 @@ export default function DynamicCTA({
     | "trial-class"
     | "meet-the-team"
     | "view-programs"
-    | "enroll-today";
+    | "enroll-today"
+    | "student-guide"
+    | "parent-guide";
 }) {
   const router = useRouter();
   const content = ctaContent[variant];
@@ -29,16 +31,35 @@ export default function DynamicCTA({
           </span>
         ))}
       </p>
-      <div className="flex md:flex-row flex-col gap-4">
-        {content.buttons.map((btn, i) => (
-          <Button
-            key={i}
-            onClick={() => btn.onClick(router)}
-            variant={btn.variant as any}
-          >
-            {btn.label}
-          </Button>
-        ))}
+      <div className="flex flex-col">
+        <div className="flex md:flex-row flex-col gap-x-4">
+          {content.buttons.slice(0, 2).map((btn, i) => (
+            <div key={i} className="flex-1 md:flex-none">
+              <Button
+                onClick={() => btn.onClick(router)}
+                variant={btn.variant as any}
+                className="w-full"
+              >
+                {btn.label}
+              </Button>
+            </div>
+          ))}
+        </div>
+        {content.buttons.length > 2 && (
+          <div className="gap-x-4 grid md:grid-cols-2 xl:grid-cols-4">
+            {content.buttons.slice(2).map((btn, i) => (
+              <div key={i + 2}>
+                <Button
+                  onClick={() => btn.onClick(router)}
+                  variant={btn.variant as any}
+                  className="w-full"
+                >
+                  {btn.label}
+                </Button>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
