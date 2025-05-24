@@ -16,20 +16,25 @@ export default function ImpactPage() {
         and the limitless potential of young minds when given the right tools
         and support.
       </p>
-      <div className="gap-8 space-y-8 grid grid-cols-1 lg:grid-cols-2 mt-4">
+      <div className="gap-8 grid grid-cols-1 lg:grid-cols-2 mt-4">
         {studentStories.map((story, idx) => (
-          <div key={idx} className="bg-card shadow p-6 rounded-lg">
-            <h4 className="font-semibold">{story.name}</h4>
-            <div className="flex items-center gap-4 my-2">
-              <span className="text-sm">{story.grade}</span>
-              <span className="text-sm">{story.location}</span>
+          <div
+            key={idx}
+            className="flex flex-col justify-between bg-card shadow p-6 border border-border rounded-lg text-card-foreground"
+          >
+            <div>
+              <h4 className="font-semibold">{story.name}</h4>
+              <div className="flex items-center gap-4 my-2">
+                <span className="text-sm">{story.grade}</span>
+                <span className="text-sm">{story.location}</span>
+              </div>
+              <blockquote className="mb-2 italic">"{story.quote}"</blockquote>
+              <ul className="space-y-3 mb-2 text-sm">
+                <li>{story.before}</li>
+                <li>{story.during}</li>
+                <li>{story.after}</li>
+              </ul>
             </div>
-            <blockquote className="mb-2 italic">"{story.quote}"</blockquote>
-            <ul className="space-y-3 mb-2 text-sm">
-              <li>{story.before}</li>
-              <li>{story.during}</li>
-              <li>{story.after}</li>
-            </ul>
             <div className="font-medium text-xs">
               Key Outcomes: {story.keyOutcomes}
             </div>
