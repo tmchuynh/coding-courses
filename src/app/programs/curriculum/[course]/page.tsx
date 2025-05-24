@@ -15,6 +15,8 @@ export default function CurriculumPage() {
 
   const [curriculumData, setCurriculumData] = useState<CourseSchedule[]>([]);
 
+  console.log("ageGroup", findAgeGroupForCourse(courseTitle));
+
   useEffect(() => {
     const fetchData = async () => {
       const ageGroup = findAgeGroupForCourse(courseTitle);
@@ -24,7 +26,7 @@ export default function CurriculumPage() {
       try {
         // Await the Promise from getCurriculumData
         const data = await getCurriculumData(
-          ageGroup?.replace(" ", "-").toLowerCase(),
+          ageGroup?.replaceAll("-", "to").replaceAll(" ", "-").toLowerCase(),
           courseName,
           courseNameId
         );
@@ -67,10 +69,10 @@ export default function CurriculumPage() {
                 <th className="px-4 py-3">
                   <h4>Topic</h4>
                 </th>
-                <th className="px-4 py-3">
+                <th className="hidden px-4 py-3 md:table-cell">
                   <h4>Focus</h4>
                 </th>
-                <th className="px-4 py-3">
+                <th className="hidden px-4 py-3 lg:table-cell">
                   <h4>Outcomes</h4>
                 </th>
               </tr>
@@ -81,14 +83,18 @@ export default function CurriculumPage() {
                   key={weekItem.week}
                   className="hover:bg-muted border-t hover:text-muted-foreground"
                 >
-                  <td className="px-4 py-3 font-medium text-center">
+                  <td className="px-4 py-3 w-1/14 font-medium text-center">
                     {weekItem.week}
                   </td>
-                  <td className="px-4 py-3 w-1/5 font-semibold">
+                  <td className="px-4 py-3 w-1/5 font-semibold text-pretty">
                     {weekItem.title}
                   </td>
-                  <td className="px-4 py-3 w-2/5">{weekItem.focus}</td>
-                  <td className="px-4 py-3">{weekItem.outcomes}</td>
+                  <td className="hidden px-4 py-3 w-2/5 md:table-cell">
+                    {weekItem.focus}
+                  </td>
+                  <td className="hidden px-4 py-3 lg:table-cell">
+                    {weekItem.outcomes}
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -104,7 +110,7 @@ export default function CurriculumPage() {
                 <th className="px-4 py-3">
                   <h4>Project</h4>
                 </th>
-                <th className="px-4 py-3">
+                <th className="hidden px-4 py-3 md:table-cell">
                   <h4>Project Description</h4>
                 </th>
               </tr>
@@ -115,11 +121,11 @@ export default function CurriculumPage() {
                   key={weekItem.week}
                   className="hover:bg-muted border-t hover:text-muted-foreground"
                 >
-                  <td className="px-4 py-3 font-medium text-center">
+                  <td className="px-4 py-3 w-1/14 font-medium text-center">
                     {weekItem.week}
                   </td>
                   <td className="px-4 py-3 w-1/5">{weekItem.project}</td>
-                  <td className="px-4 py-3 text-balance">
+                  <td className="hidden px-4 py-3 text-balance md:table-cell">
                     {weekItem.projectDescription}
                   </td>
                 </tr>

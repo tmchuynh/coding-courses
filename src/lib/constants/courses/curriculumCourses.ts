@@ -2,7 +2,7 @@ import { Curriculum } from "@/lib/interfaces/courses";
 
 export const curriculumCourses: Curriculum[] = [
   {
-    title: "Grades K–2",
+    title: "Grades K to 2",
     courses: [
       {
         courseName: "Code Through Stories",
@@ -108,7 +108,7 @@ export const curriculumCourses: Curriculum[] = [
         outcomes: [
           "Gain comfort using tech tools for input/output actions",
           "Connect movement and sound with digital behavior",
-          "Be ready for more structured coding tasks in K–2 or 3–5 courses",
+          "Be ready for more structured coding tasks in K to 2 or 3 to 5 courses",
         ],
         next: ["Mini Makers", "Code Through Stories"],
       },
@@ -150,7 +150,7 @@ export const curriculumCourses: Curriculum[] = [
     ],
   },
   {
-    title: "Grades 3–5",
+    title: "Grades 3 to 5",
     courses: [
       {
         courseName: "Game Builders Club",
@@ -317,7 +317,7 @@ export const curriculumCourses: Curriculum[] = [
     ],
   },
   {
-    title: "Grades 6–8",
+    title: "Grades 6 to 8",
     courses: [
       {
         courseName: "Game Studio",
@@ -483,7 +483,7 @@ export const curriculumCourses: Curriculum[] = [
     ],
   },
   {
-    title: "Grades 9–12",
+    title: "Grades 9 to 12",
     courses: [
       {
         courseName: "Nextjs Essentials",
@@ -523,7 +523,10 @@ export const curriculumCourses: Curriculum[] = [
           "Use math and physics to create interactive experiences",
           "Explore STEM applications of coding",
         ],
-        next: ["APIs and Integrations", "Database Basics"],
+        next: [
+          "Application Programming Interfaces and Integrations",
+          "Database Basics",
+        ],
       },
       {
         courseName: "Full Stack Foundations",
@@ -542,14 +545,14 @@ export const curriculumCourses: Curriculum[] = [
           "Prepare for deeper backend and framework learning",
         ],
         next: [
-          "APIs and Integrations",
+          "Application Programming Interfaces and Integrations",
           "Database Basics",
           "Advanced Web Dev",
           "Algorithms",
         ],
       },
       {
-        courseName: "APIs and Integrations",
+        courseName: "Application Programming Interfaces and Integrations",
         category: "web-and-app-dev",
         level: "Intermediate",
         description:
@@ -588,7 +591,7 @@ export const curriculumCourses: Curriculum[] = [
           "Prepare for full-stack applications",
         ],
         next: [
-          "APIs and Integrations",
+          "Application Programming Interfaces and Integrations",
           "Advanced Backend and DevOps",
           "Algorithms",
         ],
@@ -627,7 +630,7 @@ export const curriculumCourses: Curriculum[] = [
           "Understand the role of AI in modern apps",
           "Develop critical thinking around emerging tech",
         ],
-        next: ["Startup Studio", "Nextjs Essentials (9–12)"],
+        next: ["Startup Studio", "Nextjs Essentials (9 to 12)"],
       },
       {
         courseName: "Advanced Backend and DevOps",

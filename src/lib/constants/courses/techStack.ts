@@ -1,6 +1,6 @@
 export const techStack = [
   {
-    title: "Grades K–2",
+    title: "Grades K to 2",
     description:
       "Young learners are introduced to technology through visual, hands-on, and story-based tools that make coding approachable and fun.",
     tools: [
@@ -32,7 +32,7 @@ export const techStack = [
     ],
   },
   {
-    title: "Grades 3–5",
+    title: "Grades 3 to 5",
     description:
       "Elementary students explore creative coding, game development, and web basics using visual and beginner-friendly platforms.",
     tools: [
@@ -69,7 +69,7 @@ export const techStack = [
     ],
   },
   {
-    title: "Grades 6–8",
+    title: "Grades 6 to 8",
     description:
       "Middle schoolers deepen their skills with real-world programming languages, web development, and game engines.",
     tools: [
@@ -106,7 +106,7 @@ export const techStack = [
     ],
   },
   {
-    title: "Grades 9–12",
+    title: "Grades 9 to 12",
     description:
       "High school students master industry-standard technologies for full-stack development, AI, and entrepreneurship.",
     tools: [

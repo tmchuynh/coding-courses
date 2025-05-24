@@ -64,7 +64,7 @@ export const faqs: FAQSection[] = [
       {
         question: "What courses do you offer for beginners?",
         answer:
-          "Our K–2 and 3–5 courses use visual coding tools and story-based challenges. Middle and high school students can start with HTML/CSS and progress into JavaScript or Python—even with no prior experience.",
+          "Our K to 2 and 3 to 5 courses use visual coding tools and story-based challenges. Middle and high school students can start with HTML/CSS and progress into JavaScript or Python—even with no prior experience.",
       },
       {
         question: "Do students need to know how to type?",
@@ -135,7 +135,7 @@ export const faqs: FAQSection[] = [
       {
         question: "What equipment does my child need?",
         answer:
-          "For online classes, students need a computer with internet access and a browser. Tablets are fine for K–2 classes. Advanced courses may benefit from a laptop or desktop.",
+          "For online classes, students need a computer with internet access and a browser. Tablets are fine for K to 2 classes. Advanced courses may benefit from a laptop or desktop.",
       },
       {
         question: "How do I enroll?",
@@ -191,7 +191,7 @@ export const faqs: FAQSection[] = [
       {
         question: "Is coding too difficult for young children?",
         answer:
-          "Not at all! Our K–2 courses use visual programming languages and storytelling to make coding fun and accessible. Kids learn through play, building confidence as they go.",
+          "Not at all! Our K to 2 courses use visual programming languages and storytelling to make coding fun and accessible. Kids learn through play, building confidence as they go.",
       },
       {
         question: "Does my child need to be a math genius?",

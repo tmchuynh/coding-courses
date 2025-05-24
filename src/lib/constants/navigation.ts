@@ -38,6 +38,54 @@ export const navbarItems = [
     href: "/",
   },
   {
+    label: "About",
+    href: "/about",
+    dropdown: [
+      {
+        label: "Our Company",
+        href: "/about",
+      },
+      {
+        label: "Our Mission",
+        href: "/about/mission",
+      },
+      {
+        label: "Our Staff",
+        href: "/about/our-staff",
+      },
+      {
+        label: "Careers",
+        href: "/about/careers",
+      },
+      {
+        label: "Student Success Stories",
+        href: "/about/student-success-stories",
+      },
+    ],
+  },
+  {
+    label: "Overview",
+    href: "/overview",
+    dropdown: [
+      {
+        label: "Why Learn How to Code?",
+        href: "/overview",
+      },
+      {
+        label: "Technology Stack",
+        href: "/overview/tech-stack",
+      },
+      {
+        label: "Educational Philosophy",
+        href: "/overview/philosophy",
+      },
+      {
+        label: "In-Person vs Online",
+        href: "/overview/modalities",
+      },
+    ],
+  },
+  {
     label: "Programs",
     href: "/programs",
     dropdown: [
@@ -67,54 +115,6 @@ export const navbarItems = [
   {
     label: "Course Catalog",
     href: "/programs/courses",
-  },
-  {
-    label: "Curriculum",
-    href: "/overview",
-    dropdown: [
-      {
-        label: "Why Learn How to Code?",
-        href: "/overview",
-      },
-      {
-        label: "Technology Stack",
-        href: "/overview/tech-stack",
-      },
-      {
-        label: "Educational Philosophy",
-        href: "/overview/philosophy",
-      },
-      {
-        label: "In-Person vs Online",
-        href: "/overview/modalities",
-      },
-    ],
-  },
-  {
-    label: "About",
-    href: "/about",
-    dropdown: [
-      {
-        label: "Our Company",
-        href: "/about",
-      },
-      {
-        label: "Our Mission",
-        href: "/about/mission",
-      },
-      {
-        label: "Our Staff",
-        href: "/about/our-staff",
-      },
-      {
-        label: "Careers",
-        href: "/about/careers",
-      },
-      {
-        label: "Student Success Stories",
-        href: "/about/student-success-stories",
-      },
-    ],
   },
   {
     label: "Resources",

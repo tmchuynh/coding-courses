@@ -1,8 +1,8 @@
 import { CourseSchedule } from "@/lib/types/types";
-// Grades K–2
+// Grades K to 2
 export const yearRoundSchedule: CourseSchedule[] = [
   {
-    ageGroup: "Grades K–2",
+    ageGroup: "Grades K to 2",
     schedules: [
       {
         courseName: "Code Through Stories",
@@ -227,9 +227,9 @@ export const yearRoundSchedule: CourseSchedule[] = [
       },
     ],
   },
-  // Grades 3–5
+  // Grades 3 to 5
   {
-    ageGroup: "Grades 3–5",
+    ageGroup: "Grades 3 to 5",
     schedules: [
       {
         courseName: "Game Builders Club",
@@ -440,9 +440,9 @@ export const yearRoundSchedule: CourseSchedule[] = [
       },
     ],
   },
-  // Grades 6–8
+  // Grades 6 to 8
   {
-    ageGroup: "Grades 6–8",
+    ageGroup: "Grades 6 to 8",
     schedules: [
       {
         courseName: "Game Studio",
@@ -634,9 +634,9 @@ export const yearRoundSchedule: CourseSchedule[] = [
       },
     ],
   },
-  // Grades 9–12
+  // Grades 9 to 12
   {
-    ageGroup: "Grades 9-12",
+    ageGroup: "Grades 9 to 12",
     schedules: [
       {
         courseName: "Nextjs Essentials",
@@ -668,7 +668,10 @@ export const yearRoundSchedule: CourseSchedule[] = [
       {
         courseName: "Simulators and Physics",
         subtitle: "Coding Real-World Systems",
-        next: ["APIs and Integrations", "Database Basics"],
+        next: [
+          "Application Programming Interfaces and Integrations",
+          "Database Basics",
+        ],
         schedule: [
           {
             format: "Online",
@@ -691,7 +694,11 @@ export const yearRoundSchedule: CourseSchedule[] = [
       {
         courseName: "Full Stack Foundations",
         subtitle: "Dynamic Web Projects",
-        next: ["APIs and Integrations", "Database Basics", "Advanced Web Dev"],
+        next: [
+          "Application Programming Interfaces and Integrations",
+          "Database Basics",
+          "Advanced Web Dev",
+        ],
         schedule: [
           {
             format: "Online",
@@ -712,7 +719,7 @@ export const yearRoundSchedule: CourseSchedule[] = [
         price: { online: 349, inPerson: 399 },
       },
       {
-        courseName: "APIs and Integrations",
+        courseName: "Application Programming Interfaces and Integrations",
         subtitle: "Connecting to the Web",
         next: ["Nextjs Essentials", "Startup Studio", "Database Basics"],
         schedule: [
@@ -737,7 +744,10 @@ export const yearRoundSchedule: CourseSchedule[] = [
       {
         courseName: "Database Basics",
         subtitle: "Data & Storage",
-        next: ["APIs and Integrations", "Advanced Backend and DevOps"],
+        next: [
+          "Application Programming Interfaces and Integrations",
+          "Advanced Backend and DevOps",
+        ],
         schedule: [
           {
             format: "Online",
@@ -783,7 +793,7 @@ export const yearRoundSchedule: CourseSchedule[] = [
       {
         courseName: "AI Basics",
         subtitle: "Intro to Artificial Intelligence",
-        next: ["Startup Studio", "Nextjs Essentials (Grades 9–12)"],
+        next: ["Startup Studio", "Nextjs Essentials (Grades 9 to 12)"],
         schedule: [
           {
             format: "Online",

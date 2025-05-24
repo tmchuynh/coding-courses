@@ -10,7 +10,7 @@ import { useState } from "react";
 export default function LearningTracksPage() {
   const [activeTab, setActiveTab] = useState(0);
 
-  // Get the current age group (e.g., "K–2", "3–5", etc.)
+  // Get the current age group (e.g., "K to 2", "3 to 5", etc.)
   const currentAgeGroup = learningRoadmap[activeTab].gradeGroup;
 
   // Find the curriculum for the current age group

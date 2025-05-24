@@ -2,7 +2,7 @@ import { Roadmap } from "@/lib/interfaces/courses";
 
 export const learningRoadmap: Roadmap[] = [
   {
-    gradeGroup: "K–2",
+    gradeGroup: "K to 2",
     roadmaps: [
       {
         title: "Intro to Computational Thinking",
@@ -58,7 +58,7 @@ export const learningRoadmap: Roadmap[] = [
     ],
   },
   {
-    gradeGroup: "3–5",
+    gradeGroup: "3 to 5",
     roadmaps: [
       {
         title: "Creative Coding Path",
@@ -111,7 +111,7 @@ export const learningRoadmap: Roadmap[] = [
     ],
   },
   {
-    gradeGroup: "6–8",
+    gradeGroup: "6 to 8",
     roadmaps: [
       {
         title: "Web Dev and App Creation",
@@ -167,7 +167,7 @@ export const learningRoadmap: Roadmap[] = [
     ],
   },
   {
-    gradeGroup: "9–12",
+    gradeGroup: "9 to 12",
     roadmaps: [
       {
         title: "Full Stack Web Dev Track",
@@ -184,7 +184,7 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "Full Stack Foundations",
           },
           {
-            courseName: "APIs and Integrations",
+            courseName: "Application Programming Interfaces and Integrations",
           },
           {
             courseName: "Database Basics",

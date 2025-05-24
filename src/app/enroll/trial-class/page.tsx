@@ -272,13 +272,13 @@ export default function FreeTrial() {
                 {(() => {
                   const group = getCurriculumTitleByGrade(form.studentGrade);
                   switch (group) {
-                    case "Grades K–2":
+                    case "Grades K to 2":
                       return "Only Mondays and Tuesdays are available.";
-                    case "Grades 3–5":
+                    case "Grades 3 to 5":
                       return "Only Wednesdays and Thursdays are available.";
-                    case "Grades 6–8":
+                    case "Grades 6 to 8":
                       return "Only Fridays and Mondays are available.";
-                    case "Grades 9–12":
+                    case "Grades 9 to 12":
                       return "Only Mondays, Tuesdays, and Thursdays are available.";
                     default:
                       return "Select grade to see available days.";

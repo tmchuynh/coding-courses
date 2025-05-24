@@ -10,25 +10,25 @@ export const pricingPlans = [
 
     pricing: [
       {
-        ageGroup: "K–2",
+        ageGroup: "K to 2",
         duration: "4 weeks",
         priceOnline: 149,
         priceInPerson: 179,
       },
       {
-        ageGroup: "Grades 3–5",
+        ageGroup: "Grades 3 to 5",
         duration: "6 weeks",
         priceOnline: 199,
         priceInPerson: 229,
       },
       {
-        ageGroup: "Grades 6–8",
+        ageGroup: "Grades 6 to 8",
         duration: "8 weeks",
         priceOnline: 249,
         priceInPerson: 279,
       },
       {
-        ageGroup: "Grades 9–12",
+        ageGroup: "Grades 9 to 12",
         duration: "12 weeks",
         priceOnline: 349,
         priceInPerson: 399,
@@ -92,12 +92,12 @@ export const pricingPlans = [
         annualPriceInPersonHybrid: 949,
       },
       {
-        name: "Middle School Path (6–8)",
+        name: "Middle School Path (6 to 8)",
         annualPriceOnline: 1099,
         annualPriceInPersonHybrid: 1299,
       },
       {
-        name: "High School Path (9–12)",
+        name: "High School Path (9 to 12)",
         annualPriceOnline: 1499,
         annualPriceInPersonHybrid: 1699,
       },

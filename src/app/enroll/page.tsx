@@ -18,10 +18,10 @@ type PlanType = (typeof PLAN_TYPES)[number];
 
 function getGradeGroups() {
   return [
-    { label: "K–2", value: "Grades K–2" },
-    { label: "3–5", value: "Grades 3–5" },
-    { label: "6–8", value: "Grades 6–8" },
-    { label: "9–12", value: "Grades 9-12" },
+    { label: "K to 2", value: "Grades K to 2" },
+    { label: "3 to 5", value: "Grades 3 to 5" },
+    { label: "6 to 8", value: "Grades 6 to 8" },
+    { label: "9 to 12", value: "Grades 9 to 12" },
   ];
 }
 
