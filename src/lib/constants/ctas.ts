@@ -53,11 +53,6 @@ export const ctaContent: Record<
         onClick: (router) => router.push("/enroll/summer-camps"),
         variant: "accent",
       },
-      {
-        label: "Learn More",
-        onClick: (router) => router.push("/programs/summer-camps"),
-        variant: "outline",
-      },
     ],
   },
   "trial-class": {
