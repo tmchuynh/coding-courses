@@ -82,20 +82,21 @@ export function getCourseDetails(courseName: string, curriculum: Course[]) {
  * 
  * @param grade - The grade string to be evaluated (e.g., "K", "3", "10")
  * @returns The appropriate curriculum title range:
- *   - "Grades K–2" for kindergarten, 0, 1, or 2
- *   - "Grades 3–5" for grades 3, 4, or 5
- *   - "Grades 6–8" for grades 6, 7, or 8
- *   - "Grades 9–12" for grades 9, 10, 11, or 12
+ *   - "Grades K to 2" for kindergarten, 0, 1, or 2
+ *   - "Grades 3 to 5" for grades 3, 4, or 5
+ *   - "Grades 6 to 8" for grades 6, 7, or 8
+ *   - "Grades 9 to 12" for grades 9, 10, 11, or 12
  *   - Empty string if no matching grade is found
  */
 export function getCurriculumTitleByGrade(grade: string) {
   // Normalize input
   const g = grade.trim().toLowerCase();
   if (["k", "kindergarten", "0", "1", "2"].some((v) => g.includes(v)))
-    return "Grades K–2";
-  if (["3", "4", "5"].some((v) => g.includes(v))) return "Grades 3–5";
-  if (["6", "7", "8"].some((v) => g.includes(v))) return "Grades 6–8";
-  if (["9", "10", "11", "12"].some((v) => g.includes(v))) return "Grades 9–12";
+    return "Grades K to 2";
+  if (["3", "4", "5"].some((v) => g.includes(v))) return "Grades 3 to 5";
+  if (["6", "7", "8"].some((v) => g.includes(v))) return "Grades 6 to 8";
+  if (["9", "10", "11", "12"].some((v) => g.includes(v)))
+    return "Grades 9 to 12";
   return "";
 }
 
@@ -142,10 +143,10 @@ export function getAgeRangeByGrade(grade: string) {
  * - 6 = Sunday
  * 
  * Different grade groups have different allowed trial days:
- * - Grades K–2: Monday, Tuesday
- * - Grades 3–5: Wednesday, Thursday
- * - Grades 6–8: Friday, Monday
- * - Grades 9–12: Monday, Tuesday, Thursday
+ * - Grades K to 2: Monday, Tuesday
+ * - Grades 3 to 5: Wednesday, Thursday
+ * - Grades 6 to 8: Friday, Monday
+ * - Grades 9 to 12: Monday, Tuesday, Thursday
  * 
  * @param grade - The grade string to determine the curriculum group
  * @returns An array of numbers representing the allowed days of the week
@@ -156,13 +157,13 @@ export function getAllowedTrialDaysByGrade(grade: string): number[] {
   const group = getCurriculumTitleByGrade(grade);
   // getDay(): 6=Sun, 0=Mon, 1=Tue, 2=Wed, 3=Thu, 4=Fri, 5=Sat
   switch (group) {
-    case "Grades K–2":
+    case "Grades K to 2":
       return [0, 1]; // Monday, Tuesday
-    case "Grades 3–5":
+    case "Grades 3 to 5":
       return [2, 3]; // Wednesday, Thursday
-    case "Grades 6–8":
+    case "Grades 6 to 8":
       return [5, 0]; // Friday, Monday
-    case "Grades 9–12":
+    case "Grades 9 to 12":
       return [0, 1, 3]; // Monday, Tuesday, Thursday
     default:
       return [];
