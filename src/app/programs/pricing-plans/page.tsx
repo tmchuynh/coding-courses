@@ -24,12 +24,16 @@ export default function PricingPlans() {
         membership. Explore our options to find the perfect fit for you and your
         family.
       </p>
+      <section className="mt-8">
+        <DynamicCTA variant="trial-class" />
+      </section>
       {/* Pricing Plans Display */}
       <div className="space-y-12 mt-12">
         {pricingPlans.map((plan, idx) => (
-          <div key={idx} className="shadow-sm p-6 border rounded-lg">
-            <h2 className="mb-2 font-semibold text-xl">{plan.planType}</h2>
-            {plan.description && <p className="mb-2">{plan.description}</p>}
+          <div key={idx}>
+            <h2>{plan.planType}</h2>
+            {plan.description &&
+              plan.description.map((desc, i) => <p key={i}>{desc}</p>)}
 
             {/* Single Course Enrollment */}
             {"pricing" in plan && (
@@ -67,7 +71,7 @@ export default function PricingPlans() {
             {"tiers" in plan && (
               <div className="gap-4 grid md:grid-cols-2 mb-4">
                 {plan.tiers?.map((tier, i) => (
-                  <div key={i} className="p-3 border rounded">
+                  <div key={i}>
                     <div className="inline-flex justify-between items-center w-full">
                       <h3>{tier.name}</h3>
                       <h4>${tier.pricePerMonth}/mo</h4>
@@ -116,18 +120,20 @@ export default function PricingPlans() {
                 {plan.items?.map((item, i) => (
                   <li key={i}>
                     <strong>{item.name}:</strong> {item.price}
+                    <p>{item.description}</p>
                   </li>
                 ))}
               </ul>
             )}
 
             {/* Special Offers */}
+
             {"offers" in plan && (
               <ul className="mb-2 ml-6 list-disc">
                 {plan.offers?.map((offer, i) => (
                   <li key={i}>
-                    <strong>{offer.split(":")[0]}:</strong>
-                    {offer.split(":")[1]}
+                    <strong>{offer.name}:</strong> {offer.price}
+                    <p>{offer.description}</p>
                   </li>
                 ))}
               </ul>
@@ -141,6 +147,7 @@ export default function PricingPlans() {
                 ))}
               </ul>
             )}
+
             {plan.benefits && (
               <ul className="mb-2 ml-6 list-disc">
                 {plan.benefits.map((b, i) => (
@@ -151,9 +158,7 @@ export default function PricingPlans() {
           </div>
         ))}
       </div>
-      <section className="mt-8">
-        <DynamicCTA variant="trial-class" />
-      </section>
+
       {/* Pricing FAQs Accordion */}
       {pricingFaqSection && (
         <div className="mt-4 md:mt-6 lg:mt-8">
