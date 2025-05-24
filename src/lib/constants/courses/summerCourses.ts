@@ -10,7 +10,7 @@ export const summerCourses: Curriculum[] = [
           "Fun programming fundamentals with interactive stories and games",
         level: "Beginner",
         duration: "4 weeks (Mon-Fri, 9:00 AM – 12:00 PM)",
-        format: "In-person & Online",
+        format: "In-person only",
         description:
           "Introduce basic programming concepts through interactive stories, animations, and games using Scratch’s visual blocks. Students will learn to think like programmers by sequencing instructions, using loops, and responding to events. Through hands-on projects, they will create their own interactive stories and games, fostering creativity and logical thinking. The course encourages collaboration by sharing and remixing projects within the Scratch community, helping students build confidence in coding from an early age.",
         keyProjects: [
@@ -25,13 +25,14 @@ export const summerCourses: Curriculum[] = [
           "Use Scratch’s drag-and-drop interface",
           "Collaboration through sharing and remixing projects",
         ],
+        price: 499,
       },
       {
         courseName: "Digital Makers: Art & Animation",
         subtitle: "Create digital art and animations using block-based coding",
         level: "Beginner",
         duration: "4 weeks (Mon-Fri, 9:00 AM – 12:00 PM)",
-        format: "In-person & Online",
+        format: "Hybrid",
         description:
           "Blend coding and creativity by designing digital art and animations with block-based coding tools. Students will explore the fundamentals of digital design, create pixel art, and bring their creations to life with animation. The course covers basic animation principles and visual storytelling, allowing students to express themselves artistically while learning computational thinking. Projects such as animated greeting cards and story-driven animations help develop patience, attention to detail, and a sense of accomplishment.",
         keyProjects: [
@@ -46,13 +47,14 @@ export const summerCourses: Curriculum[] = [
           "Create digital greeting cards and animations",
           "Develop patience and attention to detail",
         ],
+        price: 499,
       },
       {
         courseName: "Robotics for Beginners",
         subtitle: "Hands-on robotics and coding with Dash & Dot robots",
         level: "Beginner",
         duration: "4 weeks (Mon-Fri, 9:00 AM – 12:00 PM)",
-        format: "In-person & Online",
+        format: "In-person only",
         description:
           "Hands-on introduction to robotics using Dash & Dot robots to teach basic coding and physical computing. Students will learn how to program robots to move, make sounds, and interact with their environment using sensors. Through engaging challenges like obstacle courses and dance routines, they will develop problem-solving skills and understand the basics of robotics. The course emphasizes teamwork, creativity, and the excitement of bringing code to life in the physical world.",
         keyProjects: [
@@ -67,6 +69,7 @@ export const summerCourses: Curriculum[] = [
           "Develop problem-solving through robot behavior design",
           "Build teamwork and project planning skills",
         ],
+        price: 499,
       },
     ],
   },
@@ -78,7 +81,7 @@ export const summerCourses: Curriculum[] = [
         subtitle: "Build games and learn Python programming basics",
         level: "Beginner",
         duration: "6 weeks (Mon-Fri, 1:00 PM – 4:00 PM)",
-        format: "In-person & Online",
+        format: "In-person only",
         description:
           "Develop interactive games using Python and Pygame, focusing on programming fundamentals and game mechanics. Students will learn Python syntax, control structures, and how to manage game graphics and sound. The course guides them through building classic arcade-style games and introduces multiplayer concepts. Emphasis is placed on debugging, iterative development, and enhancing games with creative features, providing a solid foundation in both programming and game design.",
         keyProjects: [
@@ -93,13 +96,14 @@ export const summerCourses: Curriculum[] = [
           "Use Pygame for graphics and sound",
           "Enhance creative problem-solving skills",
         ],
+        price: 699,
       },
       {
         courseName: "Web Design & Development Basics",
         subtitle: "Design and code interactive, responsive websites",
         level: "Beginner",
         duration: "6 weeks (Mon-Fri, 1:00 PM – 4:00 PM)",
-        format: "In-person & Online",
+        format: "Hybrid",
         description:
           "Learn HTML, CSS, and JavaScript to build responsive, interactive web pages with real-world applications. Students will create personal portfolio websites, interactive galleries, and responsive landing pages. The course covers web structure, styling, and adding interactivity, as well as best practices for debugging and using developer tools. By the end, students will have a strong grasp of web technologies and the ability to create their own websites from scratch.",
         keyProjects: [
@@ -114,13 +118,14 @@ export const summerCourses: Curriculum[] = [
           "Apply responsive design principles",
           "Debug web code with developer tools",
         ],
+        price: 699,
       },
       {
         courseName: "Intro to Robotics & Electronics",
         subtitle: "Explore Arduino, sensors, and electronics through projects",
         level: "Beginner",
         duration: "6 weeks (Mon-Fri, 1:00 PM – 4:00 PM)",
-        format: "In-person & Online",
+        format: "In-person only",
         description:
           "Explore microcontrollers and sensors using Arduino kits to build simple automated devices and learn electronics basics. Students will gain hands-on experience with circuits, sensors, and actuators, learning how to program Arduino boards to respond to environmental inputs. Projects include building automated plant watering systems and motion-activated alarms, fostering troubleshooting skills and an understanding of how software and hardware interact.",
         keyProjects: [
@@ -135,6 +140,7 @@ export const summerCourses: Curriculum[] = [
           "Understand input/output concepts",
           "Practice troubleshooting and iterative design",
         ],
+        price: 699,
       },
     ],
   },
@@ -146,7 +152,7 @@ export const summerCourses: Curriculum[] = [
         subtitle: "Develop modern web apps with React, Next.js, and APIs",
         level: "Intermediate",
         duration: "8 weeks (Mon-Fri, 9:00 AM – 1:00 PM)",
-        format: "In-person & Online",
+        format: "Hybrid",
         description:
           "Build scalable full-stack web applications using React, Next.js, and Tailwind CSS, with backend API integration. Students will learn to design, develop, and deploy modern web apps, covering both frontend and backend development. The course includes version control, deployment workflows, and best practices for building responsive, accessible, and performant websites. Real-world projects such as social media clones and e-commerce storefronts provide practical experience and portfolio pieces.",
         keyProjects: [
@@ -161,6 +167,7 @@ export const summerCourses: Curriculum[] = [
           "Use version control and deployment workflows",
           "Build responsive, accessible, and performant websites",
         ],
+        price: 899,
       },
       {
         courseName: "Mobile App Development Track",
@@ -168,7 +175,7 @@ export const summerCourses: Curriculum[] = [
           "Create cross-platform mobile apps with React Native or Flutter",
         level: "Intermediate",
         duration: "8 weeks (Mon-Fri, 9:00 AM – 1:00 PM)",
-        format: "In-person & Online",
+        format: "Hybrid",
         description:
           "Design and deploy cross-platform mobile apps using React Native or Flutter, focusing on UI/UX and app logic. Students will learn to create mobile applications that run on both iOS and Android, exploring user interface design, navigation, and state management. The course covers accessing device features like GPS and camera, as well as testing and preparing apps for app stores. By the end, students will have built several functional mobile apps.",
         keyProjects: [
@@ -183,13 +190,14 @@ export const summerCourses: Curriculum[] = [
           "Access device features (GPS, camera)",
           "Test, debug, and prepare apps for app stores",
         ],
+        price: 899,
       },
       {
         courseName: "Cybersecurity & Ethical Hacking",
         subtitle: "Hands-on labs in cybersecurity and ethical hacking",
         level: "Intermediate",
         duration: "8 weeks (Mon-Fri, 9:00 AM – 1:00 PM)",
-        format: "In-person & Online",
+        format: "Hybrid",
         description:
           "Learn core cybersecurity concepts and ethical hacking techniques through hands-on labs and penetration testing simulations. Students will explore network security, vulnerability assessment, and defensive coding practices. The course emphasizes the importance of ethical behavior and legal considerations in cybersecurity, providing practical skills in identifying and mitigating security threats. Realistic scenarios and labs help students understand the challenges and responsibilities of cybersecurity professionals.",
         keyProjects: [
@@ -204,13 +212,14 @@ export const summerCourses: Curriculum[] = [
           "Write secure code and identify vulnerabilities",
           "Understand legal and ethical aspects of cybersecurity",
         ],
+        price: 899,
       },
       {
         courseName: "AI & Machine Learning Foundations",
         subtitle: "Intro to data science and machine learning with Python",
         level: "Intermediate",
         duration: "8 weeks (Mon-Fri, 9:00 AM – 1:00 PM)",
-        format: "In-person & Online",
+        format: "In-person only",
         description:
           "Explore data science workflows and build machine learning models using Python and popular libraries like Scikit-learn and TensorFlow. Students will learn to manipulate and visualize data, understand key algorithms, and apply AI techniques to solve real-world problems. The course includes hands-on projects such as image classification and sentiment analysis, providing a strong foundation in both the theory and practice of machine learning.",
         keyProjects: [
@@ -225,6 +234,7 @@ export const summerCourses: Curriculum[] = [
           "Understand classification and regression algorithms",
           "Apply AI techniques to solve real-world problems",
         ],
+        price: 899,
       },
     ],
   },
@@ -246,6 +256,7 @@ export const summerCourses: Curriculum[] = [
           "Script basic game logic",
           "Test and balance gameplay for fun and fairness",
         ],
+        price: 199,
       },
       {
         courseName: "Robotics & IoT Projects",
@@ -262,6 +273,7 @@ export const summerCourses: Curriculum[] = [
           "Exchange data with cloud platforms",
           "Manage projects collaboratively",
         ],
+        price: 199,
       },
       {
         courseName: "Data Science Crash Course",
@@ -278,6 +290,7 @@ export const summerCourses: Curriculum[] = [
           "Perform basic statistical analysis",
           "Complete a hands-on data project",
         ],
+        price: 199,
       },
       {
         courseName: "Web Accessibility & UX Design",
@@ -294,6 +307,7 @@ export const summerCourses: Curriculum[] = [
           "Conduct user testing and gather feedback",
           "Build accessible HTML and CSS components",
         ],
+        price: 199,
       },
     ],
   },
