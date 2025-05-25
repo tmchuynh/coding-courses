@@ -1,4 +1,5 @@
 "use client";
+import DynamicCTA from "@/components/CTAs/DynamicCTA";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { learningRoadmap } from "@/lib/constants/courses/learningRoadmap";
@@ -106,12 +107,13 @@ export default function EnrollPage() {
     <div className="mx-auto pt-8 md:pt-12 lg:pt-24 w-10/12 md:w-11/12">
       <h1>Enroll Now</h1>
       <h5>Flexible Options for Every Learner</h5>
-      <p>
+      <p className="mb-4">
         Our pricing plans are designed to accommodate a variety of learning
         needs, whether you're looking for a single course or a comprehensive
         membership. Explore our options to find the perfect fit for you and your
         family.
       </p>
+      <DynamicCTA variant="trial-class" />
       <div className="gap-5 grid lg:grid-cols-5 mt-8 w-full">
         <section className="lg:col-span-3 w-full">
           {/* Plan Type Selection */}
