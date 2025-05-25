@@ -209,25 +209,6 @@ export const codingVocabTerms = [
         ],
       },
       {
-        category: "AI & Data",
-        terms: [
-          {
-            term: "Data",
-            definition: "Information that can be processed by a computer.",
-          },
-          {
-            term: "Dataset",
-            definition:
-              "A collection of related data, often used for training AI models.",
-          },
-          {
-            term: "Training",
-            definition:
-              "The process of teaching an AI model using data so it can make predictions or decisions.",
-          },
-        ],
-      },
-      {
         category: "Hardware & Robotics",
         terms: [
           {
@@ -255,13 +236,32 @@ export const codingVocabTerms = [
           },
         ],
       },
+      {
+        category: "Data Science, ML & AI",
+        terms: [
+          {
+            term: "Data",
+            definition: "Information that can be processed by a computer.",
+          },
+          {
+            term: "Dataset",
+            definition:
+              "A collection of related data, often used for training AI models.",
+          },
+          {
+            term: "Training",
+            definition:
+              "The process of teaching an AI model using data so it can make predictions or decisions.",
+          },
+        ],
+      },
     ],
   },
   {
     ageGroup: "6-8",
     categories: [
       {
-        category: "Programming Concepts",
+        category: "Basic Programming",
         terms: [
           {
             term: "Algorithm",
@@ -411,6 +411,39 @@ export const codingVocabTerms = [
         ],
       },
       {
+        category: "Hardware & Robotics",
+        terms: [
+          {
+            term: "Sensor",
+            definition:
+              "A device that detects information from the environment, like light or touch.",
+          },
+          {
+            term: "Servo Motor",
+            definition: "A motor that moves to a specific angle.",
+          },
+          {
+            term: "Microcontroller",
+            definition:
+              "A small computer used in robotics to control actions and inputs.",
+          },
+          {
+            term: "Actuator",
+            definition: "A device that causes movement in a robot.",
+          },
+          {
+            term: "Autonomous",
+            definition:
+              "A robot that can make decisions on its own without human control.",
+          },
+          {
+            term: "Line Follower",
+            definition:
+              "A robot that follows a path drawn on the ground using sensors.",
+          },
+        ],
+      },
+      {
         category: "Data Science, ML & AI",
         terms: [
           {
@@ -483,46 +516,13 @@ export const codingVocabTerms = [
           },
         ],
       },
-      {
-        category: "Hardware & Robotics",
-        terms: [
-          {
-            term: "Sensor",
-            definition:
-              "A device that detects information from the environment, like light or touch.",
-          },
-          {
-            term: "Servo Motor",
-            definition: "A motor that moves to a specific angle.",
-          },
-          {
-            term: "Microcontroller",
-            definition:
-              "A small computer used in robotics to control actions and inputs.",
-          },
-          {
-            term: "Actuator",
-            definition: "A device that causes movement in a robot.",
-          },
-          {
-            term: "Autonomous",
-            definition:
-              "A robot that can make decisions on its own without human control.",
-          },
-          {
-            term: "Line Follower",
-            definition:
-              "A robot that follows a path drawn on the ground using sensors.",
-          },
-        ],
-      },
     ],
   },
   {
     ageGroup: "High School (Grades 9–12)",
     categories: [
       {
-        category: "Programming Concepts",
+        category: "Basic Programming",
         terms: [
           {
             term: "Data Type",
@@ -555,7 +555,7 @@ export const codingVocabTerms = [
         ],
       },
       {
-        category: "Web Development",
+        category: "Web & App Development",
         terms: [
           {
             term: "Component",
@@ -584,222 +584,42 @@ export const codingVocabTerms = [
         ],
       },
       {
-        category: "Algorithms",
+        category: "Game Development",
         terms: [
           {
-            term: "Sorting",
+            term: "Asset Pipeline",
             definition:
-              "An algorithm that arranges data in a specific order, like from smallest to largest.",
+              "The process of creating, importing, and managing game assets like graphics and sounds.",
           },
           {
-            term: "Searching",
+            term: "Game Design Document (GDD)",
             definition:
-              "Looking through data to find something, like finding a name in a list.",
+              "A detailed plan for a game, including its mechanics, story, and art style.",
           },
           {
-            term: "Recursion",
+            term: "Game Monetization",
             definition:
-              "When a function calls itself to solve smaller parts of a problem.",
+              "Strategies for making money from a game, like in-app purchases or ads.",
           },
           {
-            term: "Big O Notation",
+            term: "Game Analytics",
             definition:
-              "A way to measure how fast or slow an algorithm is as the input gets bigger.",
+              "Using data to understand how players interact with a game and improve it.",
           },
           {
-            term: "Greedy Algorithm",
+            term: "Game Streaming",
             definition:
-              "An algorithm that makes the best choice at each step, hoping it leads to the best solution overall.",
+              "Broadcasting gameplay live over the internet, allowing others to watch and interact.",
           },
           {
-            term: "Dynamic Programming",
+            term: "Game Localization",
             definition:
-              "A method for solving complex problems by breaking them down into simpler subproblems and storing their solutions.",
+              "Adapting a game for different languages and cultures to reach a wider audience.",
           },
           {
-            term: "Graph",
+            term: "Game AI",
             definition:
-              "A collection of nodes (points) connected by edges (lines), used to represent relationships.",
-          },
-          {
-            term: "Tree",
-            definition:
-              "A hierarchical structure with a root node and child nodes, used to organize data.",
-          },
-          {
-            term: "Hash Table",
-            definition:
-              "A data structure that uses a hash function to map keys to values for fast data retrieval.",
-          },
-          {
-            term: "Queue",
-            definition:
-              "A data structure that follows the First In, First Out (FIFO) principle.",
-          },
-          {
-            term: "Stack",
-            definition:
-              "A data structure that follows the Last In, First Out (LIFO) principle.",
-          },
-          {
-            term: "Binary Search",
-            definition:
-              "An efficient algorithm for finding an item in a sorted list by repeatedly dividing the search interval in half.",
-          },
-          {
-            term: "Graph Traversal",
-            definition:
-              "The process of visiting all the nodes in a graph, often using algorithms like Depth-First Search (DFS) or Breadth-First Search (BFS).",
-          },
-          {
-            term: "Heuristic",
-            definition:
-              "A problem-solving approach that uses practical methods to find a satisfactory solution, often used in AI.",
-          },
-          {
-            term: "Pathfinding",
-            definition:
-              "The process of finding the shortest route between two points, often used in games and robotics.",
-          },
-          {
-            term: "Complexity",
-            definition:
-              "A measure of how the time or space requirements of an algorithm grow with the size of the input.",
-          },
-        ],
-      },
-      {
-        category: "Data Science, ML & AI",
-        terms: [
-          {
-            term: "Regression",
-            definition:
-              "A statistical method to predict a value based on other values.",
-          },
-          {
-            term: "Neural Network",
-            definition:
-              "A type of AI model inspired by how the human brain works, used for complex tasks like image recognition.",
-          },
-          {
-            term: "Natural Language Processing (NLP)",
-            definition:
-              "A field of AI that focuses on how computers understand and generate human language.",
-          },
-          {
-            term: "Supervised Learning",
-            definition:
-              "A type of machine learning where the model is trained on labeled data.",
-          },
-          {
-            term: "Unsupervised Learning",
-            definition:
-              "A type of machine learning where the model finds patterns in unlabeled data.",
-          },
-          {
-            term: "Reinforcement Learning",
-            definition:
-              "A type of machine learning where an agent learns to make decisions by receiving rewards or penalties based on its actions.",
-          },
-          {
-            term: "Feature",
-            definition:
-              "An individual measurable property or characteristic of the data used in machine learning.",
-          },
-          {
-            term: "Hyperparameter",
-            definition:
-              "A setting that can be adjusted to improve the performance of a machine learning model.",
-          },
-          {
-            term: "Overfitting",
-            definition:
-              "When a machine learning model learns the training data too well, including noise, and performs poorly on new data.",
-          },
-          {
-            term: "Underfitting",
-            definition:
-              "When a machine learning model is too simple and fails to capture the underlying patterns in the data.",
-          },
-          {
-            term: "Cross-Validation",
-            definition:
-              "A technique for assessing how well a machine learning model will generalize to an independent dataset.",
-          },
-          {
-            term: "Bias",
-            definition:
-              "A systematic error in a machine learning model that leads to unfair or inaccurate predictions.",
-          },
-          {
-            term: "Confusion Matrix",
-            definition:
-              "A table used to evaluate the performance of a classification model by comparing predicted and actual values.",
-          },
-          {
-            term: "Precision",
-            definition:
-              "The ratio of true positive predictions to the total predicted positives, indicating the accuracy of positive predictions.",
-          },
-          {
-            term: "Recall",
-            definition:
-              "The ratio of true positive predictions to the total actual positives, indicating the model's ability to find all relevant instances.",
-          },
-          {
-            term: "F1 Score",
-            definition:
-              "A measure that combines precision and recall into a single score, useful for evaluating models on imbalanced datasets.",
-          },
-        ],
-      },
-      {
-        category: "Software Engineering Tools",
-        terms: [
-          {
-            term: "Git",
-            definition:
-              "A version control system for tracking changes in code.",
-          },
-          {
-            term: "GitHub",
-            definition:
-              "A website where you can host and collaborate on code projects using Git.",
-          },
-          {
-            term: "IDE",
-            definition:
-              "Integrated Development Environment — software that helps you write and test code.",
-          },
-          {
-            term: "Repository",
-            definition:
-              "A digital storage for code, including its history and related files.",
-          },
-          {
-            term: "Deployment",
-            definition:
-              "The process of launching a web app or website to the public.",
-          },
-          {
-            term: "Continuous Integration (CI)",
-            definition:
-              "A practice where code changes are automatically tested and merged into the main project.",
-          },
-          {
-            term: "Continuous Deployment (CD)",
-            definition:
-              "A practice where code changes are automatically deployed to production after passing tests.",
-          },
-          {
-            term: "API",
-            definition:
-              "Application Programming Interface — a set of rules for how software components should interact.",
-          },
-          {
-            term: "Framework",
-            definition:
-              "A collection of pre-written code that helps you build applications faster.",
+              "Artificial intelligence used in games to control non-player characters (NPCs) and create dynamic gameplay.",
           },
         ],
       },
@@ -898,42 +718,222 @@ export const codingVocabTerms = [
         ],
       },
       {
-        category: "Game Development",
+        category: "Data Science, ML & AI",
         terms: [
           {
-            term: "Asset Pipeline",
+            term: "Regression",
             definition:
-              "The process of creating, importing, and managing game assets like graphics and sounds.",
+              "A statistical method to predict a value based on other values.",
           },
           {
-            term: "Game Design Document (GDD)",
+            term: "Neural Network",
             definition:
-              "A detailed plan for a game, including its mechanics, story, and art style.",
+              "A type of AI model inspired by how the human brain works, used for complex tasks like image recognition.",
           },
           {
-            term: "Game Monetization",
+            term: "Natural Language Processing (NLP)",
             definition:
-              "Strategies for making money from a game, like in-app purchases or ads.",
+              "A field of AI that focuses on how computers understand and generate human language.",
           },
           {
-            term: "Game Analytics",
+            term: "Supervised Learning",
             definition:
-              "Using data to understand how players interact with a game and improve it.",
+              "A type of machine learning where the model is trained on labeled data.",
           },
           {
-            term: "Game Streaming",
+            term: "Unsupervised Learning",
             definition:
-              "Broadcasting gameplay live over the internet, allowing others to watch and interact.",
+              "A type of machine learning where the model finds patterns in unlabeled data.",
           },
           {
-            term: "Game Localization",
+            term: "Reinforcement Learning",
             definition:
-              "Adapting a game for different languages and cultures to reach a wider audience.",
+              "A type of machine learning where an agent learns to make decisions by receiving rewards or penalties based on its actions.",
           },
           {
-            term: "Game AI",
+            term: "Feature",
             definition:
-              "Artificial intelligence used in games to control non-player characters (NPCs) and create dynamic gameplay.",
+              "An individual measurable property or characteristic of the data used in machine learning.",
+          },
+          {
+            term: "Hyperparameter",
+            definition:
+              "A setting that can be adjusted to improve the performance of a machine learning model.",
+          },
+          {
+            term: "Overfitting",
+            definition:
+              "When a machine learning model learns the training data too well, including noise, and performs poorly on new data.",
+          },
+          {
+            term: "Underfitting",
+            definition:
+              "When a machine learning model is too simple and fails to capture the underlying patterns in the data.",
+          },
+          {
+            term: "Cross-Validation",
+            definition:
+              "A technique for assessing how well a machine learning model will generalize to an independent dataset.",
+          },
+          {
+            term: "Bias",
+            definition:
+              "A systematic error in a machine learning model that leads to unfair or inaccurate predictions.",
+          },
+          {
+            term: "Confusion Matrix",
+            definition:
+              "A table used to evaluate the performance of a classification model by comparing predicted and actual values.",
+          },
+          {
+            term: "Precision",
+            definition:
+              "The ratio of true positive predictions to the total predicted positives, indicating the accuracy of positive predictions.",
+          },
+          {
+            term: "Recall",
+            definition:
+              "The ratio of true positive predictions to the total actual positives, indicating the model's ability to find all relevant instances.",
+          },
+          {
+            term: "F1 Score",
+            definition:
+              "A measure that combines precision and recall into a single score, useful for evaluating models on imbalanced datasets.",
+          },
+        ],
+      },
+      {
+        category: "Algorithms",
+        terms: [
+          {
+            term: "Sorting",
+            definition:
+              "An algorithm that arranges data in a specific order, like from smallest to largest.",
+          },
+          {
+            term: "Searching",
+            definition:
+              "Looking through data to find something, like finding a name in a list.",
+          },
+          {
+            term: "Recursion",
+            definition:
+              "When a function calls itself to solve smaller parts of a problem.",
+          },
+          {
+            term: "Big O Notation",
+            definition:
+              "A way to measure how fast or slow an algorithm is as the input gets bigger.",
+          },
+          {
+            term: "Greedy Algorithm",
+            definition:
+              "An algorithm that makes the best choice at each step, hoping it leads to the best solution overall.",
+          },
+          {
+            term: "Dynamic Programming",
+            definition:
+              "A method for solving complex problems by breaking them down into simpler subproblems and storing their solutions.",
+          },
+          {
+            term: "Graph",
+            definition:
+              "A collection of nodes (points) connected by edges (lines), used to represent relationships.",
+          },
+          {
+            term: "Tree",
+            definition:
+              "A hierarchical structure with a root node and child nodes, used to organize data.",
+          },
+          {
+            term: "Hash Table",
+            definition:
+              "A data structure that uses a hash function to map keys to values for fast data retrieval.",
+          },
+          {
+            term: "Queue",
+            definition:
+              "A data structure that follows the First In, First Out (FIFO) principle.",
+          },
+          {
+            term: "Stack",
+            definition:
+              "A data structure that follows the Last In, First Out (LIFO) principle.",
+          },
+          {
+            term: "Binary Search",
+            definition:
+              "An efficient algorithm for finding an item in a sorted list by repeatedly dividing the search interval in half.",
+          },
+          {
+            term: "Graph Traversal",
+            definition:
+              "The process of visiting all the nodes in a graph, often using algorithms like Depth-First Search (DFS) or Breadth-First Search (BFS).",
+          },
+          {
+            term: "Heuristic",
+            definition:
+              "A problem-solving approach that uses practical methods to find a satisfactory solution, often used in AI.",
+          },
+          {
+            term: "Pathfinding",
+            definition:
+              "The process of finding the shortest route between two points, often used in games and robotics.",
+          },
+          {
+            term: "Complexity",
+            definition:
+              "A measure of how the time or space requirements of an algorithm grow with the size of the input.",
+          },
+        ],
+      },
+      {
+        category: "Software Engineering Tools",
+        terms: [
+          {
+            term: "Git",
+            definition:
+              "A version control system for tracking changes in code.",
+          },
+          {
+            term: "GitHub",
+            definition:
+              "A website where you can host and collaborate on code projects using Git.",
+          },
+          {
+            term: "IDE",
+            definition:
+              "Integrated Development Environment — software that helps you write and test code.",
+          },
+          {
+            term: "Repository",
+            definition:
+              "A digital storage for code, including its history and related files.",
+          },
+          {
+            term: "Deployment",
+            definition:
+              "The process of launching a web app or website to the public.",
+          },
+          {
+            term: "Continuous Integration (CI)",
+            definition:
+              "A practice where code changes are automatically tested and merged into the main project.",
+          },
+          {
+            term: "Continuous Deployment (CD)",
+            definition:
+              "A practice where code changes are automatically deployed to production after passing tests.",
+          },
+          {
+            term: "API",
+            definition:
+              "Application Programming Interface — a set of rules for how software components should interact.",
+          },
+          {
+            term: "Framework",
+            definition:
+              "A collection of pre-written code that helps you build applications faster.",
           },
         ],
       },
