@@ -9,7 +9,7 @@ export default function CareersPage() {
         creativity, and confidence.
       </h5>
       <p>
-        At [Your Company Name], we are always on the lookout for passionate and
+        At PixelMind Labs, we are always on the lookout for passionate and
         dedicated individuals who share our vision of making coding accessible
         to every child. Our team is made up of educators, technologists, and
         innovators who are committed to creating a positive impact in the lives
