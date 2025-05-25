@@ -1,23 +1,21 @@
 "use client";
 import DynamicCTA from "@/components/CTAs/DynamicCTA";
 import { impactStats } from "@/lib/constants/metrics";
-import { useRouter } from "next/navigation";
 
 export default function AboutPage() {
-  const router = useRouter();
   return (
     <div className="mx-auto pt-8 md:pt-12 lg:pt-24 w-10/12 md:w-11/12">
-      <h1>About Us</h1>
+      <h1>About PixelMind Labs</h1>
       <h5>Where kids become creators, not just consumers.</h5>
       <div className="gap-4 grid lg:grid-cols-2">
         <div>
           <p>
-            We’re a team of educators, developers, designers, and dreamers who
-            believe that every child should have the opportunity to shape the
-            future with technology. Founded on the belief that computer science
-            is a basic literacy in the digital age, we created a learning
-            environment where young minds can explore, build, and grow through
-            the power of code.
+            At PixelMind Labs, we’re a team of educators, developers, designers,
+            and dreamers who believe that every child should have the
+            opportunity to shape the future with technology. Founded on the
+            belief that computer science is a basic literacy in the digital age,
+            we created a learning environment where young minds can explore,
+            build, and grow through the power of code.
           </p>
           <p>
             Our programs are designed to be inclusive, engaging, and relevant to
