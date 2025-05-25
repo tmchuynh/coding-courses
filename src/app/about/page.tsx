@@ -122,14 +122,49 @@ export default function AboutPage() {
             just technical skills—they gain confidence, resilience, and a sense
             of belonging in the tech world.
           </p>
-          <ul className="space-y-2 ml-4">
-            <li>🎓 Thousands of hours of live coding instruction delivered</li>
-            <li>👩‍💻 Hundreds of student projects completed and showcased</li>
-            <li>🌍 Students served across dozens of cities and schools</li>
-            <li>
-              💡 Countless moments of "aha!" that sparked lifelong passion
-            </li>
-          </ul>
+
+          <div className="gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-8">
+            <div className="flex flex-col items-center p-4 text-center">
+              <div className="flex justify-center items-center bg-card mb-3 rounded-full w-16 h-16 text-2xl">
+                🎓
+              </div>
+              <h4 className="mb-1 font-medium text-lg">Learning Hours</h4>
+              <p className="text-sm">
+                Thousands of hours of live coding instruction delivered
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center p-4 text-center">
+              <div className="flex justify-center items-center bg-card mb-3 rounded-full w-16 h-16 text-2xl">
+                👩‍💻
+              </div>
+              <h4 className="mb-1 font-medium text-lg">Student Projects</h4>
+              <p className="text-sm">
+                Hundreds of student projects completed and showcased
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center p-4 text-center">
+              <div className="flex justify-center items-center bg-card mb-3 rounded-full w-16 h-16 text-2xl">
+                🌍
+              </div>
+              <h4 className="mb-1 font-medium text-lg">Global Reach</h4>
+              <p className="text-sm">
+                Students served across dozens of cities and schools
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center p-4 text-center">
+              <div className="flex justify-center items-center bg-card mb-3 rounded-full w-16 h-16 text-2xl">
+                💡
+              </div>
+              <h4 className="mb-1 font-medium text-lg">Inspired Learning</h4>
+              <p className="text-sm">
+                Countless moments of "aha!" that sparked lifelong passion
+              </p>
+            </div>
+          </div>
+
           <p>
             Our alumni have gone on to explore high school robotics teams,
             university tech programs, and even early careers in design and
@@ -149,9 +184,7 @@ export default function AboutPage() {
                   {stat.value}
                 </div>
                 <div className="mb-1 font-semibold">{stat.label}</div>
-                <div className="text-muted-foreground text-sm">
-                  {stat.description}
-                </div>
+                <div className="text-sm">{stat.description}</div>
               </div>
             ))}
           </div>
@@ -182,7 +215,7 @@ export default function AboutPage() {
                 <div className="mb-1 font-semibold text-lg">
                   Every child can learn to code.
                 </div>
-                <div className="text-muted-foreground text-sm">
+                <div className="text-sm">
                   We believe coding is for everyone, regardless of background or
                   experience.
                 </div>
@@ -196,7 +229,7 @@ export default function AboutPage() {
                 <div className="mb-1 font-semibold text-lg">
                   Diversity makes tech stronger.
                 </div>
-                <div className="text-muted-foreground text-sm">
+                <div className="text-sm">
                   Our community thrives on different perspectives and
                   experiences.
                 </div>
@@ -210,7 +243,7 @@ export default function AboutPage() {
                 <div className="mb-1 font-semibold text-lg">
                   Learning should be joyful, challenging, and meaningful.
                 </div>
-                <div className="text-muted-foreground text-sm">
+                <div className="text-sm">
                   We make learning fun, engaging, and relevant for every
                   student.
                 </div>
@@ -224,7 +257,7 @@ export default function AboutPage() {
                 <div className="mb-1 font-semibold text-lg">
                   Mistakes are part of progress.
                 </div>
-                <div className="text-muted-foreground text-sm">
+                <div className="text-sm">
                   We celebrate curiosity and see every mistake as a step toward
                   mastery.
                 </div>
@@ -239,7 +272,7 @@ export default function AboutPage() {
                   Tech should be used to solve real problems, not just pass
                   time.
                 </div>
-                <div className="text-muted-foreground text-sm">
+                <div className="text-sm">
                   We empower students to use technology for creativity, impact,
                   and positive change.
                 </div>
@@ -254,7 +287,7 @@ export default function AboutPage() {
                 <div className="mb-1 font-semibold text-lg">
                   Collaboration drives innovation.
                 </div>
-                <div className="text-muted-foreground text-sm">
+                <div className="text-sm">
                   We encourage teamwork and sharing ideas to solve challenges
                   and build a supportive learning community.
                 </div>
