@@ -3,7 +3,7 @@
 import DynamicCTA from "@/components/CTAs/DynamicCTA";
 import { CourseSchedule } from "@/lib/interfaces/courses";
 import { capitalize, formatKebabToCamelCase } from "@/lib/utils/format";
-import { findAgeGroupForCourse } from "@/lib/utils/get";
+import { findAgeGroupForCourse, getCurriculumData } from "@/lib/utils/get";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -157,26 +157,4 @@ export default function CurriculumPage() {
       <DynamicCTA />
     </div>
   );
-}
-
-export async function getCurriculumData(
-  ageGroup: string,
-  courseName: string,
-  courseNameId: string
-): Promise<any> {
-  try {
-    const curriculumModule = await import(
-      `@/lib/constants/curriculum/${ageGroup}/${courseName}`
-    );
-    // Return the specific named export that matches toolKitID
-    if (curriculumModule[courseNameId]) {
-      return curriculumModule[courseNameId];
-    } else {
-      console.error(`Export named ${courseNameId} not found in module`);
-      return [];
-    }
-  } catch (error) {
-    console.error(`Error loading resource: ${error}`);
-    return [];
-  }
 }
