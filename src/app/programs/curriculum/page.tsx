@@ -13,6 +13,15 @@ export default function AgeGroupsPage() {
   return (
     <div className="mx-auto pt-8 md:pt-12 lg:pt-24 w-10/12 md:w-11/12">
       <h1>Preview Our Planned Our Curriculum for Each Class</h1>
+      <h5>Explore What Your Child Will Learn, One Class at a Time</h5>
+      <p>
+        Our curriculum is thoughtfully designed to grow with your child. From
+        beginner-friendly block coding to advanced game development, each class
+        offers a structured learning path with age-appropriate projects,
+        vocabulary, and skills. Preview our planned lessons to see how we build
+        confidence, spark creativity, and develop real-world tech skills in
+        every session.
+      </p>
 
       {/* Tabs */}
       <div className="flex gap-4 mt-8 border-b border-border">
