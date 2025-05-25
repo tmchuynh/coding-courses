@@ -4,7 +4,7 @@ export const privacy: Page[] = [
   {
     sectionTitle: "Compliance and Student Privacy",
     description:
-      "At [Your Company Name], the safety, privacy, and accessibility of our students are paramount. We strictly adhere to all applicable federal laws and regulations to protect your child’s information and ensure an inclusive learning environment.",
+      "At PixelMind Labs, the safety, privacy, and accessibility of our students are paramount. We strictly adhere to all applicable federal laws and regulations to protect your child’s information and ensure an inclusive learning environment.",
   },
   {
     sectionTitle: "Children’s Online Privacy Protection Act (COPPA)",
@@ -41,6 +41,6 @@ export const privacy: Page[] = [
   {
     sectionTitle: "Our Commitment",
     description:
-      "Your child’s trust is essential to us. We continuously review and update our policies and technology to maintain the highest standards in privacy, security, and accessibility. If you have any questions or concerns about our compliance efforts, please contact our Privacy Officer at privacy@yourcompany.com or call (555) 123-4567.",
+      "Your child’s trust is essential to us. We continuously review and update our policies and technology to maintain the highest standards in privacy, security, and accessibility. If you have any questions or concerns about our compliance efforts, please contact our Privacy Officer at privacy@pixelmindlabs.com or call (555) 123-4567.",
   },
 ];
