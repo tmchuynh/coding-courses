@@ -31,7 +31,7 @@ export const ctaContent: Record<
     buttons: [
       {
         label: "View Curriculum",
-        onClick: (router) => router.push("/overview/curriculum"),
+        onClick: (router) => router.push("/programs/curriculum"),
         variant: "default",
       },
       {
@@ -72,8 +72,8 @@ export const ctaContent: Record<
         variant: "tertiary",
       },
       {
-        label: "View Pricing Plans",
-        onClick: (router) => router.push("/programs/pricing-plans"),
+        label: "View Curriculum",
+        onClick: (router) => router.push("/programs/curriculum"),
         variant: "default",
       },
     ],
@@ -105,7 +105,7 @@ export const ctaContent: Record<
     buttons: [
       {
         label: "View Curriculum",
-        onClick: (router) => router.push("/overview/curriculum"),
+        onClick: (router) => router.push("/programs/curriculum"),
         variant: "default",
       },
       {
@@ -140,7 +140,7 @@ export const ctaContent: Record<
     heading: "Ready to Get Started?",
     subtitle: "Empowering students to create, innovate, and thrive.",
     paragraphs: [
-      "At [Your Company Name], we believe every student can be a creator, not just a consumer of technology.",
+      "At PixelMind Labs, we believe every student can be a creator, not just a consumer of technology.",
       "Whether you're new to coding or already building amazing things, this guide will help you understand the tools, expectations, and opportunities that lie ahead. We’re excited to help you build your first game, app, or digital story. Bring your curiosity. Bring your questions. And most of all, bring your imagination.",
       "Because the world doesn’t just need more coders — it needs more creators.",
     ],
@@ -152,7 +152,7 @@ export const ctaContent: Record<
       },
       {
         label: "Explore Curriculum",
-        onClick: (router) => router.push("/overview/curriculum"),
+        onClick: (router) => router.push("/programs/curriculum"),
         variant: "secondary",
       },
       {
@@ -183,7 +183,7 @@ export const ctaContent: Record<
       },
       {
         label: "View Curriculum",
-        onClick: (router) => router.push("/overview/curriculum"),
+        onClick: (router) => router.push("/programs/curriculum"),
         variant: "secondary",
       },
       {
