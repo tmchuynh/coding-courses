@@ -1,7 +1,6 @@
 "use client";
 
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 import {
   ArrowPathIcon,
   ChevronRightIcon,
@@ -10,93 +9,105 @@ import {
   ServerIcon,
 } from "@heroicons/react/20/solid";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const primaryFeatures = [
   {
-    name: "Push to deploy.",
+    name: "Grades K to 2",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.",
-    icon: CloudArrowUpIcon,
+      "Early introduction to coding concepts through playful exercises and visual learning. Perfect for young minds ages 5-8 to develop computational thinking.",
   },
   {
-    name: "SSL certificates.",
+    name: "Grades 3 to 5",
     description:
-      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
-    icon: LockClosedIcon,
+      "Building foundational programming skills with interactive projects. Students ages 8-11 learn block-based coding and basic web development.",
   },
   {
-    name: "Database backups.",
+    name: "Grades 6 to 8",
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.",
-    icon: ServerIcon,
+      "Advancing to text-based languages and more complex projects. Middle school students ages 11-14 explore game development and robotics.",
+  },
+  {
+    name: "Grades 9 to 12",
+    description:
+      "College and career preparation with advanced programming, including full-stack development, AI, and specialized tracks for ages 14-18.",
   },
 ];
+
 const secondaryFeatures = [
   {
-    name: "Push to deploy",
+    name: "Block Coding",
     description:
-      "Commodo nec sagittis tortor mauris sed. Turpis tortor quis scelerisque diam id accumsan nullam tempus. Pulvinar etiam lacus volutpat eu. Phasellus praesent ligula sit faucibus.",
-    href: "#",
+      "Learn the fundamentals of programming through intuitive drag-and-drop interfaces. Perfect for beginners to understand core concepts before transitioning to text-based languages.",
     icon: CloudArrowUpIcon,
   },
   {
-    name: "SSL certificates",
+    name: "Game Development",
     description:
-      "Pellentesque enim a commodo malesuada turpis eleifend risus. Facilisis donec placerat sapien consequat tempor fermentum nibh.",
-    href: "#",
+      "Design and build your own games while learning programming concepts, game mechanics, and interactive storytelling. Create engaging experiences across multiple platforms.",
+    icon: ServerIcon,
+  },
+  {
+    name: "Web & App Development",
+    description:
+      "Build responsive websites and mobile applications using industry-standard technologies. Master HTML, CSS, JavaScript and frameworks that power the modern digital world.",
     icon: LockClosedIcon,
   },
   {
-    name: "Simple queues",
+    name: "Hardware & Robotics",
     description:
-      "Pellentesque sit elit congue ante nec amet. Dolor aenean curabitur viverra suspendisse iaculis eget. Nec mollis placerat ultricies euismod ut condimentum.",
-    href: "#",
+      "Get hands-on experience with physical computing, electronics, and automation. Learn to program robots and build interactive hardware projects using sensors and actuators.",
     icon: ArrowPathIcon,
+  },
+  {
+    name: "Business & Entrepreneurship",
+    description:
+      "Develop business acumen alongside technical skills. Learn product development, marketing strategies, and how to transform creative ideas into viable business ventures.",
+    icon: CloudArrowUpIcon,
+  },
+  {
+    name: "College Prep",
+    description:
+      "Prepare for higher education with specialized courses designed to enhance your academic profile. Build projects that demonstrate your technical abilities to admissions committees.",
+    icon: LockClosedIcon,
+  },
+  {
+    name: "Full Stack Web Development",
+    description:
+      "Master both frontend and backend technologies to become a versatile developer. Create complete web applications from database design to user interface implementation.",
+    icon: ServerIcon,
+  },
+  {
+    name: "Cyber Security",
+    description:
+      "Learn to protect systems and networks from digital threats. Explore encryption, vulnerability assessment, and ethical hacking techniques to secure digital infrastructures.",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "Data Science, ML & AI",
+    description:
+      "Explore the cutting-edge fields of data analysis, machine learning, and artificial intelligence. Learn to create intelligent systems that can analyze data and make predictions.",
+    icon: CloudArrowUpIcon,
   },
 ];
 
 export default function Home() {
+  const router = useRouter();
   return (
-    <div className="py-10">
+    <div className="mx-auto pt-8 md:pt-12 lg:pt-24 w-10/12 md:w-11/12">
       <main>
         {/* Hero section */}
         <div className="relative pt-14 isolate">
-          <svg
-            aria-hidden="true"
-            className="-z-10 absolute inset-0 size-full mask-[radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-gray-200"
-          >
-            <defs>
-              <pattern
-                x="50%"
-                y={-1}
-                id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527"
-                width={200}
-                height={200}
-                patternUnits="userSpaceOnUse"
-              >
-                <path d="M100 200V.5M.5 .5H200" fill="none" />
-              </pattern>
-            </defs>
-            <svg x="50%" y={-1} className="overflow-visible fill-gray-50">
-              <path
-                d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
-                strokeWidth={0}
-              />
-            </svg>
-            <rect
-              fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
-              width="100%"
-              height="100%"
-              strokeWidth={0}
-            />
-          </svg>
-          <div className="lg:flex lg:items-center lg:gap-x-10 mx-auto px-6 lg:px-8 py-24 sm:py-32 lg:py-40 max-w-7xl">
+          <div className="lg:flex lg:items-center lg:gap-x-10 mx-auto py-24 sm:py-32 lg:py-40">
             <div className="lg:flex-auto mx-auto lg:mx-0 max-w-2xl">
               <div className="flex">
                 <div className="relative flex items-center gap-x-4 bg-white px-4 py-1 rounded-full ring-1 ring-gray-900/10 hover:ring-gray-900/20 text-sm/6">
                   <span className="font-semibold">We’re hiring</span>
                   <span aria-hidden="true" className="w-px h-4 /10" />
-                  <a href="#" className="flex items-center gap-x-1">
+                  <a
+                    href="/about/careers"
+                    className="flex items-center gap-x-1"
+                  >
                     <span aria-hidden="true" className="absolute inset-0" />
                     See open positions
                     <ChevronRightIcon
@@ -106,25 +117,20 @@ export default function Home() {
                   </a>
                 </div>
               </div>
+
               <h1 className="mt-10 font-semibold text-5xl text-pretty sm:text-7xl tracking-tight">
-                A better way to ship your projects
+                Learn to Code. Shape Your Future.
               </h1>
               <p className="mt-8 font-medium text-gray-500 text-lg text-pretty sm:text-xl/8">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-                fugiat aliqua. Anim aute id magna aliqua ad ad non deserunt
-                sunt.
+                Empower your child with essential digital skills through our
+                expert-led coding classes. From elementary school to high
+                school, our age-appropriate curriculum builds confidence,
+                creativity, and technical skills that last a lifetime.
               </p>
               <div className="flex items-center gap-x-6 mt-10">
-                <a
-                  href="#"
-                  className="bg-indigo-600 hover:bg-indigo-500 shadow-xs px-3.5 py-2.5 rounded-md font-semibold text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Get started
-                </a>
-                <a href="#" className="font-semibold text-sm/6">
-                  Learn more <span aria-hidden="true">→</span>
-                </a>
+                <Button onClick={() => router.push("/programs/curriculum")}>
+                  View Curriculum
+                </Button>
               </div>
             </div>
             <div className="mt-16 sm:mt-24 lg:mt-0 lg:shrink-0 lg:grow">
@@ -165,159 +171,68 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Logo cloud */}
-        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
-          <div className="items-center gap-x-8 gap-y-12 sm:gap-x-10 sm:gap-y-14 grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-5 mx-auto lg:mx-0 max-w-lg sm:max-w-xl lg:max-w-none">
-            <Image
-              alt="Transistor"
-              src="https://tailwindcss.com/plus-assets/img/logos/158x48/transistor-logo-gray-400.svg"
-              width={158}
-              height={48}
-              className="col-span-2 lg:col-span-1 w-full max-h-12 object-contain"
-            />
-            <Image
-              alt="Reform"
-              src="https://tailwindcss.com/plus-assets/img/logos/158x48/reform-logo-gray-400.svg"
-              width={158}
-              height={48}
-              className="col-span-2 lg:col-span-1 w-full max-h-12 object-contain"
-            />
-            <Image
-              alt="Tuple"
-              src="https://tailwindcss.com/plus-assets/img/logos/158x48/tuple-logo-gray-400.svg"
-              width={158}
-              height={48}
-              className="col-span-2 lg:col-span-1 w-full max-h-12 object-contain"
-            />
-            <Image
-              alt="SavvyCal"
-              src="https://tailwindcss.com/plus-assets/img/logos/158x48/savvycal-logo-gray-400.svg"
-              width={158}
-              height={48}
-              className="col-span-2 lg:col-span-1 sm:col-start-2 w-full max-h-12 object-contain"
-            />
-            <Image
-              alt="Statamic"
-              src="https://tailwindcss.com/plus-assets/img/logos/158x48/statamic-logo-gray-400.svg"
-              width={158}
-              height={48}
-              className="col-span-2 lg:col-span-1 col-start-2 sm:col-start-auto w-full max-h-12 object-contain"
-            />
-          </div>
-        </div>
-
         {/* Feature section */}
-        <div className="mx-auto mt-32 sm:mt-56 sm:px-6 lg:px-8 max-w-7xl">
-          <div className="relative px-6 sm:px-10 xl:px-24 py-20 sm:py-24 lg:py-24 sm:rounded-3xl overflow-hidden isolate">
-            <div className="lg:items-center gap-x-8 gap-y-16 sm:gap-y-20 lg:gap-y-0 grid grid-cols-1 lg:grid-cols-2 mx-auto lg:mx-0 max-w-2xl lg:max-w-none">
-              <div className="lg:row-start-2 lg:max-w-md">
-                <h2 className="font-semibold text-3xl text-balance sm:text-4xl tracking-tight">
-                  Boost your productivity. Start using our app today.
-                </h2>
-                <p className="mt-6 text-lg/8">
-                  Ac euismod vel sit maecenas id pellentesque eu sed
-                  consectetur. Malesuada adipiscing sagittis vel nulla. Ac
-                  euismod vel sit maecenas.
-                </p>
-              </div>
-              <Image
-                alt="Product screenshot"
-                src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
-                width={2432}
-                height={1442}
-                className="relative -z-20 lg:row-span-4 shadow-xl rounded-xl ring-1 ring-white/10 lg:w-5xl min-w-full max-w-xl lg:max-w-none"
-              />
-              <div className="lg:row-start-3 lg:mt-10 lg:pt-10 lg:border-white/10 lg:border-t max-w-xl lg:max-w-md">
-                <dl className="space-y-8 max-w-xl lg:max-w-none text-base/7">
-                  {primaryFeatures.map((feature) => (
-                    <div key={feature.name} className="relative">
-                      <dt className="inline-block ml-9 font-semibold">
-                        <feature.icon
-                          aria-hidden="true"
-                          className="top-1 left-1 absolute text-indigo-500 size-5"
-                        />
-                        {feature.name}
-                      </dt>{" "}
-                      <dd className="inline">{feature.description}</dd>
-                    </div>
-                  ))}
-                </dl>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Feature section */}
-        <div className="mx-auto mt-32 sm:mt-56 px-6 lg:px-8 max-w-7xl">
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <h2>Deploy faster</h2>
-            <p className="mt-2 font-semibold text-4xl text-pretty sm:text-5xl lg:text-balance tracking-tight">
-              Everything you need to deploy your app
-            </p>
-            <p className="mt-6">
-              Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-              Suspendisse eget egestas a elementum pulvinar et feugiat blandit
-              at. In mi viverra elit nunc.
+        <div className="gap-x-8 grid grid-cols-1 lg:grid-cols-2 mx-auto lg:mx-0">
+          <div className="">
+            <h2 className="font-semibold text-3xl text-balance sm:text-4xl tracking-tight">
+              Age-Appropriate Curriculum for Every Student
+            </h2>
+            <p className="mt-6 text-lg/8">
+              Our comprehensive programs are carefully designed to match each
+              age group's cognitive development and learning pace. From playful
+              introduction to coding for young learners to advanced career
+              preparation for teens, we provide the right challenge at the right
+              time.
             </p>
           </div>
-          <div className="mx-auto mt-16 sm:mt-20 lg:mt-24 max-w-2xl lg:max-w-none">
-            <dl className="gap-x-8 gap-y-16 grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-none">
-              {secondaryFeatures.map((feature) => (
-                <div key={feature.name} className="flex flex-col">
-                  <dt className="flex items-center gap-x-3 font-semibold text-base/7">
-                    <feature.icon
-                      aria-hidden="true"
-                      className="flex-none text-primary size-5"
-                    />
-                    {feature.name}
-                  </dt>
-                  <dd className="flex flex-col flex-auto mt-4 text-base/7">
-                    <p className="flex-auto">{feature.description}</p>
-                    <p className="mt-6">
-                      <a
-                        href={feature.href}
-                        className="font-semibold text-sm/6"
-                      >
-                        Learn more <span aria-hidden="true">→</span>
-                      </a>
-                    </p>
-                  </dd>
+
+          <div className="">
+            <dl className="space-y-8 max-w-xl lg:max-w-none text-base/7">
+              {primaryFeatures.map((feature) => (
+                <div key={feature.name} className="relative">
+                  <dt className="inline-block font-semibold">{feature.name}</dt>{" "}
+                  <dd className="inline">{feature.description}</dd>
                 </div>
               ))}
             </dl>
           </div>
         </div>
 
-        {/* Newsletter section */}
-        <div className="mx-auto mt-32 sm:mt-56 sm:px-6 lg:px-8 max-w-7xl">
-          <div className="relative bg-card shadow px-6 sm:px-24 py-24 xl:py-32 border border-border sm:rounded-3xl text-card-foreground overflow-hidden isolate">
-            <h2 className="mx-auto max-w-3xl text-center">
-              Get notified when we’re launching
+        {/* Feature section */}
+        <div className="mx-auto mt-12 md:mt-20 lg:mt-32">
+          <div className="mx-auto">
+            <h2 className="font-semibold text-3xl text-balance sm:text-4xl tracking-tight">
+              Find Your Passion in Programming
             </h2>
-            <p className="mx-auto mt-6 max-w-lg text-center text-lg">
-              Reprehenderit ad esse et non officia in nulla. Id proident tempor
-              incididunt nostrud nulla et culpa.
+            <p className="max-w-4xl">
+              From building games to securing networks, our diverse course
+              offerings cover the full spectrum of computer science disciplines.
+              Discover which path ignites your creativity and aligns with your
+              career goals.
             </p>
-            <form className="flex gap-x-4 mx-auto mt-10 max-w-md">
-              <Label htmlFor="email-address" className="sr-only">
-                Email address
-              </Label>
-              <Input
-                id="email-address"
-                name="email"
-                type="email"
-                required
-                placeholder="Enter your email"
-                autoComplete="email"
-                className="flex-auto bg-white/5 px-3.5 py-2 rounded-md min-w-0 text-base sm:text-sm/6 placeholder:text-gray-400 outline-1 -outline-offset-1 outline-white/10 focus:outline-2 focus:-outline-offset-2 focus:outline-white"
-              />
-              <button
-                type="submit"
-                className="flex-none bg-white hover:bg-gray-100 shadow-xs px-3.5 py-2.5 rounded-md font-semibold text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              >
-                Notify me
-              </button>
-            </form>
+            <div className="flex items-center gap-x-6 mt-4">
+              <Button onClick={() => router.push("/programs/curriculum")}>
+                View Curriculum
+              </Button>
+            </div>
+          </div>
+          <div className="mx-auto mt-6 md:mt-8 lg:mt-12">
+            <dl className="gap-x-8 gap-y-16 grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-none">
+              {secondaryFeatures.map((feature) => (
+                <div key={feature.name} className="flex flex-col">
+                  <dt className="flex items-center gap-x-3 font-semibold text-base/7">
+                    <feature.icon
+                      aria-hidden="true"
+                      className="flex-none text-tertiary size-5"
+                    />
+                    {feature.name}
+                  </dt>
+                  <dd className="flex flex-col flex-auto mt-4 text-base/7">
+                    <p className="flex-auto">{feature.description}</p>
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </div>
       </main>
