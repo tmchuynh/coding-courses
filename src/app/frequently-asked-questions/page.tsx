@@ -23,10 +23,10 @@ export default function FAQsPage() {
       <div className="divide-y">
         {generalFaqs.map((faq, idx) => (
           <div
-            key={faq.question}
-            className="flex md:flex-row flex-col gap-4 px-4 md:px-8 py-6"
+            key={`${faq.question}-${idx}`}
+            className="flex md:flex-row flex-col gap-4 py-6"
           >
-            <h4 className="md:w-1/2">{faq.question}</h4>
+            <h3 className="md:w-1/2">{faq.question}</h3>
             <p className="md:w-1/2">{faq.answer}</p>
           </div>
         ))}
