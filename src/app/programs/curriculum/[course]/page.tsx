@@ -16,8 +16,6 @@ export default function CurriculumPage() {
 
   const [curriculumData, setCurriculumData] = useState<CourseSchedule[]>([]);
 
-  console.log("ageGroup", findAgeGroupForCourse(courseTitle));
-
   useEffect(() => {
     const fetchData = async () => {
       const ageGroup = findAgeGroupForCourse(courseTitle);
@@ -41,8 +39,6 @@ export default function CurriculumPage() {
 
     fetchData();
   }, [courseName, courseNameId]);
-
-  console.log("curriculumData", curriculumData);
 
   return (
     <div className="mx-auto pt-8 md:pt-12 lg:pt-24 w-10/12 md:w-11/12">

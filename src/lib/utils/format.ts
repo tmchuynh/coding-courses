@@ -109,14 +109,6 @@ export function formatKebabToCamelCase(str: string): string {
 }
 
 export function formatToSlug(str: string): string {
-  console.log("formatToSlug", str);
-  console.log(
-    "formatted",
-    str
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-|-$/g, "")
-  );
   return str
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")

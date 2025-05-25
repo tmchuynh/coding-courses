@@ -73,7 +73,6 @@ export function getCoursesByCategory(): Record<string, Array<{ courseName: strin
 }
 
 export function getCourseDetails(courseName: string, curriculum: Course[]) {
-  console.log("courseName", courseName);
   return curriculum.find((c) => c.courseName === courseName);
 }
 

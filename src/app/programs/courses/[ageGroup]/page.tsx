@@ -13,7 +13,6 @@ export default function AgeGroupSchedulePage() {
   const ageGroupParam = decodeURIComponent(params.ageGroup as string);
   const router = useRouter();
   const segments = usePathname().split("/");
-  console.log("segments", segments);
 
   const group = yearRoundSchedule.find(
     (g) =>
@@ -126,17 +125,12 @@ export default function AgeGroupSchedulePage() {
       </div>
       <div className="gap-8 grid grid-cols-1 lg:grid-cols-2">
         {filteredCourses.map((course) => {
-          console.log("group.ageGroup", group.ageGroup);
-          console.log("course", course);
-          console.log("segments[3]", segments[3]);
-          console.log("course.courseName", course.courseName);
           const curriculum =
             curriculumCourses.find(
               (c) => c.title.replace("", "") === group.ageGroup
             )?.courses || [];
 
           const courseDetails = getCourseDetails(course.courseName, curriculum);
-          console.log("courseDetails", courseDetails);
           if (!courseDetails) {
             return null; // Skip rendering if course details are not found
           }

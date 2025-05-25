@@ -28,7 +28,6 @@ export default function SummerCampsPage() {
     subtotal += (selectedCourse.price as number) || 0;
   }
 
-  console.log("selectedCourse", selectedCourse);
   selectedAddOns.forEach((addOn) => {
     if (typeof addOn.price === "number") subtotal += addOn.price;
     else if (typeof addOn.price === "string" && addOn.price.startsWith("$")) {
