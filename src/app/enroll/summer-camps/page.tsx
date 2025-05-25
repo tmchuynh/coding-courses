@@ -1,6 +1,7 @@
 "use client";
 import { summerCourses } from "@/lib/constants/courses/summerCourses";
 import { pricingPlans } from "@/lib/constants/pricingPlans";
+import { Course } from "@/lib/types/types";
 import { useState } from "react";
 
 const TAX_RATE = 0.085;
@@ -11,7 +12,7 @@ function getAddOns() {
 }
 
 export default function SummerCampsPage() {
-  const [selectedCourse, setSelectedCourse] = useState<any>(null);
+  const [selectedCourse, setSelectedCourse] = useState<Course>();
   const [selectedAddOns, setSelectedAddOns] = useState<any[]>([]);
 
   function handleAddOnToggle(addOn: any) {
@@ -24,8 +25,10 @@ export default function SummerCampsPage() {
 
   let subtotal = 0;
   if (selectedCourse) {
-    subtotal += selectedCourse.price || 0;
+    subtotal += (selectedCourse.price as number) || 0;
   }
+
+  console.log("selectedCourse", selectedCourse);
   selectedAddOns.forEach((addOn) => {
     if (typeof addOn.price === "number") subtotal += addOn.price;
     else if (typeof addOn.price === "string" && addOn.price.startsWith("$")) {
@@ -82,7 +85,7 @@ export default function SummerCampsPage() {
                             {course.courseName}{" "}
                           </span>
                         </div>
-                        <span>(${selectedCourse.price})</span>
+                        <span>(${course?.price as number})</span>
                       </div>
                       <span className="block text-gray-600 text-sm">
                         {course.subtitle}
@@ -104,7 +107,7 @@ export default function SummerCampsPage() {
           {selectedCourse && (
             <div>
               <div className="font-bold text-lg">
-                {selectedCourse.courseName} (${selectedCourse.price})
+                {selectedCourse.courseName} (${selectedCourse.price as number})
               </div>
               <div className="mb-2 text-gray-700">
                 {selectedCourse.subtitle}
@@ -116,28 +119,32 @@ export default function SummerCampsPage() {
               <div className="mb-2">
                 <b>Format:</b> {selectedCourse.format}
               </div>
-              {selectedCourse.keyProjects?.length > 0 && (
-                <div className="mb-2">
-                  <b>Key Projects:</b>
-                  <ul className="ml-6 list-disc">
-                    {selectedCourse.keyProjects.map(
-                      (proj: string, idx: number) => (
-                        <li key={idx}>{proj}</li>
-                      )
-                    )}
-                  </ul>
-                </div>
-              )}
-              {selectedCourse.outcomes?.length > 0 && (
-                <div className="mb-2">
-                  <b>Outcomes:</b>
-                  <ul className="ml-6 list-disc">
-                    {selectedCourse.outcomes.map((out: string, idx: number) => (
-                      <li key={idx}>{out}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+              {selectedCourse.keyProjects &&
+                selectedCourse.keyProjects?.length > 0 && (
+                  <div className="mb-2">
+                    <b>Key Projects:</b>
+                    <ul className="ml-6 list-disc">
+                      {selectedCourse.keyProjects?.map(
+                        (proj: string, idx: number) => (
+                          <li key={idx}>{proj}</li>
+                        )
+                      )}
+                    </ul>
+                  </div>
+                )}
+              {selectedCourse.outcomes &&
+                selectedCourse.outcomes?.length > 0 && (
+                  <div className="mb-2">
+                    <b>Outcomes:</b>
+                    <ul className="ml-6 list-disc">
+                      {selectedCourse.outcomes?.map(
+                        (out: string, idx: number) => (
+                          <li key={idx}>{out}</li>
+                        )
+                      )}
+                    </ul>
+                  </div>
+                )}
             </div>
           )}
           <div className="flex flex-col lg:flex-col-reverse mx-auto mt-6 lg:mt-0 pt-4 lg:pt-0 w-full h-fit">
