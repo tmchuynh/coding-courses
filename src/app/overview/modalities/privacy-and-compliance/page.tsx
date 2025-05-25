@@ -140,10 +140,10 @@ export default function PrivacyAndCompliancePage() {
           <p className="mt-2">
             To exercise these rights, contact us at{" "}
             <a
-              href="mailto:privacy@yourcompany.com"
+              href="mailto:privacy@pixelmindlabs.com"
               className="text-blue-600 underline"
             >
-              privacy@yourcompany.com
+              privacy@pixelmindlabs.com
             </a>
             .
           </p>
@@ -256,14 +256,14 @@ export default function PrivacyAndCompliancePage() {
             <li>
               📧 Email:{" "}
               <a
-                href="mailto:privacy@yourcompany.com"
+                href="mailto:privacy@pixelmindlabs.com"
                 className="text-blue-600 underline"
               >
-                [privacy@yourcompany.com]
+                [privacy@pixelmindlabs.com]
               </a>
             </li>
             <li>
-              📍 Mailing Address: [Your Company Name], [Street Address], [City,
+              📍 Mailing Address: PixelMind Labs, [Street Address], [City,
               State, Zip Code]
             </li>
           </ul>
