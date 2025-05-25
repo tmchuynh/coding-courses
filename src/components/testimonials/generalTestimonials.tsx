@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export default function GeneralTestimonials() {
   return (
@@ -72,10 +73,12 @@ export default function GeneralTestimonials() {
                 <p>{`“${featuredTestimonial.body}”`}</p>
               </blockquote>
               <figcaption className="flex items-center gap-x-4 px-6 py-4 border-gray-900/10 border-t">
-                <img
+                <Image
                   alt=""
                   src={featuredTestimonial.author.imageUrl}
                   className="flex-none bg-gray-50 rounded-full size-10"
+                  width={40}
+                  height={40}
                 />
                 <div className="flex-auto">
                   <div className="font-semibold">
@@ -83,10 +86,12 @@ export default function GeneralTestimonials() {
                   </div>
                   <div className="text-gray-600">{`@${featuredTestimonial.author.handle}`}</div>
                 </div>
-                <img
+                <Image
                   alt=""
                   src={featuredTestimonial.author.logoUrl}
                   className="flex-none w-auto h-10"
+                  width={40}
+                  height={40}
                 />
               </figcaption>
             </figure>
@@ -116,10 +121,12 @@ export default function GeneralTestimonials() {
                           <p>{`“${testimonial.body}”`}</p>
                         </blockquote>
                         <figcaption className="flex items-center gap-x-4 mt-6">
-                          <img
+                          <Image
                             alt=""
                             src={testimonial.author.imageUrl}
                             className="bg-gray-50 rounded-full size-10"
+                            width={40}
+                            height={40}
                           />
                           <div>
                             <div className="font-semibold">
