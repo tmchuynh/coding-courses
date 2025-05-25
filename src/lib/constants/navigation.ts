@@ -1,26 +1,30 @@
 export const footerNavigation = {
   solutions: [
-    { name: "Marketing", href: "#" },
-    { name: "Analytics", href: "#" },
-    { name: "Automation", href: "#" },
-    { name: "Commerce", href: "#" },
-    { name: "Insights", href: "#" },
+    { name: "Our Company", href: "/about" },
+    { name: "Our Mission", href: "/about/mission" },
+    { name: "Our Staff", href: "/about/our-staff" },
+    { name: "Careers", href: "/about/careers" },
   ],
   support: [
-    { name: "Submit ticket", href: "#" },
-    { name: "Documentation", href: "#" },
-    { name: "Guides", href: "#" },
+    { name: "Resources", href: "/resources" },
+    { name: "FAQs", href: "/frequently-asked-questions" },
+    {
+      name: "Basic Technical Requirements",
+      href: "/overview/technical-requirements",
+    },
+    { name: "Safety and Privacy", href: "/overview/safety-and-privacy" },
   ],
   company: [
-    { name: "About", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Jobs", href: "#" },
-    { name: "Press", href: "#" },
+    { name: "Programs", href: "/programs" },
+    { name: "Course Catalog", href: "/programs/courses" },
+    { name: "Curriculum Preview", href: "/programs/curriculum" },
+    { name: "Pricing Plans", href: "/programs/pricing-plans" },
+    { name: "Summer Camps", href: "/programs/summer-camps" },
   ],
   legal: [
-    { name: "Terms of service", href: "#" },
-    { name: "Privacy policy", href: "#" },
-    { name: "License", href: "#" },
+    { name: "Contact", href: "/contact" },
+    { name: "Enroll Now", href: "/enroll" },
+    { name: "Free Trial", href: "/enroll/trial-class" },
   ],
 };
 
@@ -31,7 +35,6 @@ export const navigation = [
   { name: "Company", href: "#" },
 ];
 
-
 export const navbarItems = [
   {
     label: "Home",
@@ -39,7 +42,6 @@ export const navbarItems = [
   },
   {
     label: "About",
-    href: "/about",
     dropdown: [
       {
         label: "Our Company",
@@ -65,7 +67,6 @@ export const navbarItems = [
   },
   {
     label: "Overview",
-    href: "/overview",
     dropdown: [
       {
         label: "Why Learn How to Code?",
@@ -95,7 +96,6 @@ export const navbarItems = [
   },
   {
     label: "Programs",
-    href: "/programs",
     dropdown: [
       {
         label: "Overview",
@@ -125,7 +125,6 @@ export const navbarItems = [
   },
   {
     label: "Resources",
-    href: "/resources",
     dropdown: [
       {
         label: "Parent Guide",
