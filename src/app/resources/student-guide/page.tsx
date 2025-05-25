@@ -5,7 +5,7 @@ export default function StudentGuidePage() {
     <div className="mx-auto pt-8 md:pt-12 lg:pt-24 w-10/12 md:w-11/12">
       <h1>Student Guide</h1>
       <p>
-        Welcome to [Your Company Name] — where kids code, create, and grow. This
+        Welcome to PixelMind Labs — where kids code, create, and grow. This
         guide is your go-to resource as you start your journey in our learning
         programs. Whether you&apos;re new to code or already building amazing
         things, this guide will help you understand the tools, expectations, and
@@ -14,8 +14,8 @@ export default function StudentGuidePage() {
       <section className="mt-6">
         <h2>Our Mission</h2>
         <p className="mb-2">
-          At [Your Company Name], we believe every student can be a creator, not
-          just a consumer of technology. Our courses are designed to foster
+          At PixelMind Labs, we believe every student can be a creator, not just
+          a consumer of technology. Our courses are designed to foster
           creativity, resilience, collaboration, and digital literacy — all
           through the power of code.
         </p>
