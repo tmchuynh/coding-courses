@@ -3,24 +3,18 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { curriculumCourses } from "@/lib/constants/courses/curriculumCourses";
 import { yearRoundSchedule } from "@/lib/constants/courses/yearRoundSchedule";
-import { formatGradeRangeSlug, formatToSlug } from "@/lib/utils/format";
+import { capitalize, formatToSlug } from "@/lib/utils/format";
 import { getCourseDetails } from "@/lib/utils/get";
-import { useParams, usePathname, useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 
 export default function AgeGroupSchedulePage() {
   const params = useParams();
   const ageGroupParam = decodeURIComponent(params.ageGroup as string);
   const router = useRouter();
-  const segments = usePathname().split("/");
 
-  const group = yearRoundSchedule.find(
-    (g) =>
-      g.ageGroup.replace(/\s/g, "").replace(/–|-/g, "-") ===
-      formatGradeRangeSlug(ageGroupParam)
-        .replace(/\s/g, "")
-        .replace(/–|-/g, "-")
-  );
+  const formatAgeGroup = capitalize(ageGroupParam).replace("To", "to");
+  const group = yearRoundSchedule.find((g) => g.ageGroup === formatAgeGroup);
 
   // Gather all unique "includes" options from the group's courses
   const includesOptions = useMemo(() => {
