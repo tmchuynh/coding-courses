@@ -72,16 +72,24 @@ export const navbarItems = [
         href: "/overview",
       },
       {
-        label: "Technology Stack",
-        href: "/overview/tech-stack",
-      },
-      {
         label: "Educational Philosophy",
         href: "/overview/philosophy",
       },
       {
         label: "In-Person vs Online",
         href: "/overview/modalities",
+      },
+      {
+        label: "Technology Stack",
+        href: "/overview/tech-stack",
+      },
+      {
+        label: "Basic Technical Requirements",
+        href: "/overview/technical-requirements",
+      },
+      {
+        label: "Safety and Privacy",
+        href: "/overview/safety-and-privacy",
       },
     ],
   },
@@ -94,18 +102,17 @@ export const navbarItems = [
         href: "/programs",
       },
       {
-        label: "Pricing Plans",
-        href: "/programs/pricing-plans",
+        label: "Curriculum Preview",
+        href: "/programs/curriculum",
       },
       {
         label: "Course Roadmaps",
         href: "/programs/course-roadmaps",
       },
       {
-        label: "Curriculum Preview",
-        href: "/programs/curriculum",
+        label: "Pricing Plans",
+        href: "/programs/pricing-plans",
       },
-
       {
         label: "Summer Camps",
         href: "/programs/summer-camps",
@@ -129,16 +136,8 @@ export const navbarItems = [
         href: "/resources/student-guide",
       },
       {
-        label: "Basic Technical Requirements",
-        href: "/resources/technical-requirements",
-      },
-      {
         label: "Key Vocabulary Terms",
         href: "/resources/key-vocabulary-terms",
-      },
-      {
-        label: "Safety and Privacy",
-        href: "/resources/safety-and-privacy",
       },
       {
         label: "Parent Testimonials",
