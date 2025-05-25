@@ -1,5 +1,6 @@
 "use client";
 
+import DynamicCTA from "@/components/CTAs/DynamicCTA";
 import { CourseSchedule } from "@/lib/interfaces/courses";
 import { capitalize, formatKebabToCamelCase } from "@/lib/utils/format";
 import { findAgeGroupForCourse } from "@/lib/utils/get";
@@ -58,7 +59,7 @@ export default function CurriculumPage() {
         build a solid foundation in coding and problem-solving.
       </p>
 
-      <div className="flex flex-col gap-9">
+      <div className="flex flex-col gap-9 my-3">
         <div>
           <h2>Tentative Course Schedule</h2>
           <p className="mb-4">
@@ -152,6 +153,8 @@ export default function CurriculumPage() {
           </div>
         </div>
       </div>
+
+      <DynamicCTA />
     </div>
   );
 }
