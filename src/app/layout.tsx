@@ -1,5 +1,4 @@
-import Header from "@/components/navigation/Header";
-import DynamicBreadcrumb from "@/components/navigation/dynamic-breadcrumb";
+import AppLayout from "@/components/layout/AppLayout";
 import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "./providers";
@@ -19,11 +18,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="relative flex flex-col min-h-screen">
         <Providers>
-          <main className="flex-grow my-24 md:pb-0">
-            <DynamicBreadcrumb />
-            <Header />
-            {children}
-          </main>
+          <AppLayout>{children}</AppLayout>
         </Providers>
       </body>
     </html>
