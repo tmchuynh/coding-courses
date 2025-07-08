@@ -3,7 +3,7 @@ import { CourseSchedule } from "@/lib/interfaces/courses";
 export const uxUiDesign: CourseSchedule[] = [
   {
     week: 1,
-    title: "Introduction to UX/UI Design",
+    title: "Introduction to UX UI Design",
     focus:
       "What is UX (User Experience)? What is UI (User Interface)? Importance of good design. Examples of good and bad design.",
     outcomes:

@@ -610,7 +610,7 @@ export const yearRoundSchedule: CourseSchedule[] = [
         price: { online: 249, inPerson: 279 },
       },
       {
-        courseName: "UX/UI Design",
+        courseName: "UX UI Design",
         subtitle: "User Experience & Interface Design",
         next: ["Interactive Elements", "Frontend Fundamentals"],
         schedule: [

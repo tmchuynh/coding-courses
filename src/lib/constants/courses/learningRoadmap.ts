@@ -125,7 +125,7 @@ export const learningRoadmap: Roadmap[] = [
             courseName: "Interactive Elements",
           },
           {
-            courseName: "UX/UI Design",
+            courseName: "UX UI Design",
           },
           {
             courseName: "Web Dev and App Creation",
