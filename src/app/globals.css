@@ -98,7 +98,7 @@
   --sidebar-ring: oklch(0.60 0.13 210);
   --radius: 0.75rem;
 }
- 
+
 .dark {
   --background: oklch(0.1088 0.0052 314.01);
   --foreground: oklch(0.98 0.01 100);
@@ -139,14 +139,12 @@
   --sidebar-ring: oklch(0.5 0.01 200);
 }
 
-
 @font-face {
   font-family: "RedHatMono";
   src: url("/fonts/RedHatMono-VariableFont_wght.ttf") format("truetype");
   font-weight: 100 200 300 400 500 600 700 800 900;
   font-style: normal;
 }
-
 
 @font-face {
   font-family: "Roboto";
@@ -155,14 +153,12 @@
   font-style: normal;
 }
 
-
 @font-face {
   font-family: "YsabeauOffice";
   src: url("/fonts/YsabeauOffice-VariableFont_wght.ttf") format("truetype");
   font-weight: 100 200 300 400 500 600 700 800 900;
   font-style: normal;
 }
-
 
 @font-face {
   font-family: "YsabeauSC";
@@ -171,14 +167,12 @@
   font-style: normal;
 }
 
-
 @font-face {
   font-family: "Nunito";
   src: url("/fonts/Nunito-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-
 
 @font-face {
   font-family: "Poppins";
@@ -230,7 +224,6 @@
   }
 }
 
-
 .backface-hidden {
   backface-visibility: hidden;
 }
@@ -245,4 +238,13 @@
 
 .rotate-y-180 {
   transform: rotateY(180deg);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
