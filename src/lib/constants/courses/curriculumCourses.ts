@@ -443,7 +443,7 @@ export const curriculumCourses: Curriculum[] = [
         next: ["Unity Game Dev", "Database Basics"],
       },
       {
-        courseName: "UX/UI Design",
+        courseName: "UX UI Design",
         category: "web-and-app-dev",
         level: "Intermediate",
         description:
